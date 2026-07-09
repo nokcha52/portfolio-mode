@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root{
+    /* 색상 코드 */
+    --gs01: #000000;
+    --gs02: #212121;
+    --gs03: #404040;
+    --gs04: #6b6b6b;
+    --gs05: #8c8c8c;
+    --gs06: #aaaaaa;
+    --gs07: #cccccc;
+    --gs08: #efefef;
+    --gs09: #ffffff;
+    --ys02: #423000;
+    --ys03: #805E00;
+    --ys04: #D69D00;
+    --ys05: #FFBB00;
+    --ys06: #FFD255;
+    --ys07: #FFE499;
+    --ys08: #FFF3D3;
+    --rs02 : #420000;
+    --rs03 : #990000;
+    --rs04 : #D60000;
+    --rs05 : #FF1A1A;
+    --rs06 : #FF5555;
+    --rs07 : #FFA3A3;
+    --rs08 : #FFD3D3;
+    --bs02 : #001E42;
+    --bs03 : #013A7F;
+    --bs04 : #0160D5;
+    --bs05 : #1B81FE;
+    --bs06 : #52A0FE;
+    --bs07 : #9AC7FE;
+    --bs08 : #D3E7FF;
+    --ls02 : #033016;
+    --ls03 : #087837;
+    --ls04 : #0DC95B;
+    --ls05 : #27F17B;
+    --ls06 : #5CF59C;
+    --ls07 : #9FF9C5;
+    --ls08 : #D6FCE6;
+
+    /* 폰트 */
+    --font-heading: 'Georgia';
+    --font-title: 'Arimo';
+    --font-body: 'Arimo';
+    --font-label: 'Manrope';
+    --font-caption: 'Manrope';
+    
+    /* 폰트 크기 */
+
+
+}
+body{
+    background-color: var(--gs08);
+}
+
