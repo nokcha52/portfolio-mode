@@ -4,62 +4,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mode</title>
+    <title>Mode</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <header>
-        <div>
+        <div class="headerTop">
             <h1>
-                <a href="index.html">
-                    <img src="./images/header/logo.svg" alt="logo" width="80">
-                </a>
+                <a href="index.html"><img src="images/header/logo.svg" alt="logo"></a>
             </h1>
-            <nav>
-                <ul class="menu label-m">
-                    <li><a href="">Keyboards</a></li>
-                    <li><a href="">Keycaps</a></li>
-                    <li><a href="">Component</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Help</a></li>
+            <nav class="menu label-m">
+                <ul>
+                    <li><a href="javascript:void(0)">Keyboards</a></li>
+                    <li><a href="javascript:void(0)">Keycaps</a></li>
+                    <li><a href="javascript:void(0)">Component</a></li>
+                    <li><a href="javascript:void(0)">About</a></li>
+                    <li><a href="javascript:void(0)">Help</a></li>
                 </ul>
             </nav>
-            <ul class="side_menu">
-                <li>
-                    <a href="">
-                        <img src="./images/icon/icon_search.svg" alt="searchIcon">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="./images/icon/icon_person.svg" alt="personalIcon">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="./images/icon/icon_cart.svg" alt="cartIcon">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/icon/icon_menuBar.svg" alt="menuBar">
-                    </a>
-                </li>
+            <ul class="subMenu">
+                <li><a href="javascript:void(0)"><img src="images/icon/icon_search.svg" alt="searchIcon"></a></li>
+                <li><a href="javascript:void(0)"><img src="images/icon/icon_personal.svg" alt="personalIcon"></a></li>
+                <li><a href="mycart.html"><img src="images/icon/icon_cart.svg" alt="cartIcon"></a></li>
+                <li><a href="javascript:void(0)"><img src="images/icon/icon_menuBar.svg" alt="menuBar"></a></li>
+            </ul>
+        </div>
+        <div class="megaMenu keyboards">
+            <h2 class="title3">keyboards</h2>
+            <ul>
+                <li><a href="encore_detail.html">
+                        <img src="images/header/keyboards_2encore.jpg" alt="encoreImg">
+                        <div class="textBox">
+                            <span class="label-m">Encore</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+                <li><a href="sonnet_detail.html">
+                        <img src="images/header/keyboards_3sonn.jpg" alt="sonnetImg">
+                        <div class="textBox">
+                            <span class="label-m">Sonnet</span>
+                            <span class="body-m">75%</span>
+                        </div>
+                    </a></li>
+                <li><a href="tempo_detail.html">
+                        <img src="images/header/keyboards_4temp.jpg" alt="tempoImg">
+                        <div class="textBox">
+                            <span class="label-m">SixtyFive</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+                <li><a href="envoy_detail.html">
+                        <img src="images/header/keyboards_5env.jpg" alt="envoyImg">
+                        <div class="textBox">
+                            <span class="label-m">Envoy</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+                <li><a href="tempo_detail.html">
+                        <img src="images/header/keyboards_6six.jpg" alt="sixtyfiveImg">
+                        <div class="textBox">
+                            <span class="label-m">Tempo</span>
+                            <span class="body-m">60%</span>
+                        </div>
+                    </a></li>
+            </ul>
+            <a href="keycaps_list.html" class="arrow_go">
+                <div class="icon_arrow_bg red">
+                    <i class="icon_arrow red"></i>
+                </div>
+                <span class="arrowText red label-m">View all Keyboards</span>
+            </a>
+        </div>
+        <div class="megaMenu keycaps">
+            <h2 class="title3">Keycaps</h2>
+            <ul>
+                <li><a href="">
+                        <img src="images/header/keycap_1cacao.webp" alt="cacaoImg">
+                        <div class="textBox">
+                            <span class="label-m">Cacao</span>
+                        </div>
+                    </a></li>
+                <li><a href="">
+                        <img src="images/header/keycap_2Mon.webp" alt="montereyImg">
+                        <div class="textBox">
+                            <span class="label-m">Monterey</span>
+                        </div>
+                    </a></li>
+                <li><a href="">
+                        <img src="images/header/keycap_3ob.webp" alt="obscuraImg">
+                        <div class="textBox">
+                            <span class="label-m">Obscura</span>
+                        </div>
+                    </a></li>
+                <li><a href="">
+                        <img src="images/header/keycap_4an.webp" alt="anthraciteImg">
+                        <div class="textBox">
+                            <span class="label-m">Anthracite</span>
+                        </div>
+                    </a></li>
+                <li><a href="">
+                        <img src="images/header/keycap_5Lot.webp" alt="lotusImg">
+                        <div class="textBox">
+                            <span class="label-m">Lotus</span>
+                        </div>
+                    </a></li>
+            </ul>
+            <a href="keycaps_list.html" class="arrow_go">
+                <div class="icon_arrow_bg yellow">
+                    <i class="icon_arrow yellow"></i>
+                </div>
+                <span class="arrowText yellow label-m">View all Keycaps</span>
+            </a>
+        </div>
+        <div class="megaMenu component">
+            <h2 class="title3">Components</h2>
+            <div class="section_row">
+                <section class="switch">
+                    <h3 class="title4">Switches</h3>
+                    <ul class="body-l">
+                        <li><a href="switch_obscura.html">Obscura Linear</a></li>
+                        <li><a href="switch_tommorow.html">Tomorrow Tactile</a></li>
+                        <li><a href="switch_anthracite.html">Anthracite Silent</a></li>
+                        <li><a href="switch_lotus.html">Lotus Linear</a></li>
+                    </ul>
+                </section>
+                <section class="extraPart">
+                    <h3 class="title4">Extra Parts</h3>
+                    <ul class="body-l">
+                        <li><a href="extra_encore_list.html">Encore</a></li>
+                        <li><a href="extra_sonnet_list.html">Sonnet</a></li>
+                        <li><a href="extra_envoy_list.html">Envoy</a></li>
+                        <li><a href="extra_tempod_list.html">Tempod</a></li>
+                        <li><a href="extra_sixtyfive_list.html">SixtyFive</a></li>
+                        <li><a href="extra_loop_list.html">Loop</a></li>
+                        <li><a href="extra_eighty_list.html">Eighty</a></li>
+                        <li><a href="extra_others_list.html">Others</a></li>
+                    </ul>
+                </section>
+            </div>
+            <a href="keycaps_list.html" class="arrow_go">
+                <div class="icon_arrow_bg green">
+                    <i class="icon_arrow green"></i>
+                </div>
+                <span class="arrowText green label-m">View all Components</span>
+            </a>
+        </div>
+        <div class="megaMenu about">
+            <h2 class="title3">About</h2>
+            <div class="section_row">
+                <section class="contact">
+                    <h3 class="title4">About us</h3>
+                    <ul class="body-l">
+                        <li><a href="aboutus.html">Our Story</a></li>
+                    </ul>
+                </section>
+                <section class="notes">
+                    <h3 class="title4">Notes</h3>
+                    <ul class="body-l">
+                        <li><a href="notelist.html">News</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="megaMenu help">
+            <h2 class="title3">Help</h2>
+            <div class="section_row">
+                <section class="contact">
+                    <h3 class="title4">Contact</h3>
+                    <ul class="body-l">
+                        <li>Contact Support</li>
+                    </ul>
+                </section>
+                <section class="guides">
+                    <h3 class="title4">Guides</h3>
+                        <ul class="body-l">
+                            <li>Encore</li>
+                            <li>Sonnet</li>
+                            <li>Sonnet 2024</li>
+                            <li>Tempo</li>
+                            <li>Envoy</li>
+                        </ul>                    
+                </section>
+            </div>
+        </div>
+        <div class="megaMenu search">
+            <div class="searchBox">
+                <img src="images/icon/icon_search.svg" alt="searchIcon">
+                <input type="text" id="searchInput" placeholder="Search keyboards, switches, keycaps" class="body-l">
+            </div>
+            <div class="section_row">
+                <section class="quicklink">
+                    <h3 class="title4">Quick Links</h3>
+                    <ul class="body-l">
+                        <li><a href="">Build Guides</a></li>
+                        <li><a href="">Contact Support</a></li>
+                        <li><a href="">Notes</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="popDown login boxShadow">
+            <h2 class="title1">Welcome</h2>
+            <p class="body-2">Log in or sign up to get started.</p>
+            <div class="label_cont">
+                <label for="email" class="title4">Email<span>*</span></label>
+                <input type="email" name="email" placeholder="Enter your Email" class="label-m">
+            </div>
+            <div class="label_cont">
+                <label for="password" class="title4">Password<span>*</span></label>
+                <input type="password" name="password" placeholder="Enter your password" class="label-m">
+            </div>
+            <span class="forgotpw"><a href="password_change.html" class="label-m">Forgot password?</a></span>
+            <button class="btn_yellow label-m">Log in</button>
+            <div class="signup_text label-m">
+                <span>No account?</span>
+                <span><a href="login.html">Sign up</a></span>
+            </div>
+        </div>
+        <div class="popDown account boxShadow">
+            <h2 class="title3">username@gmail.com</h2>
+            <ul class="label-m">
+                <li><a href="my_order.html"><img src="images/icon/icon_orders.svg" alt="orderIcon"><span>My Orders</span></a></li>
+                <li><a href="my_account.html"><img src="images/icon/icon_setting.svg" alt="settingIcon"><span>Account Settings</span></a></li>
+                <li><a href="javascript:void(0)"><img src="images/icon/icon_logOut.svg" alt="logoutIcon"><span>Log Out</span></a></li>
             </ul>
         </div>
     </header>
     <main>
-        <div class="main_banner">
-            <hgroup>
-                <h2>The encore</h2>
-                <p>Learn more</p>
-                <button>Learn more</button>
-            </hgroup>
-        </div>
+        <div class="banner"></div>
     </main>
+    <!-- <footer>
+        <section>
+            <h2></h2>
+        </section>        
+        <div>
+            <section class="footer_about">
+                <h3 class="heading3">About</h3>
+                <ul class="caption-s">
+                    <li><a href="">Our Story</a></li>
+                    <li><a href="">Notes</a></li>
+                </ul>
+            </section>
+            <section class="footer_help">
+                <h3 class="heading3">Get Help</h3>
+                <ul class="caption-s">
+                    <li><a href="">Build Guides</a></li>
+                    <li><a href="">Contact Support</a></li>
+                </ul>
+            </section>
+            <section class="footer_policy">
+                <h3 class="heading3">Policy</h3>
+                <ul class="caption-s">
+                    <li><a href="">Refund & Returns</a></li>
+                    <li><a href="">Shipping</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Privacy</a></li>
+                </ul>
+            </section>
+            <section class="footer_sns">
+                <h3 class="heading3">Mode</h3>
+                <p class="body-m">Challenge the industry with us</p>
+                <ul>
+                    <li><a href=""><img src="images/icon/icon_instagram.svg" alt="instaIcon"></a></li>
+                    <li><a href=""><img src="images/icon/icon_discord.svg" alt="discordIcon"></a></li>
+                    <li><a href=""><img src="images/icon/icon_youtube.svg" alt="youtubeIcon"></a></li>
+                </ul>
+            </section>
+        </div>
+    </footer> -->
 </body>
 
 </html>

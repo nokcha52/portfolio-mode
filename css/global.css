@@ -1,172 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-:root{
-    /* 색상 코드 */
-    --gs01: #000000;
-    --gs02: #212121;
-    --gs03: #404040;
-    --gs04: #6b6b6b;
-    --gs05: #8c8c8c;
-    --gs06: #aaaaaa;
-    --gs07: #cccccc;
-    --gs08: #efefef;
-    --gs09: #ffffff;
-    --ys02: #423000;
-    --ys03: #805E00;
-    --ys04: #D69D00;
-    --ys05: #FFBB00;
-    --ys06: #FFD255;
-    --ys07: #FFE499;
-    --ys08: #FFF3D3;
-    --rs02 : #420000;
-    --rs03 : #990000;
-    --rs04 : #D60000;
-    --rs05 : #FF1A1A;
-    --rs06 : #FF5555;
-    --rs07 : #FFA3A3;
-    --rs08 : #FFD3D3;
-    --bs02 : #001E42;
-    --bs03 : #013A7F;
-    --bs04 : #0160D5;
-    --bs05 : #1B81FE;
-    --bs06 : #52A0FE;
-    --bs07 : #9AC7FE;
-    --bs08 : #D3E7FF;
-    --ls02 : #033016;
-    --ls03 : #087837;
-    --ls04 : #0DC95B;
-    --ls05 : #27F17B;
-    --ls06 : #5CF59C;
-    --ls07 : #9FF9C5;
-    --ls08 : #D6FCE6;
-
-    /* 폰트 스타일*/
-    --font-heading: 'Georgia';
-    --font-title: 'Arimo';
-    --font-body: 'Arimo';
-    --font-label: 'Manrope';
-    --font-caption: 'Manrope';
-
-    /* 폰트 크기 */
-    --fs-40: 40px;
-    --fs-32: 32px;
-    --fs-24: 24px;
-    --fs-20: 20px;
-    --fs-16: 16px;
-    --fs-14: 14px;
-    --fs-12: 12px;
-    --fs-10: 10px;
-
-    /* 폰트 굵기 */
-    --fw-bold: 700;
-    --fw-reg: 400;
-}
-
-/* 텍스트 스타일 */
-.heading1{
-    font-family: var(--font-heading);
-    font-size: var(--fs-40);
-    font-weight: var(--fw-bold);
-    line-height: 1.15;
-}
-.heading2{
-    font-family: var(--font-heading);
-    font-size: var(--fs-32);
-    font-weight: var(--fw-bold);
-    line-height: 1.2;
-}
-.heading3{
-    font-family: var(--font-heading);
-    font-size: var(--fs-24);
-    font-weight: var(--fw-bold);
-    line-height: 1.25;
-}
-.heading4{
-    font-family: var(--font-heading);
-    font-size: var(--fs-20);
-    font-weight: var(--fw-bold);
-    line-height: 1.3;
-}
-.title1{
-    font-family: var(--font-title);
-    font-size: var(--fs-32);
-    font-weight: var(--fw-bold);
-    line-height: 1.2;
-}
-.title2{
-    font-family: var(--font-title);
-    font-size: var(--fs-24);
-    font-weight: var(--fw-bold);
-    line-height: 1.3;
-}
-.title3{
-    font-family: var(--font-title);
-    font-size: var(--fs-20);
-    font-weight: var(--fw-bold);
-    line-height: 1.3;
-}
-.title4{
-    font-family: var(--font-title);
-    font-size: var(--fs-16);
-    font-weight: var(--fw-bold);
-    line-height: 1.38;
-}
-.body-xl{
-    font-family: var(--font-body);
-    font-size: var(--fs-16);
-    font-weight: var(--fw-reg);
-    line-height: 1.5;
-}
-.body-l{
-    font-family: var(--font-body);
-    font-size: var(--fs-14);
-    font-weight: var(--fw-reg);
-    line-height: 1.4;
-}
-.body-m{
-    font-family: var(--font-body);
-    font-size: var(--fs-12);
-    font-weight: var(--fw-reg);
-    line-height: 1.5;
-}
-.body-s{
-    font-family: var(--font-body);
-    font-size: var(--fs-10);
-    font-weight: var(--fw-reg);
-    line-height: 1.6;
-}
-.label-xl{
-    font-family: var(--font-label);
-    font-size: var(--fs-20);
-    font-weight: var(--fw-bold);
-    line-height: 1.3;
-}
-.label-l{
-    font-family: var(--font-label);
-    font-size: var(--fs-16);
-    font-weight: var(--fw-bold);
-    line-height: 1.4;
-}
-.label-m{
-    font-family: var(--font-label);
-    font-size: var(--fs-14);
-    font-weight: var(--fw-bold);
-    line-height: 1.4;
-}
-.label-s{
-    font-family: var(--font-label);
-    font-size: var(--fs-12);
-    font-weight: var(--fw-bold);
-    line-height: 1.5;
-}
-.caption-s{
-    font-family: var(--font-caption);
-    font-size: var(--fs-12);
-    font-weight: var(--fw-reg);
-    line-height: 1.5;
-}
-
+/* 글로벌 스타일 */
 body{
     background-color: var(--gs08);
 }
@@ -174,82 +7,253 @@ main{
     padding: 20px 20px 20px 100px;
     box-sizing: border-box;
 }
-
-/* 글로벌 스타일 */
 @media screen and (min-width: 1440px){
-    body > *:not(header,footer),
-    main,
-    header div{
-        display: block;
+    body main > *,
+    header > div.headerTop{
         max-width: 1100px;
-        width: 100%;
         margin: 0 auto;
     }
     header{
         width: 100%;
         height: 40px;
-        background-color: var(--gs09);        
+        background-color: var(--gs09);
     }
-    header div{
+    header div.headerTop{        
+        justify-content: space-between;
+    }
+    header div.headerTop >*,
+    header div.headerTop ul li{
+        line-height: 40px;
+    }
+    header div.headerTop,
+    header div.headerTop ul{
         height: 100%;
+        display: flex;
+        gap: 20px;
+    }    
+    header div.headerTop h1{
+        width: 5%;
+        max-width: 80px;
+    }
+    header div.headerTop nav{
+        width: 80%;
+    }
+    header div.headerTop ul.subMenu{
+        width: 15%;
+    }
+    header div.headerTop ul{
+        list-style: none;
+    }
+    header div.headerTop ul li a{
+        color: var(--gs04);
+    } 
+    header div.headerTop ul li a img{
+        vertical-align: middle;
+    }
+    header .subMenu li:last-child{
+        display: none;
+    }
+
+    .megaMenu{
+        width: 100%;
+        padding: 30px 0;
+        background-color: var(--gs09);
+        box-sizing: border-box;
+    }
+    .megaMenu h2{
+        max-width: 870px;
+        margin: 0 auto 30px;
+        color: var(--gs04);
+    }
+    .megaMenu > ul{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 870px;
+        margin: 0 auto 30px;
+        gap: 40px 5%;
+        list-style: none;
+    }
+    .megaMenu > ul li{
+        width: 30%;
+        min-width: 0;
+        padding: 0;
+    }
+    .megaMenu > ul li a{
+        display: block;
+        width: 100%;
+    }
+    .megaMenu > ul li a img{
+        display: block;
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+        border-radius: 10px;
+    }
+    .megaMenu .textBox{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        margin-top: 10px;
     }
-    header h1{
-        width: 100%;
-        height: 40px;
-        max-width: 80px;
+    .megaMenu .textBox > * {
+        display: inline-block;
+    } 
+    header .megaMenu ul li a,
+    header .megaMenu ul li a span.label-m {
+        color: var(--gs02);
     }
-    header h1 a{
+    .megaMenu .textBox span.body-m {
+        color: var(--gs05);
+    }
+    .megaMenu > a{
         display: flex;
         align-items: center;
-        height: 100%;
+        gap: 10px;
+        max-width: 870px;
+        margin: 0 auto;
     }
-    header h1 a img{
+    header .megaMenu.keycaps ul li a img{
+        transform: scale(1.1);
+    }
+    header .megaMenu.keycaps ul li a div span{
         display: block;
+        width: 100%;
+        text-align: center;
     }
-    header nav{
-        width: 80%;
-    }
-    header ul{
-        list-style: none;
+    header .megaMenu .section_row{
+        max-width: 870px;
+        margin: 0 auto;
         display: flex;
-        align-items: center;
-        gap: 20px;
+        align-items: start;
     }
-    nav ul li a{
+    header .megaMenu section:first-child{
+        width: 30%;
+    }
+    header .megaMenu section:last-child{
+        width: 70%;
+    }
+    header .megaMenu section h3{
+        margin-bottom: 30px;
+    }
+    header .megaMenu section ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        list-style: none;        
+        height: 170px;
+        max-width: 200px;
+    }
+    header .megaMenu section ul li{
+        width: 100%;
+    }
+    header .megaMenu section ul li a{
+        display: inline-block;
+    }
+    header .section_row .megaMenusection ul{
+        list-style: none;
+    }
+    header .megaMenu.search .searchBox{
+        max-width: 870px;
+        width: 100%;
+        margin: 0 auto;
+        border: 2px solid var(--gs07);
+        border-radius: 10px;
+        display: flex;
+        gap: 10px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+    }
+    header .megaMenu.search .searchBox input{
+        width: 90%;
+        height: 50px;
+        border: none;
+    }
+    header .megaMenu.search .searchBox input::placeholder{
+        color: var(--gs06);
+    }
+    header .popDown{
+        width: 360px;
+        background-color: var(--gs09);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px;
+        box-sizing: content-box;
+        border-radius: 10px;
+    }
+    header .popDown.login,
+    header .popDown.account
+    {
+        position: absolute;
+        right: 15%;
+    }
+    header .popDown > *{
+        width: 100%;
+    }
+    header .popDown h2{
         color: var(--gs04);
     }
-    .side_menu{
-        width: 10%;
+    header .popDown p{
+        color: var(--gs02);
     }
-    .side_menu li a{
+    header .popDown .label_cont label{
+        display: block;
+        color: var(--gs04);
+        margin-bottom: 10px;
+    }
+    header .popDown input{        
+        width: 90%;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid var(--gs05);
+    }
+    header .popDown .label_cont label > span{
+        color: var(--rs04);
+        margin-left: 5px;
+    }
+    header .popDown > span.forgotpw > a{
+        color: var(--gs05);
+        text-align: right;
+        width: 100%;
+        display: inline-block;
+    }
+    header .popDown div.signup_text{
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 10px;
+    }
+    header .popDown > div.signup_text > span:first-child{
+        color: var(--gs04);
+    }
+    header .popDown div.signup_text > span:last-child a{
+        color: var(--gs02);
+    }
+    header .popDown.account ul li:not(:last-child){
+        margin-bottom: 20px;
+    }
+    header .popDown.account ul li a{
+        list-style: none;
+        display: flex;
+        align-items: center;       
+        gap: 10px;
+        color: var(--gs02);
+    }
+    header .popDown.account ul li img{
         width: 24px;
         height: 24px;
-    }
-    ul li a{
-        padding: 5px 0;
-        border-bottom: 2px solid transparent;
-        transition: border-bottom 0.3s ease;
-    }
-    ul li a:hover{
-        border-bottom: 2px solid var(--gs04);        
-    }
-    .side_menu li a img{
-        display: block;
-        width: 24px;
-        height: 24px;
-    }
-    .side_menu li:last-child{
-        display: none;
-    }
+     }
+
+
+
+
     main{
         display: block;
+        height: 5000px;
     }
     main .main_banner{
         height: 600px;
@@ -260,5 +264,13 @@ main{
         width: 100%;
         text-align: center;
     }
+    footer{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
 
 }

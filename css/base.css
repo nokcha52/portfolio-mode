@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root{
+    /* 색상 코드 */
+    --gs01: #000000;
+    --gs02: #212121;
+    --gs03: #404040;
+    --gs04: #6b6b6b;
+    --gs05: #8c8c8c;
+    --gs06: #aaaaaa;
+    --gs07: #cccccc;
+    --gs08: #efefef;
+    --gs09: #ffffff;
+    --ys02: #423000;
+    --ys03: #805E00;
+    --ys04: #D69D00;
+    --ys05: #FFBB00;
+    --ys06: #FFD255;
+    --ys07: #FFE499;
+    --ys08: #FFF3D3;
+    --rs02 : #420000;
+    --rs03 : #990000;
+    --rs04 : #D60000;
+    --rs05 : #FF1A1A;
+    --rs06 : #FF5555;
+    --rs07 : #FFA3A3;
+    --rs08 : #FFD3D3;
+    --bs02 : #001E42;
+    --bs03 : #013A7F;
+    --bs04 : #0160D5;
+    --bs05 : #1B81FE;
+    --bs06 : #52A0FE;
+    --bs07 : #9AC7FE;
+    --bs08 : #D3E7FF;
+    --ls02 : #033016;
+    --ls03 : #087837;
+    --ls04 : #0DC95B;
+    --ls05 : #27F17B;
+    --ls06 : #5CF59C;
+    --ls07 : #9FF9C5;
+    --ls08 : #D6FCE6;
+
+    /* 폰트 스타일*/
+    --font-heading: 'Georgia';
+    --font-title: 'Arimo';
+    --font-body: 'Arimo';
+    --font-label: 'Manrope';
+    --font-caption: 'Manrope';
+
+    /* 폰트 크기 */
+    --fs-40: 40px;
+    --fs-32: 32px;
+    --fs-24: 24px;
+    --fs-20: 20px;
+    --fs-16: 16px;
+    --fs-14: 14px;
+    --fs-12: 12px;
+    --fs-10: 10px;
+
+    /* 폰트 굵기 */
+    --fw-bold: 700;
+    --fw-reg: 400;
+}
+
+/* 텍스트 스타일 */
+.heading1{
+    font-family: var(--font-heading);
+    font-size: var(--fs-40);
+    font-weight: var(--fw-bold);
+    line-height: 1.15;
+}
+.heading2{
+    font-family: var(--font-heading);
+    font-size: var(--fs-32);
+    font-weight: var(--fw-bold);
+    line-height: 1.2;
+}
+.heading3{
+    font-family: var(--font-heading);
+    font-size: var(--fs-24);
+    font-weight: var(--fw-bold);
+    line-height: 1.25;
+}
+.heading4{
+    font-family: var(--font-heading);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bold);
+    line-height: 1.3;
+}
+.title1{
+    font-family: var(--font-title);
+    font-size: var(--fs-32);
+    font-weight: var(--fw-bold);
+    line-height: 1.2;
+}
+.title2{
+    font-family: var(--font-title);
+    font-size: var(--fs-24);
+    font-weight: var(--fw-bold);
+    line-height: 1.3;
+}
+.title3{
+    font-family: var(--font-title);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bold);
+    line-height: 1.3;
+}
+.title4{
+    font-family: var(--font-title);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-bold);
+    line-height: 1.38;
+}
+.body-xl{
+    font-family: var(--font-body);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-reg);
+    line-height: 1.5;
+}
+.body-l{
+    font-family: var(--font-body);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-reg);
+    line-height: 1.4;
+}
+.body-m{
+    font-family: var(--font-body);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-reg);
+    line-height: 1.5;
+}
+.body-s{
+    font-family: var(--font-body);
+    font-size: var(--fs-10);
+    font-weight: var(--fw-reg);
+    line-height: 1.6;
+}
+.label-xl{
+    font-family: var(--font-label);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bold);
+    line-height: 1.3;
+}
+.label-l{
+    font-family: var(--font-label);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-bold);
+    line-height: 1.4;
+}
+.label-m{
+    font-family: var(--font-label);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-bold);
+    line-height: 1.4;
+}
+.label-s{
+    font-family: var(--font-label);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-bold);
+    line-height: 1.5;
+}
+.caption-s{
+    font-family: var(--font-caption);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-reg);
+    line-height: 1.5;
+}
+/* 아이콘 스타일 */
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  -webkit-mask: var(--icon-url) no-repeat center / contain;
+  mask: var(--icon-url) no-repeat center / contain;
+}
+.icon_arrow {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    -webkit-mask: url('../images/icon/icon_arrow.svg') no-repeat center / contain;
+    mask: url('../images/icon/icon_arrow.svg') no-repeat center / contain;
+}
+/* 아이콘 red */
+.icon_arrow_bg.red{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--rs07);
+}
+.icon_arrow.red{
+    background-color: var(--rs03);
+}
+.arrowText.red{
+    display: inline-block;
+    line-height: 24px;
+    color: var(--rs03);
+}
+.arrow_go:hover .icon_arrow_bg.red{
+    background-color:var(--rs06); 
+}
+.arrow_go:hover .icon_arrow.red{
+    background-color: var(--rs02);
+}
+.arrow_go:hover .arrowText.red{
+    color: var(--rs02);
+}
+/* 아이콘 yellow */
+.icon_arrow_bg.yellow{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--ys07);
+}
+.icon_arrow.yellow{
+    background-color: var(--rs04);
+}
+.arrowText.yellow{
+    display: inline-block;
+    line-height: 24px;
+    color: var(--ys03);
+}
+.arrow_go:hover .icon_arrow_bg.yellow{
+    background-color:var(--ys05); 
+}
+.arrow_go:hover .icon_arrow.yellow{
+    background-color: var(--rs02);
+}
+.arrow_go:hover .arrowText.yellow{
+    color: var(--ys02);
+}
+/* 아이콘 green */
+.icon_arrow_bg.green{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--ls07);
+}
+.icon_arrow.green{
+    background-color: var(--ls03);
+}
+.arrowText.green{
+    display: inline-block;
+    line-height: 24px;
+    color: var(--ls03);
+}
+.arrow_go:hover .icon_arrow_bg.green{
+    background-color:var(--ls06); 
+}
+.arrow_go:hover .icon_arrow.green{
+    background-color: var(--ls02);
+}
+.arrow_go:hover .arrowText.green{
+    color: var(--ls02);
+}
+/* 아이콘 blue */
+.icon_arrow_bg.blue{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--bs07);
+}
+.icon_arrow.blue{
+    background-color: var(--bs03);
+}
+.arrowText.blue{
+    display: inline-block;
+    line-height: 24px;
+    color: var(--bs03);
+}
+.arrow_go:hover .icon_arrow_bg.blue{
+    background-color:var(--bs06); 
+}
+.arrow_go:hover .icon_arrow.blue{
+    background-color: var(--bs02);
+}
+.arrow_go:hover .arrowText.blue{
+    color: var(--bs02);
+}
+/* 아이콘 black */
+.icon_arrow_bg.black{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--gs01);
+}
+.icon_arrow.black{
+    background-color: var(--gs09);
+}
+.arrowText.black{
+    display: inline-block;
+    line-height: 24px;
+    color: var(--gs03);
+}
+.arrow_go:hover .icon_arrow_bg.black{
+    background-color:var(--gs03); 
+}
+.arrow_go:hover .icon_arrow.black{
+    background-color: var(--gs09);
+}
+.arrow_go:hover .arrowText.black{
+    color: var(--gs02);
+}
+
+/* 버튼 스타일 */
+.btn_red{
+    padding: 15px;
+    background-color: var(--rs07);
+    color: var(--rs03);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.btn_red:hover{
+    background-color: var(--rs06);
+    color: var(--gs09);
+}
+.btn_yellow{
+    padding: 15px;
+    background-color: var(--ys05);
+    color: var(--rs02);
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn_yellow:hover{
+    background-color: var(--ys06);
+    color: var(--rs03);
+}
+.btn_green{
+    padding: 15px;
+    background-color: var(--ys05);
+    color: var(--rs02);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.btn_green:hover{
+    background-color: var(--ys06);
+    color: var(--rs03);
+}
+.btn_blue{
+    padding: 15px;
+    background-color: var(--bs07);
+    color: var(--bs02);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.btn_blue:hover{
+    background-color: var(--bs06);
+    color: var(--gs01);
+}
+
+/* 박스 그림자 */
+.boxShadow{
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+}
