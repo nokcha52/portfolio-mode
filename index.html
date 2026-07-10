@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mode</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header>
-        <h1>
-            <a href="#">
-                <img src="./images/header/logo.svg" alt="logo">
-            </a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="">Keyboards</a></li>
-                <li><a href="">Keycaps</a></li>
-                <li><a href="">Component</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Help</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
+        <div>
+            <h1>
+                <a href="index.html">
+                    <img src="./images/header/logo.svg" alt="logo" width="80">
+                </a>
+            </h1>
+            <nav>
+                <ul class="menu label-m">
+                    <li><a href="">Keyboards</a></li>
+                    <li><a href="">Keycaps</a></li>
+                    <li><a href="">Component</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </nav>
+            <ul class="side_menu">
                 <li>
                     <a href="">
                         <img src="./images/icon/icon_search.svg" alt="searchIcon">
@@ -39,9 +43,23 @@
                         <img src="./images/icon/icon_cart.svg" alt="cartIcon">
                     </a>
                 </li>
+                <li>
+                    <a href="">
+                        <img src="images/icon/icon_menuBar.svg" alt="menuBar">
+                    </a>
+                </li>
             </ul>
-        </nav>
-
+        </div>
     </header>
+    <main>
+        <div class="main_banner">
+            <hgroup>
+                <h2>The encore</h2>
+                <p>Learn more</p>
+                <button>Learn more</button>
+            </hgroup>
+        </div>
+    </main>
 </body>
+
 </html>
