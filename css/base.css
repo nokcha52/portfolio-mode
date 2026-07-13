@@ -182,6 +182,13 @@
     -webkit-mask: url('../images/icon/icon_arrow.svg') no-repeat center / contain;
     mask: url('../images/icon/icon_arrow.svg') no-repeat center / contain;
 }
+.icon_arrow_bg,
+.icon_arrow{
+    transition:  background-color 0.3s ease;
+}
+.arrowText{
+    transition: color 0.3s ease;
+}
 /* 아이콘 red */
 .icon_arrow_bg.red{
     display: inline-flex;
@@ -197,7 +204,8 @@
 .arrowText.red{
     display: inline-block;
     line-height: 24px;
-    color: var(--rs03);
+    color: var(--rs03);    
+    transition:  color 0.3s ease;
 }
 .arrow_go:hover .icon_arrow_bg.red{
     background-color:var(--rs06); 
@@ -367,3 +375,4 @@
 .boxShadow{
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
 }
+/* input 효과 */
