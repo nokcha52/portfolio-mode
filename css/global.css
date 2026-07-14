@@ -1,16 +1,54 @@
-
 /* 글로벌 스타일 */
 body{
     background-color: var(--gs08);
+    margin: 0;
 }
 header{
     position: sticky;
     top: 0;
 }
-
+header .headerTop{        
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+header div.headerTop h1{
+    max-width: 80px;
+    width: 100%;
+}
 main{
     padding: 20px 20px 20px 100px;
     box-sizing: border-box;
+}
+footer .btn_yellow{
+    max-width: 300px;
+    white-space: normal;
+    word-break: keep-all;
+    padding: 12px 15px;
+    height: auto;
+}
+footer .footer_sns ul li:hover a img{
+    color: var(--rs03);
+    background-color: var(--rs03);
+}
+
+.toast {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: var(--gs02);
+    color: var(--gs09);
+    padding: 15px 25px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+}
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 /* 데스크탑 */
 @media screen and (min-width: 1024px){
@@ -83,6 +121,20 @@ main{
         padding: 30px 0;
         background-color: var(--gs09);
         box-sizing: border-box;
+    }
+    .megaMenu,
+    .popDown {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .megaMenu.actived,
+    .popDown.actived{
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
     .megaMenu .back_btn {
         display: none;
@@ -248,7 +300,7 @@ main{
     header .popDown.login,
     header .popDown.account{
         position: absolute;
-        right: 15%;
+        right: 5%;
     }
     header .popDown > *{
         width: 100%;
@@ -351,12 +403,12 @@ main{
         width: 100%;
         background-color: var(--gs09);
         display: flex;
-        gap: 30px;
         align-items: center;
         justify-content: center;
         padding: 60px 10px;
     }
     footer > div {
+        max-width: 700px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -416,7 +468,6 @@ main{
     footer > div > section > ul > li:hover a{
         color: var(--ls03);
     }
-
 }
 /* 태블릿 */
 @media screen and (max-width: 1023px) and (min-width: 768px){
@@ -429,15 +480,6 @@ main{
         height: 40px;
         background-color: var(--gs09);
     }
-    header .headerTop{        
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-    header div.headerTop h1{
-        max-width: 80px;
-        width: 100%;
-    }
     header div.headerTop .menu{
         display: none;
     }
@@ -448,6 +490,19 @@ main{
     header div.headerTop .subMenu li:nth-child(2),
     header div.headerTop .subMenu li:nth-child(3){
         display: none;
+    }
+    .megaMenu,
+    .megaMenu.tablet{
+        position: absolute;
+        opacity: 0;
+        transform: translateX(10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .megaMenu.actived {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
     }
     header div.megaMenu:not(.search){
         position: absolute;
@@ -463,12 +518,12 @@ main{
         align-items: center;
         gap: 30px;
         padding: 30px 10px;
+        overflow-y: auto; 
     }
     header div.megaMenu:first-child{
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
     header div.megaMenu .back_btn{
         background-color: transparent;
@@ -593,7 +648,7 @@ main{
         display: flex;
     }
     header .megaMenu.tablet > button > span{
-        margin-left: 20px;
+        margin-left: 10px;
     }
     header .megaMenu.tablet ul li{
         padding: 0;
@@ -617,6 +672,10 @@ main{
         color: var(--gs02);
         min-width: 260px;
     }
+    header .megaMenu.tablet ul:last-child{
+        position: absolute;
+        bottom: 30px;
+    }
     header .megaMenu.tablet > p{
         width: 100%;
         max-width: 260px;
@@ -631,13 +690,7 @@ main{
         padding: 0;
         color: var(--gs02);
     }
-    main{
-        height: 5000px;
-    }
-    main > *{
-        display: none;
-    }
-    
+
     footer{
         width: 100%;
         background-color: var(--gs09);
@@ -706,7 +759,6 @@ main{
     footer > div > section > ul > li:hover a{
         color: var(--ls03);
     }
-
 }
 @media screen and (max-width: 767px) and (min-width: 280px){
     body main > *{
@@ -717,15 +769,6 @@ main{
         width: 100%;
         height: 40px;
         background-color: var(--gs09);
-    }
-    header .headerTop{        
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-    header div.headerTop h1{
-        max-width: 80px;
-        width: 100%;
     }
     header div.headerTop .menu{
         display: none;
@@ -738,8 +781,17 @@ main{
     header div.headerTop .subMenu li:nth-child(3){
         display: none;
     }
-    header{
-        display: none;
+    .megaMenu {
+        position: absolute;
+        opacity: 0;
+        transform: translateX(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .megaMenu.actived {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
     }
     header div.megaMenu:not(.search){
         position: absolute;
@@ -755,12 +807,12 @@ main{
         align-items: center;
         gap: 30px;
         padding: 30px 10px;
+        overflow-y: auto; 
     }
     header div.megaMenu:first-child{
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
     header div.megaMenu .back_btn{
         background-color: transparent;
@@ -820,7 +872,7 @@ main{
     }
     header div.megaMenu .section_row section{
         width: 100%;
-        min-width: 260px;
+        min-width: 240px;
         margin-bottom: 30px;
     }
     header div.megaMenu .section_row section h3{
@@ -922,6 +974,10 @@ main{
         border: none;
         padding: 0;
         color: var(--gs02);
+    }
+    header .megaMenu.tablet ul:last-child{
+        position: absolute;
+        bottom: 30px;
     }
     main{
         height: 5000px;
@@ -1002,5 +1058,4 @@ main{
     footer > div > section > ul > li:hover a{
         color: var(--ls03);
     }
-
 }

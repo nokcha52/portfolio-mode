@@ -21,26 +21,22 @@
             </h1>
             <nav class="menu label-m">
                 <ul>
-                    <li data-tabName="keyboard"><a href="javascript:void(0)">Keyboards</a></li>
-                    <li data-tabName="keycap"><a href="javascript:void(0)">Keycaps</a></li>
-                    <li data-tabName="component"><a href="javascript:void(0)">Component</a></li>
-                    <li data-tabName="about"><a href="javascript:void(0)">About</a></li>
-                    <li data-tabName="help"><a href="javascript:void(0)">Help</a></li>
+                    <li><a href="javascript:void(0)">Keyboards</a></li>
+                    <li><a href="javascript:void(0)">Keycaps</a></li>
+                    <li><a href="javascript:void(0)">Component</a></li>
+                    <li><a href="javascript:void(0)">About</a></li>
+                    <li><a href="javascript:void(0)">Help</a></li>
                 </ul>
             </nav>
             <ul class="subMenu">
-                <li data-tabName="search"><a href="javascript:void(0)"><img src="images/icon/icon_search.svg"
-                            alt="searchIcon"></a></li>
-                <li data-tabName="login"><a href="javascript:void(0)"><img src="images/icon/icon_personal.svg"
-                            alt="personalIcon"></a></li>
-                <li data-tabName="cart"><a href="mycart.html"><img src="images/icon/icon_cart.svg" alt="cartIcon"></a>
-                </li>
-                <li data-tabName="menuBar"><a href="javascript:void(0)"><img src="images/icon/icon_menuBar.svg"
-                            alt="menuBar"></a></li>
+                <li><a href="javascript:void(0)"><img src="images/icon/icon_search.svg" alt="searchIcon"></a></li>
+                <li><a href="javascript:void(0)"><img src="images/icon/icon_personal.svg" alt="personalIcon"></a></li>
+                <li><a href="mycart.html"><img src="images/icon/icon_cart.svg" alt="cartIcon"></a></li>
+                <li><a href="javascript:void(0)"><img src="images/icon/icon_menuBar.svg" alt="menuBar"></a></li>
             </ul>
         </div>
-        <div id="keyboard" class="megaMenu keyboards">
-            <button  class="back_btn">
+        <div class="megaMenu keyboards">
+            <button onclick="history.back()" class="back_btn">
                 <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                 <span class="label-l">Back</span>
             </button>
@@ -99,8 +95,8 @@
                 <span class="arrowText red label-m">View all Keyboards</span>
             </a>
         </div>
-        <div id="keycap" class="megaMenu keycaps">
-            <button  class="back_btn">
+        <div class="megaMenu keycaps">
+            <button onclick="history.back()" class="back_btn">
                 <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                 <span class="label-l">Back</span>
             </button>
@@ -154,11 +150,11 @@
                 <span class="arrowText yellow label-m">View all Keycaps</span>
             </a>
         </div>
-        <div id="component" class="megaMenu component">
-            <button  class="back_btn">
+        <div class="megaMenu component">
+            <button onclick="history.back()" class="back_btn">
                 <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                 <span class="label-l">Back</span>
-            </button>
+            </button>            
             <h2 class="title3">Components</h2>
             <div class="section_row">
                 <section class="switch">
@@ -191,11 +187,11 @@
                 <span class="arrowText green label-m">View all Components</span>
             </a>
         </div>
-        <div id="about" class="megaMenu about">
-            <button  class="back_btn">
+        <div class="megaMenu about">
+            <button onclick="history.back()" class="back_btn">
                 <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                 <span class="label-l">Back</span>
-            </button>
+            </button>            
             <h2 class="title3">About</h2>
             <div class="section_row">
                 <section class="contact">
@@ -212,8 +208,8 @@
                 </section>
             </div>
         </div>
-        <div id="help" class="megaMenu help">
-            <button  class="back_btn">
+        <div class="megaMenu help">
+            <button onclick="history.back()" class="back_btn">
                 <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                 <span class="label-l">Back</span>
             </button>
@@ -237,7 +233,7 @@
                 </section>
             </div>
         </div>
-        <div id="search" class="megaMenu search">
+        <div class="megaMenu search">
             <div class="searchBox">
                 <img src="images/icon/icon_search.svg" alt="searchIcon">
                 <input type="text" id="searchInput" placeholder="Search keyboards, switches, keycaps" class="body-l">
@@ -254,72 +250,75 @@
                 </section>
             </div>
         </div>
-        <form id="login_before" action="/login-process" method="POST" class="popDown login boxShadow">
+        <form action="/login-process" method="POST" class="popDown login boxShadow">
             <h2 class="title1">Welcome</h2>
             <p class="body-2">Log in or sign up to get started.</p>
+
             <div class="label_cont">
                 <label for="loginEmail" class="title4">Email<span>*</span></label>
                 <input type="email" id="loginEmail" name="email" placeholder="Enter your Email" class="label-m"
                     required>
             </div>
+
             <div class="label_cont">
                 <label for="loginPassword" class="title4">Password<span>*</span></label>
                 <input type="password" id="loginPassword" name="password" placeholder="Enter your password"
                     class="label-m" required>
             </div>
+
             <span class="forgotpw"><a href="password_change.html" class="label-m">Forgot password?</a></span>
+
             <button type="submit" class="btn_yellow label-m">Log in</button>
+
             <div class="signup_text label-m">
                 <span>No account?</span>
-                <span><a href="login_main.html">Sign up</a></span>
+                <span><a href="login.html">Sign up</a></span>
             </div>
         </form>
         </form>
-        <div id="login_after" class="popDown account boxShadow">
+        <div class="popDown account boxShadow">
             <p class="title3">username@gmail.com</p>
             <ul class="label-m">
                 <li><a href="my_order.html"><img src="images/icon/icon_orders.svg" alt="orderIcon"><span>My
                             Orders</span></a></li>
                 <li><a href="my_account.html"><img src="images/icon/icon_setting.svg" alt="settingIcon"><span>Account
                             Settings</span></a></li>
-                <li><a href="javascript:void(0)" class="logout_btn">
-                        <img src="images/icon/icon_logOut.svg" alt="logoutIcon">
-                        <span>Log Out</span>
-                    </a></li>
+                <li><a href="javascript:void(0)"><img src="images/icon/icon_logOut.svg" alt="logoutIcon"><span>Log
+                            Out</span></a></li>
             </ul>
         </div>
-        <div id="menuBar" class="megaMenu tablet login_before">
+        <div class="megaMenu tablet login_before">
             <button class="close_btn">
                 <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                 <span class="label-l">close</span>
             </button>
             <ul>
                 <li>
-                    <button data-target="keyboard">
+                    <button>
                         <span class="label-l">keyboards</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
                 </li>
                 <li>
-                    <button data-target="keycap">
+                    <button>
                         <span class="label-l">keycaps</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
                 </li>
                 <li>
-                    <button data-target="component">
+                    <button>
                         <span class="label-l">Components</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
                 </li>
                 <li>
-                    <button data-target="about">
+                    <button>
                         <span class="label-l">About</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
                 </li>
                 <li>
-                    <button data-target="help">
+                    <button>
                         <span class="label-l">Help</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
@@ -329,49 +328,49 @@
                 <li>
                     <a href="login_main.html">
                         <img src="images/icon/icon_personal.svg" alt="personalIcon">
-                        <span class="label-m">Log in</span>
+                        <span>Log in</span>
                     </a>
                 </li>
                 <li>
                     <a href="mycart.html">
                         <img src="images/icon/icon_cart.svg" alt="cartIcon">
-                        <span class="label-m">Shopping Cart</span>
+                        <span>Shopping Cart</span>
                     </a>
                 </li>
             </ul>
         </div>
-        <div id="tablet_menu_after" class="megaMenu tablet login_after">
+        <div class="megaMenu tablet login_after">
             <button class="close_btn">
                 <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                 <span class="label-l">close</span>
             </button>
             <ul>
                 <li>
-                    <button data-target="keyboard">
+                    <button>
                         <span class="label-l">keyboards</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
                 </li>
                 <li>
-                    <button data-target="keycap">
+                    <button>
                         <span class="label-l">keycaps</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
                 </li>
                 <li>
-                    <button data-target="component">
+                    <button>
                         <span class="label-l">Components</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
                 </li>
                 <li>
-                    <button data-target="about">
+                    <button>
                         <span class="label-l">About</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
                 </li>
                 <li>
-                    <button data-target="help">
+                    <button>
                         <span class="label-l">Help</span>
                         <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                     </button>
@@ -392,8 +391,8 @@
                 </li>
             </ul>
         </div>
-        <div id="tablet_account_detail" class="megaMenu tablet login_after">
-            <button  class="back_btn">
+        <div class="megaMenu tablet login_after">
+            <button onclick="history.back()" class="back_btn">
                 <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
                 <span class="label-l">Back</span>
             </button>
@@ -432,7 +431,7 @@
             <h2 class="heading2">From Mode.<br>
                 with love</h2>
             <p class="body-l">Product updates, news, and launches</p>
-            <form method="POST" class="subscribe-form">
+            <form action="/subscribe-process" method="POST" class="subscribe-form">
                 <input type="email" id="emailInput" placeholder="Enter your email address">
                 <button class="btn_yellow label-s">Subscribe</button>
             </form>
@@ -477,5 +476,5 @@
         </div>
     </footer>
 </body>
-<div id="toast" class="toast label-m"></div>
+
 </html>
