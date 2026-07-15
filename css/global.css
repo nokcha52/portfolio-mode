@@ -1,4 +1,6 @@
-/* 글로벌 스타일 */
+/* ============================================
+   전체 공통 (모든 화면 크기)
+   ============================================ */
 body{
     background-color: var(--gs08);
     margin: 0;
@@ -6,6 +8,10 @@ body{
 header{
     position: sticky;
     top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 40px;
+    background-color: var(--gs09);
 }
 header .headerTop{        
     padding: 10px 20px;
@@ -16,10 +22,47 @@ header div.headerTop h1{
     max-width: 80px;
     width: 100%;
 }
-main{
-    padding: 20px 20px 20px 100px;
-    box-sizing: border-box;
+body main > *{
+    max-width: 1100px;
+    margin: 0 auto;
 }
+main{
+    padding: 20px 10px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* search 박스는 3개 breakpoint 전부 동일해서 공통으로 뺌 */
+header .megaMenu.search .searchBox{
+    max-width: 870px;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid var(--gs07);
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+header .megaMenu.search .searchBox input{
+    width: 90%;
+    height: 50px;
+    border: none;
+}
+header .megaMenu.search .searchBox input::placeholder{
+    color: var(--gs06);
+}
+header .megaMenu.search .searchBox .clear_btn{
+    background-color: transparent;
+    border: none;
+}
+header .megaMenu.search .searchBox .clear_btn img{
+    opacity: 0.7;
+    transform: translateY(1px);
+}
+
 footer .btn_yellow{
     max-width: 300px;
     white-space: normal;
@@ -50,17 +93,16 @@ footer .footer_sns ul li:hover a img{
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
-/* 데스크탑 */
+
+
+/* ============================================
+   데스크탑 전용 (1024px 이상)
+   ============================================ */
 @media screen and (min-width: 1024px){
-    body main > *,
-    header > div.headerTop{
+    header > div.headerTop,
+    main{
         max-width: 1100px;
         margin: 0 auto;
-    }
-    header{
-        width: 100%;
-        height: 40px;
-        background-color: var(--gs09);
     }
     header div.headerTop{        
         justify-content: space-between;
@@ -152,7 +194,6 @@ footer .footer_sns ul li:hover a img{
         gap: 40px 5%;
         list-style: none;
     }
-
     .megaMenu > ul li{
         width: 30%;
         min-width: 0;
@@ -259,43 +300,25 @@ footer .footer_sns ul li:hover a img{
     header .section_row .megaMenusection ul{
         list-style: none;
     }
-    header .megaMenu.search .searchBox{
+    #searchNoResult{
         max-width: 870px;
-        width: 100%;
-        margin: 0 auto;
-        border: 2px solid var(--gs07);
-        border-radius: 10px;
-        display: flex;
-        gap: 10px;
-        padding: 0 20px;
-        box-sizing: border-box;
-        margin-bottom: 30px;
-    }
-    header .megaMenu.search .searchBox input{
-        width: 90%;
-        height: 50px;
-        border: none;
-    }
-    header .megaMenu.search .searchBox input::placeholder{
-        color: var(--gs06);
-    }
-    header .megaMenu.search .searchBox .clear_btn{
-        background-color: transparent;
-        border: none;
-    }
-    header .megaMenu.search .searchBox .clear_btn img{
-        opacity: 0.7;
-        transform: translateY(1px);
+        margin: 10px auto 30px;
+        color: var(--gs05);
     }
     header .popDown{
         width: 360px;
         background-color: var(--gs09);
         display: flex;
         flex-direction: column;
-        gap: 40px;
         padding: 40px;
         box-sizing: content-box;
         border-radius: 10px;
+    }
+    header .popDown:not(.account){
+        gap: 40px;
+    }
+    header .popDown.account{
+        gap: 10px;
     }
     header .popDown.login,
     header .popDown.account{
@@ -344,8 +367,12 @@ footer .footer_sns ul li:hover a img{
     header .popDown div.signup_text > span:last-child a{
         color: var(--gs02);
     }
-    header .popDown.account > p{
+    header .popDown.account > p.title2{
+        color: var(--bs02);
+    }
+    header .popDown.account > p.title4{
         color: var(--bs04);
+        margin-bottom: 10px;
     }
     header .popDown.account ul li:not(:last-child){
         margin-bottom: 20px;
@@ -385,19 +412,6 @@ footer .footer_sns ul li:hover a img{
     }
     input:hover::placeholder{    
         color: var(--bs06);
-    }
-    main{
-        display: block;
-        height: 5000px;
-    }
-    main .main_banner{
-        height: 600px;
-        background: url(../images/main_page/banner.webp) no-repeat center/cover;
-        border-radius: 20px;
-    }
-    main .main_banner hgroup{
-        width: 100%;
-        text-align: center;
     }
     footer{
         width: 100%;
@@ -442,7 +456,6 @@ footer .footer_sns ul li:hover a img{
     footer > section > p{
         color: var(--gs02);
     }
-    
     footer > div > section {
         min-width: 150px;
         text-align: center;
@@ -469,17 +482,12 @@ footer .footer_sns ul li:hover a img{
         color: var(--ls03);
     }
 }
-/* 태블릿 */
-@media screen and (max-width: 1023px) and (min-width: 768px){
-    body main > *{
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-    header{
-        width: 100%;
-        height: 40px;
-        background-color: var(--gs09);
-    }
+
+
+/* ============================================
+   태블릿 + 모바일 공통 (1023px 이하)
+   ============================================ */
+@media screen and (max-width: 1023px){
     header div.headerTop .menu{
         display: none;
     }
@@ -491,11 +499,9 @@ footer .footer_sns ul li:hover a img{
     header div.headerTop .subMenu li:nth-child(3){
         display: none;
     }
-    .megaMenu,
-    .megaMenu.tablet{
+    .megaMenu {
         position: absolute;
         opacity: 0;
-        transform: translateX(10px);
         pointer-events: none;
         transition: opacity 0.3s ease, transform 0.3s ease;
     }
@@ -562,10 +568,6 @@ footer .footer_sns ul li:hover a img{
         max-width: 260px;
         height: 100px;
     }
-    header div.megaMenu .arrow_go{
-        display: flex;
-        gap: 10px;
-    }
     header div.megaMenu > ul li div.textBox{
         display: flex;
         justify-content: space-between;
@@ -583,7 +585,6 @@ footer .footer_sns ul li:hover a img{
     }
     header div.megaMenu .section_row section{
         width: 100%;
-        min-width: 260px;
         margin-bottom: 30px;
     }
     header div.megaMenu .section_row section h3{
@@ -603,34 +604,6 @@ footer .footer_sns ul li:hover a img{
         position: absolute;
         top: 40px;
     }
-    header .megaMenu.search .searchBox{
-        max-width: 870px;
-        width: 100%;
-        margin: 0 auto;
-        border: 2px solid var(--gs07);
-        border-radius: 10px;
-        display: flex;
-        gap: 10px;
-        padding: 0 20px;
-        box-sizing: border-box;
-        margin-bottom: 30px;
-    }
-    header .megaMenu.search .searchBox input{
-        width: 90%;
-        height: 50px;
-        border: none;
-    }
-    header .megaMenu.search .searchBox input::placeholder{
-        color: var(--gs06);
-    }
-    header .megaMenu.search .searchBox .clear_btn{
-        background-color: transparent;
-        border: none;
-    }
-    header .megaMenu.search .searchBox .clear_btn img{
-        opacity: 0.7;
-        transform: translateY(1px);
-    }
     header .megaMenu.search .quicklink{
         max-width: 870px;
         width: 100%;
@@ -646,9 +619,6 @@ footer .footer_sns ul li:hover a img{
         border: none;
         text-align: left;
         display: flex;
-    }
-    header .megaMenu.tablet > button > span{
-        margin-left: 10px;
     }
     header .megaMenu.tablet ul li{
         padding: 0;
@@ -690,22 +660,29 @@ footer .footer_sns ul li:hover a img{
         padding: 0;
         color: var(--gs02);
     }
-
     footer{
         width: 100%;
         background-color: var(--gs09);
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
         padding: 60px 10px;
     }
-    footer > div{
+    footer > div {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1;
     }
-    footer > *{
-        min-height: 31 5px;
+    footer > *:not(.footer_front){
+        min-height: 315px;
+    }
+    footer > section {
+        min-width: 260px;
+        height: 100%;
     }
     footer > section > *,
     footer > section form > *{
@@ -726,13 +703,6 @@ footer .footer_sns ul li:hover a img{
     }
     footer > section > p{
         color: var(--gs02);
-    }
-   footer > div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        flex: 1;
     }
     footer > div > section {
         min-width: 200px;
@@ -760,302 +730,29 @@ footer .footer_sns ul li:hover a img{
         color: var(--ls03);
     }
 }
-@media screen and (max-width: 767px) and (min-width: 280px){
-    body main > *{
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-    header{
-        width: 100%;
-        height: 40px;
-        background-color: var(--gs09);
-    }
-    header div.headerTop .menu{
-        display: none;
-    }
-    header div.headerTop .subMenu{
-        display: flex;
-        gap: 20px;
-    }
-    header div.headerTop .subMenu li:nth-child(2),
-    header div.headerTop .subMenu li:nth-child(3){
-        display: none;
-    }
-    .megaMenu {
-        position: absolute;
-        opacity: 0;
-        transform: translateX(-10px);
-        pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    .megaMenu.actived {
-        opacity: 1;
-        transform: translateX(0);
-        pointer-events: auto;
-    }
-    header div.megaMenu:not(.search){
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        max-width: 360px;
-        min-width: 260px;
-        height: 100dvh;
-        background-color: var(--gs09);
-        display: flex;
-        flex-direction: column;        
-        align-items: center;
-        gap: 30px;
-        padding: 30px 10px;
-        overflow-y: auto; 
-    }
-    header div.megaMenu:first-child{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    header div.megaMenu .back_btn{
-        background-color: transparent;
-        border: none;
-        width: 100%;
-        text-align: left;
-    }
-    header div.megaMenu .back_btn img{
-        transform: rotate(180deg);
-    }
-    header div.megaMenu .back_btn span{
-        margin-left: 10px;
-        color: var(--gs02);
-    }
-    header div.megaMenu h2{
-        width: 100%;
-        padding-left: 20px;
-        text-align: left;
-        color: var(--gs04);
-    }
-    header div.megaMenu > ul > li{
-        max-width: 260px;
-        padding: 10px;
-    }
-    header div.megaMenu > ul > li:not(:last-child){
-        margin-bottom: 30px;
-    }
-    header div.megaMenu > ul figure{
-        margin-bottom: 15px;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    header div.megaMenu > ul img{
-        display: block;
-        width: 100%;
-        max-width: 260px;
-        height: 100px;
-    }
-    header div.megaMenu .arrow_go{
-        display: flex;
-        gap: 10px;
-    }
-    header div.megaMenu > ul li div.textBox{
-        display: flex;
-        justify-content: space-between;
-    }
-    header div.megaMenu > ul li div.textBox span{
-        color: var(--gs03);
-        text-align: center;
-    }
-    header div.megaMenu.keycaps ul li figure img{
-        transform: scale(1.4);
-    }
-    header div.megaMenu.keycaps ul li div.textBox span{
-        width: 100%;
-        text-align: center;
+/* ============================================
+   태블릿 전용 (768px ~ 1023px) 
+   ============================================ */
+@media screen and (max-width: 1023px) and (min-width: 768px){
+    .megaMenu{
+        transform: translateX(10px);
     }
     header div.megaMenu .section_row section{
-        width: 100%;
+        min-width: 260px;
+    }
+    header .megaMenu.tablet > button > span{
+        margin-left: 10px;
+    }
+}
+/* ============================================
+   모바일 전용 (280px ~ 767px) 
+   ============================================ */
+@media screen and (max-width: 767px) and (min-width: 280px){
+    header div.megaMenu .section_row section{
         min-width: 240px;
-        margin-bottom: 30px;
-    }
-    header div.megaMenu .section_row section h3{
-        margin-bottom: 30px;
-        color: var(--gs03);
-    }
-    header div.megaMenu .section_row section ul li:not(:last-child){
-        margin-bottom: 20px;
-    }
-    header div.megaMenu .section_row section ul li a{
-        color: var(--gs02);
-    }
-    header div.megaMenu.search{
-        width: 100%;
-        background-color: var(--gs09);
-        padding: 30px 20px;
-        position: absolute;
-        top: 40px;
-    }
-    header .megaMenu.search .searchBox{
-        max-width: 870px;
-        width: 100%;
-        margin: 0 auto;
-        border: 2px solid var(--gs07);
-        border-radius: 10px;
-        display: flex;
-        gap: 10px;
-        padding: 0 20px;
-        box-sizing: border-box;
-        margin-bottom: 30px;
-    }
-    header .megaMenu.search .searchBox input{
-        width: 90%;
-        height: 50px;
-        border: none;
-    }
-    header .megaMenu.search .searchBox input::placeholder{
-        color: var(--gs06);
-    }
-    header .megaMenu.search .searchBox .clear_btn{
-        background-color: transparent;
-        border: none;
-    }
-    header .megaMenu.search .searchBox .clear_btn img{
-        opacity: 0.7;
-        transform: translateY(1px);
-    }
-    header .megaMenu.search .quicklink{
-        max-width: 870px;
-        width: 100%;
-        margin: 0 auto;
-    }
-    header .popDown{
-        display: none;
-    }
-    header .megaMenu.tablet > button,
-    header .megaMenu.tablet ul li button{
-        width: 100%;
-        background-color: transparent;
-        border: none;
-        text-align: left;
-        display: flex;
     }
     header .megaMenu.tablet > button > span{
         margin-left: 20px;
     }
-    header .megaMenu.tablet ul li{
-        padding: 0;
-    }
-    header .megaMenu.tablet ul li button{
-        justify-content: space-between;
-        align-items: center;
-        min-width: 260px;
-    }
-    header .megaMenu.tablet ul li button:not(:last-child){
-        margin-bottom: 30px;
-    }
-    header .megaMenu.tablet ul li img{
-        width: 24px;
-        height: 24px;
-    }
-    header .megaMenu.tablet ul li > a{
-        display: flex;
-        align-items: left;
-        gap: 20px;
-        color: var(--gs02);
-        min-width: 260px;
-    }
-    header .megaMenu.tablet > p{
-        width: 100%;
-        max-width: 260px;
-    }
-    header .log_out_btn{
-        max-width: 260px;
-        width: 100%;
-    }
-    header .log_out_btn button{
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        color: var(--gs02);
-    }
-    header .megaMenu.tablet ul:last-child{
-        position: absolute;
-        bottom: 30px;
-    }
-    main{
-        height: 5000px;
-    }
-    main > *{
-        display: none;
-    }
-    
-    footer{
-        width: 100%;
-        background-color: var(--gs09);
-        display: flex;        
-        flex-wrap: wrap;
-        gap: 30px;
-        align-items: center;
-        justify-content: center;
-        padding: 60px 10px;
-    }
-    footer > div{
-        display: flex;
-        
-    }
-    footer > *{
-        min-height: 315px;
-    }
-    footer > section {
-        min-width: 260px;
-    }
-    footer > section > *,
-    footer > section form > *{
-        display: block;
-        width: 100%;
-    }
-    footer > section > *:not(:last-child){
-        margin-bottom: 20px;
-    }
-    footer > section > h2{
-        color: var(--gs03);
-    }
-    footer > section form > input{
-        padding: 15px;
-        border: 1px solid var(--gs05);
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-    footer > section > p{
-        color: var(--gs02);
-    }
-   footer > div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        flex: 1;
-    }
-    footer > div > section {
-        min-width: 200px;
-        text-align: center;
-    }
-    footer > div> section > h3{
-        color: var(--gs03);
-        margin-bottom: 30px;
-    }
-    footer > div > section:not(:last-child) > ul > li,
-    footer > div > section:last-child p{
-        margin-bottom: 20px;
-    }
-    footer > div > section:last-child > ul > li {
-        display: inline-block;
-    }
-    footer > div > section:last-child > ul > li:not(:first-child){
-        margin-left: 30px
-    }
-    footer > div > section > ul > li > a{
-        color: var(--gs01);
-        transition: color 0.3s ease;
-    }
-    footer > div > section > ul > li:hover a{
-        color: var(--ls03);
-    }
+
 }

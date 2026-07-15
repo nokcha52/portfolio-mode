@@ -64,7 +64,7 @@ function loginForm(){
 
         var $btn = $(this).find("button[type='submit']");
         var originalText = $btn.text();
-        $btn.text("로그인 중...").prop("disabled", true);
+        $btn.text("Logging in...").prop("disabled", true);
 
         setTimeout(function(){
             onLoginSuccess($("#loginEmail").val());
