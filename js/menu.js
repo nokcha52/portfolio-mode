@@ -210,3 +210,15 @@ function subscribeForm(){
         $input.prop("disabled", true).val("");
     });
 }
+
+document.querySelectorAll('.delayLink').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const targetUrl = link.href;
+
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 6000);
+    });
+});

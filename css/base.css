@@ -374,6 +374,52 @@
     background-color: var(--bs06);
     color: var(--gs01);
 }
+/* 탭버튼 스타일 */
+.tab_btn{
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: var(--font-label);
+    font-weight: 700;
+    font-size: var(--fs-12);
+    line-height: 14px;
+}
+.tab_btn.yellow{
+    background-color: var(--ys07);
+    color: var(--rs03);
+}
+.tab_btn.yellow:hover{
+    background-color: var(--ys06);
+    color: var(--ys02);
+}
+.tab_btn.yellow.active{
+    background-color: var(--ys05);
+    color: var(--rs02);
+}
+.tab_btn.blue{
+    background-color: var(--bs07);
+    color: var(--bs03);
+}
+.tab_btn.blue:hover{
+    background-color: var(--bs06);
+    color: var(--bs02);
+}
+.tab_btn.blue.active{
+    background-color: var(--bs03);
+    color: var(--gs09);
+}
+.tab_btn.trans{
+    background-color: none;
+    color: var(--gs02);
+}
+.tab_btn.trans:hover{
+    background-color: var(--ys07);
+    color: var(--rs03);
+}
+.tab_btn.trans.active{
+    background-color: var(--ys08);
+    color: var(--rs03);
+}
 
 /* 박스 그림자 */
 .boxShadow{

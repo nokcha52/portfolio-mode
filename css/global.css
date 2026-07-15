@@ -1,6 +1,9 @@
 /* ============================================
    전체 공통 (모든 화면 크기)
    ============================================ */
+html {
+    overflow-y: scroll;
+}
 body{
     background-color: var(--gs08);
     margin: 0;
@@ -603,6 +606,9 @@ footer .footer_sns ul li:hover a img{
         padding: 30px 20px;
         position: absolute;
         top: 40px;
+    }
+    header .megaMenu{
+        scrollbar-width: none;
     }
     header .megaMenu.search .quicklink{
         max-width: 870px;

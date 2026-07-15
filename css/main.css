@@ -1,0 +1,221 @@
+main{
+    gap: 50px;
+}
+section.text_section{    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.banner{
+    background-image: url(../images/main_page/banner.webp);
+    background-size: cover;
+    background-position: center;
+}
+.card_slot_section{
+    position: relative;
+    width: 100%;
+}
+.card_slot_section h2{
+    color: var(--gs04);
+    margin-bottom: 30px;
+}
+.card_slot_section > a.arrow_go{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.card_slot_section .card_slot_cont,
+.card_slot_section .card_slot_cont_news{    
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.card_slot_section .card_slot_cont .card_slot_product,
+.card_slot_section .card_slot_cont_news .card_slot_news{
+    width: 32%;
+    background-color: var(--gs09);
+    padding: 20px;
+    border-radius: 20px;
+    min-width: 300px;
+}
+.card_slot_section .card_slot_cont .card_slot_product:hover img,
+.card_slot_cont_news .card_slot_news:hover img{
+    transform: scale(1.1);
+}
+.card_slot_section .card_slot_cont .card_slot_product figure{
+    padding: 10px 10px 20px 10px;
+}
+.card_slot_section .card_slot_cont .card_slot_product figure img{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.card_slot_section .card_slot_cont .card_slot_product .price_align{
+    margin: 10px 0 20px 0;
+}
+.card_slot_section .card_slot_cont .card_slot_product .price_align span:first-child{
+    color: var(--gs05);
+}
+.card_slot_section .card_slot_cont .card_slot_product .price_align span:last-child{
+    color: var(--gs03);
+}
+.card_slot_section .card_slot_cont .card_slot_product h3{
+    margin-bottom: 10px;
+    color: var(--ys04);
+}
+.card_slot_section .card_slot_cont .card_slot_product p{
+    color: var(--gs01);
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card_slot_section .card_slot_cont .card_slot_product ul{
+    margin-bottom: 20px;
+}
+.card_slot_section .card_slot_cont .card_slot_product ul li{
+    /* height: 24px; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card_slot_section .card_slot_cont .card_slot_product ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.card_slot_section .card_slot_inner{
+    width: 100%;
+    padding: 30px 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.card_slot_section .card_slot_inner figure{
+    min-width: 200px;
+    width: 50%;
+}
+.card_slot_section .card_slot_inner figure img{
+    width: 100%;    
+    max-width: 500px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.card_slot_section .card_slot_inner .textBox{
+    width: 100%;
+    max-width: 450px;
+    min-width: 200px;
+}
+.card_slot_section .card_slot_inner .textBox h3{
+    margin-bottom: 20px;
+    color: var(--ys04);
+}
+.card_slot_section .card_slot_inner .textBox p{
+    margin-bottom: 30px;
+}
+.card_slot_section .card_slot_inner .textBox ul{
+    margin-bottom: 30px;
+}
+.card_slot_section .card_slot_inner .textBox ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.card_slot_section .card_slot_inner .textBox a.btn_yellow{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.card_slot_section .card_slot_cont_news .card_slot_news figure{
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card_slot_section .card_slot_cont_news .card_slot_news figure img{
+    width: 100%;
+    max-height: 145px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.card_slot_section .card_slot_cont_news .card_slot_news .text_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+.card_slot_section .card_slot_cont_news .card_slot_news .text_cont > span{
+    color: var(--gs05);
+}
+.card_slot_section .card_slot_cont_news .card_slot_news h3{
+    color: var(--ls02);
+}
+.card_slot_section .card_slot_cont_news .card_slot_news p{
+    color: var(--gs01);
+}
+@media screen and (max-width: 1023px) and (min-width: 768px){
+    .card_slot_section.row_align .card_slot_inner{
+        flex-wrap: nowrap;
+    }
+    .card_slot_section.row_align .card_slot_inner figure{
+        max-width: 400px;
+        min-width: 300px;
+    }
+    .card_slot_section.row_align .card_slot_inner figure img{
+        width: 100%;
+        /* max-height: 200px; */
+    }
+    .card_slot_section.row_align .card_slot_inner .textBox{
+        max-width: 400px;
+        min-width: 300px;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 690px){
+    .banner{
+        height: 500px;
+    }
+    .card_slot_section.row_align .card_slot_inner figure{
+        width: 70%;
+        min-width: 300px;
+    }
+    .card_slot_section.row_align .card_slot_inner figure img{
+        width: 100%;
+        height: 100%;
+    }
+    .card_slot_section.row_align .card_slot_inner .textBox{
+        min-width: 300px;
+    }    
+    .title2{
+        font-size: 24px;
+    }
+    .title3{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 689px){
+    .card_slot_section.row_align .card_slot_inner figure {
+        text-align: center;
+        width: 100%;
+    }
+    .card_slot_section.row_align .card_slot_inner figure img{
+        width: 100%;
+        /* height: 250px; */
+    }
+    .title2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 400px){    
+    .card_slot_section > .arrow_go{
+        display: none;
+    }
+}

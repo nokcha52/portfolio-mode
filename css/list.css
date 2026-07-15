@@ -1,0 +1,149 @@
+main{
+    gap: 50px;
+}
+.banner{
+    background-image: url(../images/keyboards/banner.webp);
+}
+.banner .banner_text_section{
+    text-align: right;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.product_list{
+    width: 100%;
+    position: relative;
+}
+.product_list .list_head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.product_list .list_head div.list_controls{
+    display: flex;
+    gap: 20px;
+}
+.product_list .list_head div.list_controls button{
+    border: none;
+}
+.product_list .searchBox,
+.product_list .sortBox {
+    display: none;
+}
+.product_list .searchBox.active,
+.product_list .sortBox.active {
+    display: flex;
+}
+.product_list .sortBox {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background-color: var(--gs09);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 150px;
+}
+
+.product_list .searchBox {
+    gap: 20px;
+    background-color: var(--gs09);
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+.product_list .searchBox.actived{
+    border: none;
+}
+.product_list .searchBox input{
+    border: none;
+}
+.product_list .searchBox button{
+    border: none;
+    background-color: transparent;
+}
+.product_list .sortBox{
+    background-color: var(--gs09);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 150px;
+}
+.product_list .sortBox button{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+.product_list .sortBox .optionList{
+    text-align: center;
+}
+.product_list .sortBox .optionList li{
+    margin: 10px 0;
+    padding: 10px;
+}
+.product_list .sortBox .optionList li:hover{
+    background-color: var(--bs06);
+    color: var(--gs09);
+}
+.product_list > ul{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10px;
+}
+.product_list > ul li{
+    width: 32%;
+}
+.product_list > ul li .card_slot_cont{
+    background-color: var(--gs09);
+    border-radius: 20px;
+    overflow: hidden;
+    min-width: 280px;
+}
+.product_list > ul li .card_slot_cont figure{
+    width: 100%;
+    background-color: var(--gs08);
+    padding: 30px;
+}
+.product_list > ul li .card_slot_cont figure img:first-child{
+    object-position: center;
+}
+.product_list > ul li .card_slot_cont figure img{
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+}
+.product_list > ul li .card_slot_cont .text_cont{
+    padding: 20px;
+    position: relative;
+}
+.product_list > ul li .card_slot_cont .text_cont h3{
+    color: var(--ls02);
+    margin-bottom: 20px;
+}
+.product_list > ul li .card_slot_cont .text_cont >span{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: var(--gs03);
+}
+.product_list > ul li .card_slot_cont .text_cont p{
+    margin-bottom: 30px;
+    color: var(--gs01);
+}
+.product_list > ul li .card_slot_cont .text_cont .span_align{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.product_list > ul li .card_slot_cont .text_cont .span_align span:first-child{
+    color: var(--gs04);
+}
+.product_list > ul li .card_slot_cont .text_cont .span_align span:last-child{
+    color: var(--gs01);
+}

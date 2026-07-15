@@ -1,0 +1,61 @@
+.banner{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+    border-radius: 20px;  
+    background-size: cover;
+    background-position: center;
+}
+.banner .banner_text_section{
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+.banner .banner_text_section h2{
+    margin-bottom: 10px;
+    color: var(--gs07);
+}
+.banner .banner_text_section p{
+    margin-bottom: 20px;
+    color: var(--gs08);
+}
+.banner .banner_text_section button{
+    width: 200px;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 767px){
+    .banner .banner_text_section h2{
+        margin-bottom: 5px;
+    }
+    .banner .banner_text_section p{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 690px){
+    .banner{
+        height: 500px;
+    }
+}
+@media screen and (max-width: 689px) and (min-width:500px){
+    .banner{
+        height: 400px;
+    }
+}
+@media screen and (max-width: 499px) and (min-width:300px){
+    .banner{
+        height: 300px;
+    }
+    .banner .banner_text_section h2{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 299px){
+    .banner{
+        height: 200px;
+    }
+    .banner .banner_text_section h2{
+        font-size: 20px;
+    }
+}

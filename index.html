@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/menu.js"></script>
@@ -70,8 +71,8 @@
                             <img src="images/header/keyboards_4temp.jpg" alt="tempoImg">
                         </figure>
                         <div class="textBox">
-                            <span class="label-m">SixtyFive</span>
-                            <span class="body-m">65%</span>
+                            <span class="label-m">Tempo</span>
+                            <span class="body-m">60%</span>
                         </div>
                     </a></li>
                 <li><a href="keyboard_envoy_detail.html">
@@ -83,17 +84,17 @@
                             <span class="body-m">65%</span>
                         </div>
                     </a></li>
-                <li><a href="keyboard_tempo_detail.html">
+                <li><a href="keyboard_sixtyFive_detail.html">
                         <figure>
                             <img src="images/header/keyboards_6six.jpg" alt="sixtyfiveImg">
                         </figure>
                         <div class="textBox">
-                            <span class="label-m">Tempo</span>
-                            <span class="body-m">60%</span>
+                            <span class="label-m">SixtyFive</span>
+                            <span class="body-m">65%</span>
                         </div>
                     </a></li>
             </ul>
-            <a href="keycaps_list.html" class="arrow_go">
+            <a href="keyboards_list.html" class="arrow_go">
                 <div class="icon_arrow_bg red">
                     <i class="icon_arrow red"></i>
                 </div>
@@ -165,10 +166,10 @@
                 <section class="switch">
                     <h3 class="title4">Switches</h3>
                     <ul class="body-l">
-                        <li><a href="switch_obscura.html">Obscura Linear</a></li>
-                        <li><a href="switch_tommorow.html">Tomorrow Tactile</a></li>
-                        <li><a href="switch_anthracite.html">Anthracite Silent</a></li>
-                        <li><a href="switch_lotus.html">Lotus Linear</a></li>
+                        <li><a href="switch_obscura_detail.html">Obscura Linear</a></li>
+                        <li><a href="switch_tommorow_detail.html">Tomorrow Tactile</a></li>
+                        <li><a href="switch_anthracite_detail.html">Anthracite Silent</a></li>
+                        <li><a href="switch_lotus_detail.html">Lotus Linear</a></li>
                     </ul>
                 </section>
                 <section class="extraPart">
@@ -208,7 +209,7 @@
                 <section class="notes">
                     <h3 class="title4">Notes</h3>
                     <ul class="body-l">
-                        <li><a href="note_list.html">News</a></li>
+                        <li><a href="notes_list.html">News</a></li>
                     </ul>
                 </section>
             </div>
@@ -223,7 +224,7 @@
                 <section class="contact">
                     <h3 class="title4">Contact</h3>
                     <ul class="body-l">
-                        <li><a href="contact_suport_main.html">Contact Support</a></li>
+                        <li><a href="contact_support_main.html">Contact Support</a></li>
                     </ul>
                 </section>
                 <section class="guides">
@@ -424,14 +425,16 @@
     </header>
     <main>
         <div class="banner">
-            <h2>The Encore</h2>
-            <p>Anouncing 2026</p>
-            <button>Learn more</button>
+            <section class="banner_text_section">
+                <h2 class="title1">The Encore</h2>
+                <p class="body-l">Anouncing 2026</p>
+                <button class="btn_yellow label-m">Learn more</button>
+            </section>
         </div>
-        <section>
-            <h2>Design Inspire</h2>
-            <p>Build your deram keyboard, so you can get your best work done</p>
-            <a href="keycaps_list.html" class="arrow_go">
+        <section class="text_section">
+            <h2 class="title1">Design Inspire</h2>
+            <p class="body-l">Build your deram keyboard, so you can get your best work done</p>
+            <a href="keyboards_list.html" class="arrow_go">
                 <div class="icon_arrow_bg blue">
                     <i class="icon_arrow blue"></i>
                 </div>
@@ -439,8 +442,8 @@
             </a>
         </section>
         <section class="card_slot_section">
-            <h2>Our keyboards</h2>
-            <a href="keycaps_list.html" class="arrow_go">
+            <h2 class="heading3">Our keyboards</h2>
+            <a href="keyboards_list.html" class="arrow_go">
                 <div class="icon_arrow_bg yellow">
                     <i class="icon_arrow yellow"></i>
                 </div>
@@ -449,7 +452,7 @@
             <div class="card_slot_cont">
                 <article class="card_slot_product">
                     <figure>
-                        <img src="images/main_page/keyboard1.png" alt="">
+                        <img src="images/main_page/keyboard1.png" alt="encoreImg">
                     </figure>
                     <div class="price_align">
                         <span class="label-m">From</span>
@@ -461,15 +464,15 @@
                     <ul class="body-l">
                         <li>
                             <img src="images/icon/icon_keyboard.svg" alt="keyboardIcon">
-                            <p>65% Layout</p>
+                            <span>65% Layout</span>
                         </li>
                         <li>
                             <img src="images/icon/icon_tag.svg" alt="tagIcon">
-                            <p>Natural hardwoods</p>
+                            <span>Natural hardwoods</span>
                         </li>
                         <li>
                             <img src="images/icon/icon_layer.svg" alt="layerIcon">
-                            <p>Crown Mounting System</p>
+                            <span>Crown Mounting System</span>
                         </li>
                     </ul>
                     <a href="keyboard_encore_detail.html" class="arrow_go">
@@ -481,26 +484,27 @@
                 </article>
                 <article class="card_slot_product">
                     <figure>
-                        <img src="images/main_page/keyboard2.png" alt="">
+                        <img src="images/main_page/keyboard2.png" alt="sonnetImg">
                     </figure>
                     <div class="price_align">
                         <span class="label-m">From</span>
                         <span class="label-m">$279.00</span>
                     </div>
                     <h3 class="title3">Sonnet</h3>
-                    <p class="body-l">A dramatic sculpted side profile, a contrasting accent bar, and an internal design that offers versatile typing feel and sound.</p>
+                    <p class="body-l">A dramatic sculpted side profile, a contrasting accent bar, and an internal design
+                        that offers versatile typing feel and sound.</p>
                     <ul class="body-l">
                         <li>
                             <img src="images/icon/icon_keyboard.svg" alt="keyboardIcon">
-                            <p>75% Layout</p>
+                            <span>75% Layout</span>
                         </li>
                         <li>
                             <img src="images/icon/icon_tag.svg" alt="tagIcon">
-                            <p>Sculpted side profile</p>
+                            <span>Sculpted side profile</span>
                         </li>
                         <li>
                             <img src="images/icon/icon_layer.svg" alt="layerIcon">
-                            <p>Mounting Block System</p>
+                            <span>Mounting Block System</span>
                         </li>
                     </ul>
                     <a href="keyboard_sonnet_detail.html" class="arrow_go">
@@ -512,26 +516,27 @@
                 </article>
                 <article class="card_slot_product">
                     <figure>
-                        <img src="images/main_page/keyboard3.png" alt="">
+                        <img src="images/main_page/keyboard3.png" alt="sixtyfiveImg">
                     </figure>
                     <div class="price_align">
                         <span class="label-m">From</span>
                         <span class="label-m">$270.00</span>
                     </div>
                     <h3 class="title3">SixtyFive</h3>
-                    <p class="body-l">Classic Mode design language, understated details, and a defining magnetic accent.Easy to build and tune.</p>
+                    <p class="body-l">Classic Mode design language, understated details, and a defining magnetic
+                        accent.Easy to build and tune.</p>
                     <ul class="body-l">
                         <li>
                             <img src="images/icon/icon_keyboard.svg" alt="keyboardIcon">
-                            <p>65% Layout</p>
+                            <span>65% Layout</span>
                         </li>
                         <li>
                             <img src="images/icon/icon_tag.svg" alt="tagIcon">
-                            <p>Additional Walnut Accent</p>
+                            <span>Additional Walnut Accent</span>
                         </li>
                         <li>
                             <img src="images/icon/icon_layer.svg" alt="layerIcon">
-                            <p>Mounting Block Pack</p>
+                            <span>Mounting Block pack</span>
                         </li>
                     </ul>
                     <a href="keyboard_sixtyFive_detail.html" class="arrow_go">
@@ -543,6 +548,256 @@
                 </article>
             </div>
         </section>
+        <section class="card_slot_section">
+            <h2 class="heading3">Other Products</h2>
+            <a href="components_list.html" class="arrow_go">
+                <div class="icon_arrow_bg yellow">
+                    <i class="icon_arrow yellow"></i>
+                </div>
+                <span class="arrowText yellow label-m">View all products</span>
+            </a>
+            <div class="card_slot_cont">
+                <article class="card_slot_product">
+                    <figure>
+                        <img src="images/main_page/product1.png" alt="anthraciteImg">
+                    </figure>
+                    <div class="price_align">
+                        <span class="label-m">$59.99</span>
+                    </div>
+                    <h3 class="title3">Anthracite Keycaps</h3>
+                    <p class="body-l">Off-whites and cool grays inspired by modern urban architecture.</p>
+                    <ul class="body-l">
+                        <li>
+                            <img src="images/icon/icon_keyboard.svg" alt="keyboardIcon">
+                            <span>Built for all keyboards</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_compass.svg" alt="compassIcon">
+                            <span>Cherry Profile</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_layer.svg" alt="layerIcon">
+                            <span>Double Shot Legends</span>
+                        </li>
+                    </ul>
+                    <a href="keycap_anthracite_detail.html" class="arrow_go">
+                        <div class="icon_arrow_bg black">
+                            <i class="icon_arrow black"></i>
+                        </div>
+                        <span class="arrowText black label-m">Learn more</span>
+                    </a>
+                </article>
+                <article class="card_slot_product">
+                    <figure>
+                        <img src="images/main_page/product2.png" alt="eightplateImg">
+                    </figure>
+                    <div class="price_align">
+                        <span class="label-m">$35.00</span>
+                    </div>
+                    <h3 class="title3">Eighty Plate</h3>
+                    <p class="body-l">The ISO plate will include cutouts in this layout to provide support for the
+                        switches.</p>
+                    <ul class="body-l">
+                        <li>
+                            <img src="images/icon/icon_keyboard.svg" alt="keyboardIcon">
+                            <span>Built for eighty</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_compass.svg" alt="compassIcon">
+                            <span>One large cutout for the alpha cluster</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_layer.svg" alt="layerIcon">
+                            <span>The standard layout</span>
+                        </li>
+                    </ul>
+                    <a href="component_eightyplate_detail.html" class="arrow_go">
+                        <div class="icon_arrow_bg black">
+                            <i class="icon_arrow black"></i>
+                        </div>
+                        <span class="arrowText black label-m">Learn more</span>
+                    </a>
+                </article>
+                <article class="card_slot_product">
+                    <figure>
+                        <img src="images/main_page/product3.png" alt="LotusswitcheseImg">
+                    </figure>
+                    <div class="price_align">
+                        <span class="label-m">$42.00</span>
+                    </div>
+                    <h3 class="title3">Lotus Linear Switches</h3>
+                    <p class="body-l">70x switches are recommended for the Tempo or Envoy.</p>
+                    <ul class="body-l">
+                        <li>
+                            <img src="images/icon/icon_keyboard.svg" alt="keyboardIcon">
+                            <span>Unique bouncy fee</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_compass.svg" alt="compassIcon">
+                            <span>Cherry Profile</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_layer.svg" alt="layerIcon">
+                            <span>Ultra-smooth linear switches</span>
+                        </li>
+                    </ul>
+                    <a href="switch_lotus_detail.html" class="arrow_go">
+                        <div class="icon_arrow_bg black">
+                            <i class="icon_arrow black"></i>
+                        </div>
+                        <span class="arrowText black label-m">Learn more</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+        <section class="card_slot_section row_align">
+            <h2 class="heading3">Our Mission</h2>
+            <article class="card_slot_inner boxShadow">
+                <figure>
+                    <img src="images/main_page/card_mission.jpeg" alt="ourMissionImg">
+                </figure>
+                <div class="textBox">
+                    <h3 class="title2">Design by us, Built by you </h3>
+                    <p class="body-xl">Once it's built, you can swap switches anytime to change the sound and feel. </p>
+                    <ul class="body-l">
+                        <li>
+                            <img src="images/icon/icon_setting.svg" alt="settingIcon">
+                            <span>The Encore ships as a kit</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_link.svg" alt="linkIcon">
+                            <span>Straightforward build </span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_compass.svg" alt="settingIcon">
+                            <span>Land on our favorite</span>
+                        </li>
+                    </ul>
+                    <a href="keyboard_encore_detail.html" class="btn_yellow label-m">Explore Encore</a>
+                </div>
+            </article>
+        </section>
+        <section class="card_slot_section">
+            <h2 class="heading3">About Mode</h2>
+            <a href="note_list.html" class="arrow_go">
+                <div class="icon_arrow_bg yellow">
+                    <i class="icon_arrow yellow"></i>
+                </div>
+                <span class="arrowText yellow label-m">More about Notes</span>
+            </a>
+            <div class="card_slot_cont_news">
+                <article class="card_slot_news">
+                    <figure>
+                        <img src="images/main_page/note1.jpeg" alt="anthraciteImg">
+                    </figure>
+                    <div class="text_cont">
+                        <span class="label-s">April 26, 2026</span>
+                        <h3 class="title3">Design the Crown Mounting System</h3>
+                        <p class="body-l">The Crown Mou nting System went through dozens of iterations over twelve
+                            months dialing in details down to the micron to create a stable and comfortable typing
+                            experience, that sounds great.</p>
+                        <a href="keycap_anthracite_detail.html" class="arrow_go">
+                            <div class="icon_arrow_bg black">
+                                <i class="icon_arrow black"></i>
+                            </div>
+                            <span class="arrowText black label-m">Continue reading</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="card_slot_news">
+                    <figure>
+                        <img src="images/main_page/note2.jpeg" alt="anthraciteImg">
+                    </figure>
+                    <div class="text_cont">
+                        <span class="label-s">Febuary 17, 2026</span>
+                        <h3 class="title3">Developing the Sonnet’s Sound</h3>
+                        <p class="body-l">Every component of an custom mechanical keyboard forms an intricate acoustic
+                            chain, culminating in a distinct sound profile that defines the typing experience.</p>
+                        <a href="keycap_anthracite_detail.html" class="arrow_go">
+                            <div class="icon_arrow_bg black">
+                                <i class="icon_arrow black"></i>
+                            </div>
+                            <span class="arrowText black label-m">Continue reading</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="card_slot_news">
+                    <figure>
+                        <img src="images/main_page/note3.webp" alt="anthraciteImg">
+                    </figure>
+                    <div class="text_cont">
+                        <span class="label-s">May 01, 2026</span>
+                        <h3 class="title3">How we design and make keyboards</h3>
+                        <p class="body-l">Dive into the details of our process, from initial sketches and material
+                            selection to precision manufacturing and final assembly. We put care, craft, and engineering
+                            into everything we make.</p>
+                        <a href="keycap_anthracite_detail.html" class="arrow_go">
+                            <div class="icon_arrow_bg black">
+                                <i class="icon_arrow black"></i>
+                            </div>
+                            <span class="arrowText black label-m">Continue reading</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="card_slot_section row_align">
+            <h2 class="heading3">The sonnet</h2>
+            <article class="card_slot_inner boxShadow">
+                <figure>
+                    <img src="images/main_page/card_sonnet.jpg" alt="ourMissionImg">
+                </figure>
+                <div class="textBox">
+                    <h3 class="title2">Like a Fine-tuned Instrument</h3>
+                    <p class="body-xl">The Sonnet is built to make daily work feel better through materials, acoustics,
+                        and a design that complements your space.</p>
+                    <ul class="body-l">
+                        <li>
+                            <img src="images/icon/icon_setting.svg" alt="settingIcon">
+                            <span>Refined 75% keyboard</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_link.svg" alt="linkIcon">
+                            <span>Assembly Tools</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_compass.svg" alt="settingIcon">
+                            <span>Microsuede Bag</span>
+                        </li>
+                    </ul>
+                    <a href="keyboard_sonnet_detail.html" class="btn_yellow label-m">Explore Sonnet</a>
+                </div>
+            </article>
+        </section>
+                <section class="card_slot_section row_align">
+            <h2 class="heading3">Community</h2>
+            <article class="card_slot_inner boxShadow">
+                <figure>
+                    <img src="images/main_page/card_comunity.webp" alt="communityImg">
+                </figure>
+                <div class="textBox">
+                    <h3 class="title2">A Conversation on Community</h3>
+                    <p class="body-xl">Mode founder Jaicob and Chief Design Officer Matthew Encina sit down for a candid conversation about
+origins of Mode, joy of well-made tools and Thoughtful design..</p>
+                    <ul class="body-l">
+                        <li>
+                            <img src="images/icon/icon_orders.svg" alt="orderIcon">
+                            <span>Purpose</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_compass.svg" alt="compassIcon">
+                            <span>Process</span>
+                        </li>
+                        <li>
+                            <img src="images/icon/icon_personal.svg" alt="personalIcon">
+                            <span>People</span>
+                        </li>
+                    </ul>
+                    <a href="keyboard_sonnet_detail.html" class="btn_yellow label-m">Explore Sonnet</a>
+                </div>
+            </article>
+        </section>
+
     </main>
     <footer>
         <section class="footer_front">
@@ -560,7 +815,7 @@
                 <h3 class="heading3">About</h3>
                 <ul class="caption-s">
                     <li><a href="about_us.html">Our Story</a></li>
-                    <li><a href="note_list.html">Notes</a></li>
+                    <li><a href="notes_list.html">Notes</a></li>
                 </ul>
             </section>
             <section class="footer_help">
