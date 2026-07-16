@@ -104,6 +104,9 @@ main{
     overflow: hidden;
     min-width: 280px;
 }
+.product_list > ul li .card_slot_cont:hover{
+    box-shadow: 0 10 10 0 rgba(0,0,0,0.25);
+}
 .product_list > ul li .card_slot_cont figure{
     width: 100%;
     background-color: var(--gs08);
@@ -117,6 +120,10 @@ main{
     height: 100px;
     object-fit: contain;
     object-position: center;
+    transition: all 0.3s ease;
+}
+.product_list > ul li .card_slot_cont:hover img{
+    transform: scale(1.1);
 }
 .product_list > ul li .card_slot_cont .text_cont{
     padding: 20px;
