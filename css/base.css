@@ -374,6 +374,18 @@
     background-color: var(--bs06);
     color: var(--gs01);
 }
+.btn_white{
+    padding: 15px;
+    color: var(--gs09);
+    background: transparent;
+    border: 1px solid var(--gs09);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.btn_white:hover{
+    border: 1px solid var(--gs07);
+    color: var(--gs07);
+}
 /* 탭버튼 스타일 */
 .tab_btn{
     border: none;

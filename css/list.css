@@ -1,8 +1,11 @@
 main{
     gap: 50px;
 }
-.banner{
+.banner.keyboard{
     background-image: url(../images/keyboards/banner.webp);
+}
+.banner.keycap{    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/keycaps/banner.webp);
 }
 .banner .banner_text_section{
     text-align: right;
@@ -19,6 +22,17 @@ main{
     justify-content: space-between;
     margin-bottom: 30px;
 }
+.product_list .list_head .tab_cont{
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+    flex: 0 1 auto;
+    min-width: 0;
+}
+.product_list .list_head .tab_cont .tab_btn{
+    white-space: nowrap;
+    margin-right: 5px;
+}
 .product_list .list_head div.list_controls{
     display: flex;
     gap: 20px;
@@ -28,11 +42,23 @@ main{
 }
 .product_list .searchBox,
 .product_list .sortBox {
-    display: none;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 10;
+}
+.product_list .searchBox{
+    transform: translateX(10px);
+}
+.product_list .sortBox{
+    transform: translateY(-10px);
 }
 .product_list .searchBox.active,
 .product_list .sortBox.active {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 .product_list .sortBox {
     flex-direction: column;
@@ -44,7 +70,17 @@ main{
     border-radius: 5px;
     max-width: 150px;
 }
-
+.product_list .sortBox button{
+    padding: 10px;
+}
+.product_list .sortBox ul li{
+    padding: 10px;
+    text-align: center;
+}
+.product_list .sortBox ul li:hover{
+    background-color: var(--bs06);
+    color: var(--gs09);
+}
 .product_list .searchBox {
     gap: 20px;
     background-color: var(--gs09);
@@ -53,7 +89,7 @@ main{
     border-radius: 10px;
     position: absolute;
     right: 50px;
-    top: 0;
+    top: -5px;
 }
 .product_list .searchBox.actived{
     border: none;
@@ -83,10 +119,6 @@ main{
     margin: 10px 0;
     padding: 10px;
 }
-.product_list .sortBox .optionList li:hover{
-    background-color: var(--bs06);
-    color: var(--gs09);
-}
 .product_list > ul{
     display: flex;
     gap: 20px;
@@ -102,15 +134,14 @@ main{
     background-color: var(--gs09);
     border-radius: 20px;
     overflow: hidden;
-    min-width: 280px;
-}
-.product_list > ul li .card_slot_cont:hover{
-    box-shadow: 0 10 10 0 rgba(0,0,0,0.25);
+    min-width: 260px;
+    min-height: 320px;
 }
 .product_list > ul li .card_slot_cont figure{
     width: 100%;
     background-color: var(--gs08);
     padding: 30px;
+    overflow: hidden;
 }
 .product_list > ul li .card_slot_cont figure img:first-child{
     object-position: center;
@@ -122,16 +153,14 @@ main{
     object-position: center;
     transition: all 0.3s ease;
 }
-.product_list > ul li .card_slot_cont:hover img{
-    transform: scale(1.1);
-}
 .product_list > ul li .card_slot_cont .text_cont{
     padding: 20px;
     position: relative;
 }
 .product_list > ul li .card_slot_cont .text_cont h3{
-    color: var(--ls02);
+    color: var(--ls03);
     margin-bottom: 20px;
+    max-width: 250px;
 }
 .product_list > ul li .card_slot_cont .text_cont >span{
     position: absolute;
@@ -153,4 +182,97 @@ main{
 }
 .product_list > ul li .card_slot_cont .text_cont .span_align span:last-child{
     color: var(--gs01);
+}
+.product_list > ul.component_card_cont li article a figure{
+    padding:0;
+    height: 160px;
+}
+.product_list > ul.component_card_cont li article a figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product_list > ul.component_card_cont li article .text_cont{
+    min-height: 145px;
+}
+.product_list > ul.component_card_cont li article .text_cont p{
+    margin-bottom: 0;
+}
+.product_list .pagination{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.product_list .pagination .page_btn{
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: var(--gs09);
+    color: var(--gs01);
+    border-color: var(--gs07);
+    font-family: var(--font-label);
+    font-size: var(--fs-14);
+    font-weight: 700;
+}
+.product_list .pagination .page_btn:hover{
+    background-color: var(--ys06);
+    color: var(--rs04);
+}
+.product_list .pagination .page_btn.active{
+    background-color: var(--ys05);
+}
+@media screen and (min-width: 1024px){    
+    .product_list .sortBox .optionList li:hover{
+        background-color: var(--bs06);
+        color: var(--gs09);
+    }
+    .product_list > ul li .card_slot_cont:hover img{
+        transform: scale(1.1);
+    }
+}
+@media screen and (min-width:1030px){
+    .product_list > ul{
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 1029px) and (min-width: 628px){
+    .product_list > ul{
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .product_list > ul li{
+        width: 49%;
+    }
+}
+@media screen and (max-width: 627px){
+    .product_list > ul{
+        padding: 0;
+        align-items: center;
+    }
+    .product_list > ul li{
+        width: 100%;
+    } 
+}
+@media screen and (max-width: 440px){
+    .list_head{
+        flex-direction: column;
+    }
+    .tab_cont{
+        width: 100%;
+        margin-right: 5px;
+    }
+    .list_controls{
+        width: 100%;
+        justify-content: right;
+    }
+}
+@media screen and (max-width: 310px){
+    .product_list > ul li .card_slot_cont .text_cont h3{
+        max-width: 160px;
+        white-space: normal;
+        word-break: break-word;
+    }
 }

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/comp_banner.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/list.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headerTop">
+            <h1>
+                <a href="index.html"><img src="images/header/logo.svg" alt="logo"></a>
+            </h1>
+            <nav class="menu label-m">
+                <ul>
+                    <li data-tabName="keyboard"><a href="javascript:void(0)">Keyboards</a></li>
+                    <li data-tabName="keycap"><a href="javascript:void(0)">Keycaps</a></li>
+                    <li data-tabName="component"><a href="javascript:void(0)">Component</a></li>
+                    <li data-tabName="about"><a href="javascript:void(0)">About</a></li>
+                    <li data-tabName="help"><a href="javascript:void(0)">Help</a></li>
+                </ul>
+            </nav>
+            <ul class="subMenu">
+                <li data-tabName="search"><a href="javascript:void(0)"><img src="images/icon/icon_search.svg"
+                            alt="searchIcon"></a></li>
+                <li data-tabName="login"><a href="javascript:void(0)"><img src="images/icon/icon_personal.svg"
+                            alt="personalIcon"></a></li>
+                <li data-tabName="cart"><a href="mycart.html"><img src="images/icon/icon_cart.svg" alt="cartIcon"></a>
+                </li>
+                <li data-tabName="menuBar"><a href="javascript:void(0)"><img src="images/icon/icon_menuBar.svg"
+                            alt="menuBar"></a></li>
+            </ul>
+        </div>
+        <div id="keyboard" class="megaMenu keyboards">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">keyboards</h2>
+            <ul>
+                <li><a href="keyboard_encore_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_2encore.jpg" alt="encoreImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Encore</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+                <li><a href="keyboard_sonnet_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_3sonn.jpg" alt="sonnetImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Sonnet</span>
+                            <span class="body-m">75%</span>
+                        </div>
+                    </a></li>
+                <li><a href="keyboard_tempo_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_4temp.jpg" alt="tempoImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Tempo</span>
+                            <span class="body-m">60%</span>
+                        </div>
+                    </a></li>
+                <li><a href="keyboard_envoy_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_5env.jpg" alt="envoyImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Envoy</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+                <li><a href="keyboard_sixtyFive_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_6six.jpg" alt="sixtyfiveImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">SixtyFive</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+            </ul>
+            <a href="keyboards_list.html" class="arrow_go">
+                <div class="icon_arrow_bg red">
+                    <i class="icon_arrow red"></i>
+                </div>
+                <span class="arrowText red label-m">View all Keyboards</span>
+            </a>
+        </div>
+        <div id="keycap" class="megaMenu keycaps">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">Keycaps</h2>
+            <ul>
+                <li><a href="keycap_cacao_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_1cacao.webp" alt="cacaoImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Cacao</span>
+                        </div>
+                    </a></li>
+                <li><a href="keycap_monterey_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_2Mon.webp" alt="montereyImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Monterey</span>
+                        </div>
+                    </a></li>
+                <li><a href="keycap_obscura_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_3ob.webp" alt="obscuraImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Obscura</span>
+                        </div>
+                    </a></li>
+                <li><a href="keycap_anthracite_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_4an.webp" alt="anthraciteImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Anthracite</span>
+                        </div>
+                    </a></li>
+                <li><a href="keycap_lotus_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_5Lot.webp" alt="lotusImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Lotus</span>
+                        </div>
+                    </a></li>
+            </ul>
+            <a href="keycaps_list.html" class="arrow_go">
+                <div class="icon_arrow_bg yellow">
+                    <i class="icon_arrow yellow"></i>
+                </div>
+                <span class="arrowText yellow label-m">View all Keycaps</span>
+            </a>
+        </div>
+        <div id="component" class="megaMenu component">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">Components</h2>
+            <div class="section_row">
+                <section class="switch">
+                    <h3 class="title4">Switches</h3>
+                    <ul class="body-l">
+                        <li><a href="switch_obscura_detail.html">Obscura Linear</a></li>
+                        <li><a href="switch_tommorow_detail.html">Tomorrow Tactile</a></li>
+                        <li><a href="switch_anthracite_detail.html">Anthracite Silent</a></li>
+                        <li><a href="switch_lotus_detail.html">Lotus Linear</a></li>
+                    </ul>
+                </section>
+                <section class="extraPart">
+                    <h3 class="title4">Extra Parts</h3>
+                    <ul class="body-l">
+                        <li><a href="components_list.html?category=encore">Encore</a></li>
+                        <li><a href="components_list.html?category=sonnet">Sonnet</a></li>
+                        <li><a href="components_list.html?category=envoy">Envoy</a></li>
+                        <li><a href="components_list.html?category=tempo">Tempo</a></li>
+                        <li><a href="components_list.html?category=sixtyfive">SixtyFive</a></li>
+                        <li><a href="components_list.html?category=loop">Loop</a></li>
+                        <li><a href="components_list.html?category=eighty">Eighty</a></li>
+                        <li><a href="components_list.html?category=others">Others</a></li>
+                    </ul>
+                </section>
+            </div>
+            <a href="components_list.html" class="arrow_go">
+                <div class="icon_arrow_bg green">
+                    <i class="icon_arrow green"></i>
+                </div>
+                <span class="arrowText green label-m">View all Components</span>
+            </a>
+        </div>
+        <div id="about" class="megaMenu about">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">About</h2>
+            <div class="section_row">
+                <section class="contact">
+                    <h3 class="title4">About us</h3>
+                    <ul class="body-l">
+                        <li><a href="about_us.html">Our Story</a></li>
+                    </ul>
+                </section>
+                <section class="notes">
+                    <h3 class="title4">Notes</h3>
+                    <ul class="body-l">
+                        <li><a href="notes_list.html">News</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div id="help" class="megaMenu help">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">Help</h2>
+            <div class="section_row">
+                <section class="contact">
+                    <h3 class="title4">Contact</h3>
+                    <ul class="body-l">
+                        <li><a href="contact_support_main.html">Contact Support</a></li>
+                    </ul>
+                </section>
+                <section class="guides">
+                    <h3 class="title4">Guides</h3>
+                    <ul class="body-l">
+                        <li><a href="bulid_guides_encore.html">Encore</a></li>
+                        <li><a href="bulid_guides_sonnet.html">Sonnet</a></li>
+                        <li><a href="bulid_guides_sonnet2024.html">Sonnet 2024</a></li>
+                        <li><a href="bulid_guides_tempo.html">Tempo</a></li>
+                        <li><a href="bulid_guides_envoy.html">Envoy</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div id="search" class="megaMenu search">
+            <div class="searchBox">
+                <img src="images/icon/icon_search.svg" alt="searchIcon">
+                <input type="text" id="searchInput" placeholder="Search keyboards, switches, keycaps" class="body-l">
+                <button class="clear_btn"><img src="images/icon/icon_x_btn.svg" alt="xIcon"></button>
+            </div>
+            <div class="section_row">
+                <section class="quicklink">
+                    <h3 class="title4">Quick Links</h3>
+                    <ul class="body-l">
+                        <li><a href="bulid_guides_list.html">Build Guides</a></li>
+                        <li><a href="contact_support_main.html">Contact Support</a></li>
+                        <li><a href="notes_list.html">Notes</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <form id="login_before" action="/login-process" method="POST" class="popDown login boxShadow">
+            <h2 class="title1">Welcome</h2>
+            <p class="body-2">Log in or sign up to get started.</p>
+            <div class="label_cont">
+                <label for="loginEmail" class="title4">Email<span>*</span></label>
+                <input type="email" id="loginEmail" name="email" placeholder="Enter your Email" class="label-m"
+                    required>
+            </div>
+            <div class="label_cont">
+                <label for="loginPassword" class="title4">Password<span>*</span></label>
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password"
+                    class="label-m" required>
+            </div>
+            <span class="forgotpw"><a href="password_change.html" class="label-m">Forgot password?</a></span>
+            <button type="submit" class="btn_yellow label-m">Log in</button>
+            <div class="signup_text label-m">
+                <span>No account?</span>
+                <span><a href="login_main.html">Sign up</a></span>
+            </div>
+        </form>
+        </form>
+        <div id="login_after" class="popDown account boxShadow">
+            <p class="title2">Welcome back</p>
+            <p class="title4">username@gmail.com</p>
+            <ul class="label-m">
+                <li><a href="my_order.html"><img src="images/icon/icon_orders.svg" alt="orderIcon"><span>My
+                            Orders</span></a></li>
+                <li><a href="my_account.html"><img src="images/icon/icon_setting.svg" alt="settingIcon"><span>Account
+                            Settings</span></a></li>
+                <li><a href="javascript:void(0)" class="logout_btn">
+                        <img src="images/icon/icon_logOut.svg" alt="logoutIcon">
+                        <span>Log Out</span>
+                    </a></li>
+            </ul>
+        </div>
+        <div id="menuBar" class="megaMenu tablet login_before">
+            <button class="close_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">close</span>
+            </button>
+            <ul>
+                <li>
+                    <button data-target="keyboard">
+                        <span class="label-l">keyboards</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="keycap">
+                        <span class="label-l">keycaps</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="component">
+                        <span class="label-l">Components</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="about">
+                        <span class="label-l">About</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="help">
+                        <span class="label-l">Help</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="login_main.html">
+                        <img src="images/icon/icon_personal.svg" alt="personalIcon">
+                        <span class="label-m">Log in</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mycart.html">
+                        <img src="images/icon/icon_cart.svg" alt="cartIcon">
+                        <span class="label-m">Shopping Cart</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="tablet_menu_after" class="megaMenu tablet login_after">
+            <button class="close_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">close</span>
+            </button>
+            <ul>
+                <li>
+                    <button data-target="keyboard">
+                        <span class="label-l">keyboards</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="keycap">
+                        <span class="label-l">keycaps</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="component">
+                        <span class="label-l">Components</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="about">
+                        <span class="label-l">About</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="help">
+                        <span class="label-l">Help</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="login_main.html">
+                        <img src="images/icon/icon_personal.svg" alt="personalIcon">
+                        <span class="label-m">My account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mycart.html">
+                        <img src="images/icon/icon_cart.svg" alt="cartIcon">
+                        <span class="label-m">Shopping Cart</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="tablet_account_detail" class="megaMenu tablet login_after">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <p class="label-xl">user@gmail.com</p>
+            <ul>
+                <li>
+                    <a href="my_order.html" class="label-l">My Orders</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="my_benefit.html" class="label-l">My Benefits</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="my_account.html" class="label-l">My Account</a>
+                </li>
+            </ul>
+            <div class="log_out_btn">
+                <button class="label-l">
+                    Log out
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="banner keycap">
+            <section class="banner_text_section">
+                <p class="title1">Find Your Perfect Set</p>
+            </section>
+        </div>
+        <div class="product_list">
+            <div class="list_head">
+                <button class="tab_btn blue active">All</button>
+                <div class="list_controls">
+                    <button class="btn_search" aria-label="검색">
+                        <img src="images/icon/icon_search.svg" alt="searchIcon">
+                    </button>
+                    <button class="btn_sortToggle" aria-label="정렬">
+                        <img src="images/icon/icon_listBar.svg" alt="listbarIcon">
+                    </button>
+                </div>
+            </div>
+            <div class="searchBox">
+                <img src="images/icon/icon_search.svg" alt="searchIcon">
+                <input type="text" placeholder="Search products">
+                <button class="close_btn"><img src="images/icon/icon_x_btn.svg" alt="xIcon"></button>
+            </div>
+            <div class="sortBox">
+                <button class="selectedValue label-m">Featured</button>
+                <ul class="option_list label-s">
+                    <li data-value="alpha-asc">Alphabetical, A-Z</li>
+                    <li data-value="alpha-desc">Alphabetical, Z-A</li>
+                    <li data-value="price-high">Price, High to Low</li>
+                    <li data-value="price-low">Price, Low to High</li>
+                </ul>
+            </div>
+            <ul>
+                <li>
+                    <article class="card_slot_cont boxShadow">
+                        <a href="keycap_anthracite_detail.html">
+                        <figure>
+                            <img src="images/main_page/product1.png" alt="anthraciteThumb">
+                        </figure>
+                        <div class="text_cont">
+                            <h3 class="title3">Anthracite</h3>
+                            <span class="label-m">$59.99</span>
+                            <p class="body-l">Off-whites and cool grays inspired by modern urban architecture.</p>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="card_slot_cont boxShadow">
+                        <a href="keycap_obscura_detail.html">
+                        <figure>
+                            <img src="images/keycaps/obscura/thumb.jpg" alt="obscuraThumb">
+                        </figure>
+                        <div class="text_cont">
+                            <h3 class="title3">Obscura</h3>
+                            <span class="label-m">$59.99</span>
+                            <p class="body-l">A clean high-contrast white on black.</p>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="card_slot_cont boxShadow">
+                        <a href="keycap_lotus_detail.html">
+                        <figure>
+                            <img src="images/keycaps/lotus/thumb.jpg" alt="lotusThumb">
+                        </figure>
+                        <div class="text_cont">
+                            <h3 class="title3">Lotus</h3>
+                            <span class="label-m">$59.99</span>
+                            <p class="body-l">A soft muted green with off-white legends.</p>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="card_slot_cont boxShadow">
+                        <a href="keycap_cacao_detail.html">
+                        <figure>
+                            <img src="images/keycaps/cacao/thumb.jpg" alt="cacaoThumb">
+                        </figure>
+                        <div class="text_cont">
+                            <h3 class="title3">Cacao</h3>
+                            <span class="label-m">$59.99</span>
+                            <p class="body-l">A rich dark brown with tan legends inspired the cacao bean.</p>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article class="card_slot_cont boxShadow">
+                        <a href="keycap_monterey_detail.html">
+                        <figure>
+                            <img src="images/keycaps/monterey/thumb.png" alt="montereyThumb">
+                        </figure>
+                        <div class="text_cont">
+                            <h3 class="title3">Monterey</h3>
+                            <span class="label-m">$59.99</span>
+                            <p class="body-l">A modern beige with off-white legends.</p>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <section class="footer_front">
+            <h2 class="heading2">From Mode.<br>
+                with love</h2>
+            <p class="body-l">Product updates, news, and launches</p>
+            <form method="POST" class="subscribe-form">
+                <input type="email" id="emailInput" placeholder="Enter your email address">
+                <button class="btn_yellow label-s">Subscribe</button>
+            </form>
+            <p class="body-l">© 2026 Mode Designs. All rights reserved.</p>
+        </section>
+        <div class="alignHr">
+            <section class="footer_about">
+                <h3 class="heading3">About</h3>
+                <ul class="caption-s">
+                    <li><a href="about_us.html">Our Story</a></li>
+                    <li><a href="notes_list.html">Notes</a></li>
+                </ul>
+            </section>
+            <section class="footer_help">
+                <h3 class="heading3">Get Help</h3>
+                <ul class="caption-s">
+                    <li><a href="bulid_guides_list.html">Build Guides</a></li>
+                    <li><a href="contact_support_main.html">Contact Support</a></li>
+                </ul>
+            </section>
+            <section class="footer_policy">
+                <h3 class="heading3">Policy</h3>
+                <ul class="caption-s">
+                    <li><a href="policy_refund.html">Refund & Returns</a></li>
+                    <li><a href="policy_shipping.html">Shipping</a></li>
+                    <li><a href="policy_service.html">Terms of Service</a></li>
+                    <li><a href="policy_privacy.html">Privacy</a></li>
+                </ul>
+            </section>
+            <section class="footer_sns">
+                <h3 class="heading3">Mode</h3>
+                <p class="body-m">Challenge the industry with us</p>
+                <ul>
+                    <li><a href="https://www.instagram.com/modekeyboards/"><img src="images/icon/icon_instagram.svg"
+                                alt="instaIcon"></a></li>
+                    <li><a href="https://discord.com/invite/Mvsq4BP"><img src="images/icon/icon_discord.svg"
+                                alt="discordIcon"></a></li>
+                    <li><a href="https://www.youtube.com/@modekeyboards"><img src="images/icon/icon_youtube.svg"
+                                alt="youtubeIcon"></a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+</body>
+<div id="toast" class="toast label-m"></div>
+
+</html>

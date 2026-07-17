@@ -1,0 +1,91 @@
+.product_card{
+    background-color: var(--gs03);
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+.product_card h2{
+    color: var(--gs07);
+    margin-bottom: 20px;
+}
+.product_card > p{
+    margin-bottom: 20px;
+}
+.product_card .star_cont{
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+.product_card .star_cont > img{
+    width: 20px;
+    margin-right: 5px;
+}
+.product_card .star_cont span{
+    color: var(--gs06);
+}
+.product_card span.title3{
+    color: var(--gs07);    
+    margin-bottom: 30px;
+    display: block;
+}
+.product_card p{
+    color: var(--gs09);
+}
+.product_card a.btn_red{
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.product_card .price_policy_cont{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.product_card .price_policy_cont p{
+    width: 65%;
+    margin: 0;
+}
+.product_card .price_policy_cont button{
+    padding: 10px;
+    width: 30%;
+}
+.product_card hr{
+    opacity: 0.7;
+}
+.product_card .policy_cont button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.product_card .policy_cont button span{    
+    color: var(--gs06);
+    border-bottom: 1px solid var(--gs06);
+}
+.product_card .policy_cont button:hover span {
+    color: var(--gs08);
+    border-bottom: 1px solid var(--gs08);
+}
+@media screen and (min-width: 1024px){
+    .product_card{
+        max-width: 400px;
+    }
+    .product_card figure{
+        display: none;
+    }
+}
+@media screen and (max-width:1023px){
+    .product_card{
+        width: 100%;
+    }
+    .product_card figure{
+        display: block;
+        width: 100%;
+    }
+    .product_card figure img{
+        transform: translateX(-1%);
+    }
+}

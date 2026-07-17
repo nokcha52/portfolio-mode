@@ -1,9 +1,6 @@
 /* ============================================
    전체 공통 (모든 화면 크기)
    ============================================ */
-html {
-    overflow-y: scroll;
-}
 body{
     background-color: var(--gs08);
     margin: 0;
@@ -25,7 +22,7 @@ header div.headerTop h1{
     max-width: 80px;
     width: 100%;
 }
-body main > *{
+body main > *:not(.main_head){
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -65,7 +62,6 @@ header .megaMenu.search .searchBox .clear_btn img{
     opacity: 0.7;
     transform: translateY(1px);
 }
-
 footer .btn_yellow{
     max-width: 300px;
     white-space: normal;
@@ -73,11 +69,6 @@ footer .btn_yellow{
     padding: 12px 15px;
     height: auto;
 }
-footer .footer_sns ul li:hover a img{
-    color: var(--rs03);
-    background-color: var(--rs03);
-}
-
 .toast {
     position: fixed;
     bottom: 40px;
@@ -96,14 +87,8 @@ footer .footer_sns ul li:hover a img{
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
-
-
-/* ============================================
-   데스크탑 전용 (1024px 이상)
-   ============================================ */
 @media screen and (min-width: 1024px){
-    header > div.headerTop,
-    main{
+    header > div.headerTop{
         max-width: 1100px;
         margin: 0 auto;
     }
@@ -485,11 +470,6 @@ footer .footer_sns ul li:hover a img{
         color: var(--ls03);
     }
 }
-
-
-/* ============================================
-   태블릿 + 모바일 공통 (1023px 이하)
-   ============================================ */
 @media screen and (max-width: 1023px){
     header div.headerTop .menu{
         display: none;
@@ -736,9 +716,6 @@ footer .footer_sns ul li:hover a img{
         color: var(--ls03);
     }
 }
-/* ============================================
-   태블릿 전용 (768px ~ 1023px) 
-   ============================================ */
 @media screen and (max-width: 1023px) and (min-width: 768px){
     .megaMenu{
         transform: translateX(10px);
@@ -750,9 +727,6 @@ footer .footer_sns ul li:hover a img{
         margin-left: 10px;
     }
 }
-/* ============================================
-   모바일 전용 (280px ~ 767px) 
-   ============================================ */
 @media screen and (max-width: 767px) and (min-width: 280px){
     header div.megaMenu .section_row section{
         min-width: 240px;
