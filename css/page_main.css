@@ -8,6 +8,9 @@ section.text_section{
     align-items: center;
     gap: 20px;
 }
+section.text_section p{
+    text-align: center;
+}
 .banner{
     background-image: url(../images/main_page/banner.webp);
     background-size: cover;
