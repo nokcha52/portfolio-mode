@@ -26,6 +26,9 @@
     margin-bottom: 30px;
 }
 @media screen and (max-width: 767px){
+    .banner .banner_text_section button{
+        margin-bottom: 10px;
+    }
     .banner .banner_text_section h2{
         margin-bottom: 5px;
     }
