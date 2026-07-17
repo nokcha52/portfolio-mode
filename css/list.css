@@ -257,16 +257,24 @@ main{
     } 
 }
 @media screen and (max-width: 440px){
-    .list_head{
+    .product_list.component .list_head{
         flex-direction: column;
     }
-    .tab_cont{
-        width: 100%;
+    .product_list.component .tab_cont{
+        width: 80%;
         margin-right: 5px;
     }
-    .list_controls{
+    .product_list.component .list_controls{
         width: 100%;
         justify-content: right;
+    }
+    .product_list.component .searchBox{
+        position: absolute;
+        top: 30px;
+    }
+    .product_list.component .sortBox{
+        position: absolute;
+        top: 65px;
     }
 }
 @media screen and (max-width: 310px){
