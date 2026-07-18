@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const optionList = sortBox?.querySelectorAll('.option_list li');
 
     const productList = document.querySelector('.product_list > ul');
-    const tabButtons = document.querySelectorAll('.tab_btn');
     const paginationNav = document.querySelector('.pagination');
 
     if (!productList) return;
@@ -80,16 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sortBox && !sortBox.contains(e.target)) {
             sortBox.classList.remove('active');
         }
-    });
-
-    tabButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            tabButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            currentCategory = btn.dataset.category;
-            currentPage = 1;
-            render();
-        });
     });
 
     function render() {
@@ -173,17 +162,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryFromURL = urlParams.get('category');
-
-    if (categoryFromURL) {
-        const matchedTab = Array.from(tabButtons).find(btn => btn.dataset.category === categoryFromURL);
-        if (matchedTab) {
-            tabButtons.forEach(b => b.classList.remove('active'));
-            matchedTab.classList.add('active');
-            currentCategory = categoryFromURL;
-        }
-    }
+    // 탭 버튼 모듈(product-list-tabs.js)에서 카테고리를 바꿀 수 있도록 공개 API 노출
+    // (이 파일이 먼저 로드되고, DOMContentLoaded 리스너도 먼저 등록되므로
+    //  탭 모듈의 DOMContentLoaded 콜백이 실행될 때는 아래 API가 이미 준비되어 있음)
+    window.ProductListCore = {
+        setCategory(category) {
+            currentCategory = category;
+            currentPage = 1;
+            render();
+        },
+        render
+    };
 
     render();
 });

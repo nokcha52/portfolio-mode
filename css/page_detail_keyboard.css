@@ -1,5 +1,6 @@
 main{
     padding: 0;
+    overflow: hidden;
 }
 div.main_head{
     background-color: var(--gs05);
@@ -10,12 +11,12 @@ div.main_head .width_cont{
     width: 100%;
     min-height: 600px;
     margin: 0 auto;
-    padding: 10px;    
+    padding: 10px;
     display: flex;
     align-items: center;
     gap: 20px;
 }
-div.main_head > figure{
+div.main_head>figure{
     max-width: 600px;
 }
 div.main_head figure img{
@@ -23,8 +24,271 @@ div.main_head figure img{
     object-fit: cover;
     margin: auto 0;
 }
-@media screen and (max-width:1023px){    
-    div.main_head .width_cont > figure{
+.tab_cont ul.btn_cont{
+    display: flex;
+}
+.tab_cont ul.btn_cont li button{
+    transition: border 0.3s ease;
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+.tab_cont ul.btn_cont li button.active{
+    border-bottom: 1px solid var(--bs04);
+    color: var(--bs03);
+    border-radius: 0px;
+}
+div.tab_panel{
+    width: 100%;
+    padding: 100px 20px;
+}
+div.tab_panel>section{
+    margin: 0 auto 80px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.tab_panel>section>h2{
+    margin-bottom: 20px;
+    color: var(--bs02);
+}
+div.tab_panel>section>p{
+    max-width: 600px;
+    color: var(--gs02);
+}
+div.tab_panel>section>h2+p,
+div.tab_panel>section>h2+figure{
+    margin-bottom: 40px;
+}
+div.tab_panel>section>figure,
+div.tab_panel>section>figure img{
+    width: 100%;
+}
+div.tab_panel>section>figure img{
+    border-radius: 20px;
+}
+section>.text_align{
+    display: flex;
+    justify-content: space-between;
+}
+section>.text_align .span_cont{
+    width: 24%;
+}
+section>.text_align .span_cont span{
+    display: block;
+}
+section .card_overflow {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;         /* 가로 스크롤 활성화 */
+    scrollbar-width: none;    /* 스크롤바 숨기기 */
+    
+    /* 💡 핵심 수정 사항 */
+    width: 100%;              /* 부모(800px) 안에서 꽉 채우기 */
+    max-width: 800px;         /* 너비를 800px로 확실히 제한 */
+    box-sizing: border-box;
+    padding: 10px 5px;        /* 약간의 여백 */
+}
+section .card_overflow .card_slot_cont {
+    width: 300px;
+    flex-shrink: 0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    background-color: var(--gs09);
+}
+section .card_overflow .card_slot_cont figure{
+    margin-bottom: 20px;
+}
+section .card_overflow .card_slot_cont figure img{
+    width: 100%;
+    border-radius: 10px;
+}
+section .card_overflow .card_slot_cont h3{
+    margin-bottom: 10px;
+    color: var(--gs03);
+}
+section .card_overflow .card_slot_cont .text_cont .span_align:not(:last-child){
+    padding-bottom: 10px;
+}
+section .card_overflow .card_slot_cont .text_cont .span_align{
+    display: flex;
+    align-items: center;
+}
+section .card_overflow .card_slot_cont .text_cont .span_align span:first-child{
+    max-width: 150px;
+    width: 100%;
+    display: block;
+}
+section .tab_cont{
+    display: flex;
+    margin-bottom: 20px;
+}
+section .tab_cont li button{
+    color: var(--gs04);
+}
+section .tab_cont li button.active{
+    color: var(--gs02);
+}
+section article.card_slot{   
+    border-radius: 20px;
+    width: 100%;
+}
+section.detail_spec article.card_slot:not(.first){
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section article.card_slot h3{
+    color: var(--gs03);
+    margin-bottom: 20px;
+}
+section article.card_slot > p{
+    margin-bottom: 30px;
+}
+section article.card_slot p{
+    color: var(--gs01);
+}
+section article.card_slot > div figure img:not(.mini_card img),
+section article.card_slot > div figure video{
+    border-radius: 10px;
+}
+section article.card_slot > div section{
+    text-align: left;
+}
+section article.card_slot > div section h4{
+    margin-bottom: 10px;
+}
+section article.card_slot > div section p:not(:last-child){
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--gs05);
+}
+section article.card_slot section p{
+    margin-bottom: 30px;
+}
+section article.card_slot section div.span_align{
+    margin-bottom: 20px;
+}
+section article.card_slot section div.span_align span:first-child{
+    max-width: 150px;
+    width: 100%;
+}
+.mini_card{
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    scrollbar-width: none;
+}
+.mini_card div{
+    width: 130px;
+    min-width: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    background-color: var(--gs09);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0;
+}
+.mini_card div figure{
+    width: 100%;
+    height: 100%;
+    min-width: 130px;
+    max-height: 100px;
+    overflow: hidden;
+}
+.mini_card div figure,
+.mini_card div figure img{
+    width: 100%;
+    height: 100%;
+    min-width: 130px;
+    max-height: 100px;
+    object-fit: cover;
+}
+.mini_card div span{
+    display: block;
+    width: 100%;
+}
+.card_slot.first .align_row > section:last-child .span_align{
+    display: flex;
+}
+.card_slot.first .align_row > section:last-child .span_align span.label-s{
+    max-width: 140px;
+}
+section article.card_slot.last{
+    display: flex;
+    align-items: stretch!important;
+}
+section article.card_slot.last section{
+    height: auto;
+}
+section a.btn_blue{
+    margin-top: 20px;
+}
+section .card_overflow,
+.mini_card {
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+}
+section .card_overflow *,
+.mini_card * {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+.card_slot_cont{
+    width: 300px;
+}
+section article.card_slot div figure {
+    width: 100%;
+    max-width: 800px; /* 원하는 최대 너비 지정 */
+}
+
+/* 내부 iframe 비디오 속성 */
+section article.card_slot div figure video,
+section article.card_slot div figure iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* ◀ 비율을 16:9로 강제 고정하여 깨짐 방지 */
+    border-radius: 10px;  /* 기존 스타일 유지 */
+    border: none;
+}
+@media screen and (min-width:1023px){
+    section article.card_slot{
+        padding: 40px;
+    }
+    section article.card_slot > div:not(.mini_card){
+        display: flex;
+        gap: 30px;
+    }
+    section article.card_slot div figure,
+    section article.card_slot figure,
+    section article.card_slot figure+section,
+    section article.card_slot div section{
+        width: 48%;
+    }
+    section article.card_slot figure img,
+    section article.card_slot figure video{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1023px){
+    div.main_head .width_cont>figure{
         display: none;
     }
+    section article.card_slot{
+        padding: 20px;
+    }
+}
+@media screen and (max-width:800px){
+    
 }

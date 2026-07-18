@@ -6,7 +6,7 @@
 }
 .product_card h2{
     color: var(--gs07);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .product_card > p{
     margin-bottom: 20px;
@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     line-height: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .product_card .star_cont > img{
     width: 20px;
@@ -26,7 +26,7 @@
 }
 .product_card span.title3{
     color: var(--gs07);    
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: block;
 }
 .product_card p{
