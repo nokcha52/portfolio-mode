@@ -24,24 +24,24 @@ div.main_head figure img{
     object-fit: cover;
     margin: auto 0;
 }
-.tab_cont ul.btn_cont{
+main .tab_cont ul.btn_cont{
     display: flex;
 }
-.tab_cont ul.btn_cont li button{
+main .tab_cont ul.btn_cont li button{
     transition: border 0.3s ease;
     border: 1px solid transparent;
     border-radius: 0px;
 }
-.tab_cont ul.btn_cont li button.active{
+main .tab_cont ul.btn_cont li button.active{
     border-bottom: 1px solid var(--bs04);
     color: var(--bs03);
     border-radius: 0px;
 }
-div.tab_panel{
+main div.tab_panel{
     width: 100%;
-    padding: 100px 20px;
+    padding: 100px 10px;
 }
-div.tab_panel>section{
+main div.tab_panel>section{
     margin: 0 auto 80px;
     text-align: center;
     max-width: 800px;
@@ -50,46 +50,44 @@ div.tab_panel>section{
     flex-direction: column;
     align-items: center;
 }
-div.tab_panel>section>h2{
+main div.tab_panel>section>h2{
     margin-bottom: 20px;
     color: var(--bs02);
 }
-div.tab_panel>section>p{
+main div.tab_panel>section>p{
     max-width: 600px;
     color: var(--gs02);
 }
-div.tab_panel>section>h2+p,
-div.tab_panel>section>h2+figure{
+main div.tab_panel>section>h2+p,
+main div.tab_panel>section>h2+figure{
     margin-bottom: 40px;
 }
-div.tab_panel>section>figure,
-div.tab_panel>section>figure img{
+main div.tab_panel>section>figure,
+main div.tab_panel>section>figure img{
     width: 100%;
 }
-div.tab_panel>section>figure img{
+main div.tab_panel>section>figure img{
     border-radius: 20px;
 }
-section>.text_align{
+main section>.text_align{
     display: flex;
     justify-content: space-between;
 }
-section>.text_align .span_cont{
+main section>.text_align .span_cont{
     width: 24%;
 }
-section>.text_align .span_cont span{
+main section>.text_align .span_cont span{
     display: block;
 }
-section .card_overflow {
+main section .card_overflow {
     display: flex;
     gap: 20px;
-    overflow-x: auto;         /* 가로 스크롤 활성화 */
-    scrollbar-width: none;    /* 스크롤바 숨기기 */
-    
-    /* 💡 핵심 수정 사항 */
-    width: 100%;              /* 부모(800px) 안에서 꽉 채우기 */
-    max-width: 800px;         /* 너비를 800px로 확실히 제한 */
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+    max-width: 800px;
     box-sizing: border-box;
-    padding: 10px 5px;        /* 약간의 여백 */
+    padding: 10px 5px;    
 }
 section .card_overflow .card_slot_cont {
     width: 300px;
@@ -115,19 +113,30 @@ section .card_overflow .card_slot_cont .text_cont .span_align:not(:last-child){
 }
 section .card_overflow .card_slot_cont .text_cont .span_align{
     display: flex;
+    gap: 10px;
     align-items: center;
 }
 section .card_overflow .card_slot_cont .text_cont .span_align span:first-child{
     max-width: 150px;
+    min-width: 100px;
     width: 100%;
     display: block;
 }
+section .card_slot .text_sec span:last-child{
+    width: 100%;
+    min-width: 100px;
+}
 section .tab_cont{
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
 }
 section .tab_cont li button{
+    min-width: 105px;
     color: var(--gs04);
+    padding: 0;
 }
 section .tab_cont li button.active{
     color: var(--gs02);
@@ -307,7 +316,36 @@ section article.card_slot section .span_align .label-s{
     section article.card_slot{
         padding: 20px;
     }
+    section .card_slot{
+        flex-direction: column;
+    }
+    section .card_slot .title1{
+        font-size: var(--fs-24);
+    }
+    section .card_slot > figure,
+    section .card_slot > div > figure{
+        margin-bottom: 20px;
+    }
+    section .card_slot >figure img{
+        width: 100%;
+    }
+    section .card_slot:last-child section:first-child{
+        margin-bottom: 20px;
+    }
 }
-@media screen and (max-width:800px){
-    
+@media screen and (max-width:600px){
+    .heading2{
+        font-size: 24px;
+    }
+    section .card_slot .title1{
+        font-size: 20px;
+    }
+    main section > .text_align.fl{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+    }
+    main section > .text_align.fl .span_cont{
+        width: 100%;
+    }
 }
