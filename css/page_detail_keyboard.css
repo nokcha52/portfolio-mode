@@ -228,19 +228,20 @@ section article.card_slot.last{
 }
 section article.card_slot.last section{
     height: auto;
+    width: 48%;
 }
 section a.btn_blue{
     margin-top: 20px;
 }
 section .card_overflow,
-.mini_card {
+.mini_card{
     -webkit-user-select: none; 
     -moz-user-select: none;
     -ms-user-select: none; 
     user-select: none; 
 }
 section .card_overflow *,
-.mini_card * {
+.mini_card *{
     -webkit-user-drag: none;
     user-drag: none;
 }
@@ -249,18 +250,36 @@ section .card_overflow *,
 }
 section article.card_slot div figure {
     width: 100%;
-    max-width: 800px; /* 원하는 최대 너비 지정 */
+    max-width: 800px; 
 }
-
-/* 내부 iframe 비디오 속성 */
 section article.card_slot div figure video,
-section article.card_slot div figure iframe {
+section article.card_slot div figure iframe{
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9; /* ◀ 비율을 16:9로 강제 고정하여 깨짐 방지 */
-    border-radius: 10px;  /* 기존 스타일 유지 */
+    border-radius: 10px;
     border: none;
 }
+div.tab_panel section figure.video_container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+div.tab_panel section figure.video_container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+}
+section article.card_slot section .span_align{
+    display: flex;
+}
+section article.card_slot section .span_align .label-s{
+    max-width: 100px;
+    display: block;
+}
+
 @media screen and (min-width:1023px){
     section article.card_slot{
         padding: 40px;
