@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/comp_product_card.css">
+    <link rel="stylesheet" href="css/comp_review.css">
     <link rel="stylesheet" href="css/page_detail_keyboard.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/menu.js"></script>
@@ -920,7 +921,130 @@
             </section>
         </div>
         <div class="tab_panel" data-category="review">
-            <h2>review</h2>
+            <div class="review_head">
+                <div class="left_side">
+                    <div class="star_cont">
+                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                        <span class="label-s">4.89 out of 5</span>
+                    </div>
+                    <p class="body-l">Based on 50 reviews</p>
+                </div>
+                <section class="right_side">
+                    <h2 class="title3">Customer Reviews</h2>
+                    <div class="star_numb">
+                        <div class="star_cont">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                        </div>
+                        <span class="label-s">40</span>
+                    </div>
+                    <div class="star_numb">
+                        <div class="star_cont">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                        </div>
+                        <span class="label-s">5</span>
+                    </div>
+                    <div class="star_numb">
+                        <div class="star_cont">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                        </div>
+                        <span class="label-s">4</span>
+                    </div>
+                    <div class="star_numb">
+                        <div class="star_cont">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                        </div>
+                        <span class="label-s">1</span>
+                    </div>
+                    <div class="star_numb">
+                        <div class="star_cont">
+                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                        </div>
+                        <span class="label-s">2</span>
+                    </div>
+
+                </section>
+            </div>
+            <div class="review_center">
+                <ul class="label-s">
+                    <li>
+                        <button data-category="review" class="tab_btn trans is-active">Review</button>
+                    </li>
+                    <li>
+                        <button data-category="question" class="tab_btn trans">Questions</button>
+                    </li>
+                </ul>
+                <button class="btn_blue tab_actions write_btn" data-tab-action="review">Write a Review</button>
+                <button class="btn_blue write_btn tab_actions" data-tab-action="question" hidden>Ask a Question</button>
+            </div>
+            <div class="sortBox">
+                <button class="selectedValue label-m">Featured</button>
+                <ul class="option_list label-s">
+                    <li data-value="most-recent">Most Recent</li>
+                    <li data-value="highest-rating">Highest Rating</li>
+                    <li data-value="lowest-rating">Lowest Rating</li>
+                    <li data-value="most-helpful">Most Helpful</li>
+                </ul>
+            </div>
+            <div class="tab_panel" data-panel="review">
+                <div class="review_grid">
+                    <article>
+                        <div class="star_cont">
+                            <img src="images/icon/icon_star_empty.svg" alt="starImg">
+                        </div>
+                        <span class="label-s">1 month ago</span>
+                        <div class="user_info">
+                            <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
+                            <div>
+                                <span class="user_name label-m"></span>
+                                <span class="user_coun caption-s"></span>
+                            </div>
+                        </div>
+                        <p class="user_review"></p>
+                        <div class="good_and_bad">
+                            <div class="thumb_up">
+                                <img src="images/icon/icon_thumbup.svg" alt="thumbup">
+                                <span>0</span>
+                            </div>
+                            <div class="thumb_down">
+                                <img src="images/icon/icon_thumbdown.svg" alt="thumbdown">
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="pagination"></div>
+            </div>
+            <div class="tab_panel" data-panel="question" hidden>
+                <div class="question_list">
+                    <article>
+
+                    </article>
+                </div>
+            </div>
         </div>
         <div class="tab_panel" data-category="faq">
             <h2>faq</h2>
@@ -970,8 +1094,7 @@
                                 alt="instaIcon"></a></li>
                     <li><a href="https://discord.com/invite/Mvsq4BP"><img src="images/icon/icon_discord.svg"
                                 alt="discordIcon"></a></li>
-                    <li><a href="https://www.youtube.com/@modekeyboards"><img src="images/icon/icon_youtube.svg"
-                                alt="youtubeIcon"></a></li>
+                    <li><a href="https://www.youtube.com/@modekeyboards"><img src="images/icon/icon_youtube.svg" alt="youtubeIcon"></a></li>
                 </ul>
             </section>
         </div>
