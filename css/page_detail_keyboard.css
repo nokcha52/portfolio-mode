@@ -128,6 +128,8 @@ section .card_slot .text_sec span:last-child{
 }
 section .tab_cont{
     display: flex;
+    justify-content: space-between;
+    max-width: 600px;
     margin-bottom: 20px;    
     overflow-x: auto;
     scrollbar-width: none;
