@@ -1,6 +1,5 @@
 main{
     padding: 0;
-    overflow: hidden;
 }
 div.main_head{
     background-color: var(--gs05);
@@ -37,7 +36,7 @@ main .tab_cont ul.btn_cont li button.active{
     color: var(--bs03);
     border-radius: 0px;
 }
-main div.tab_panel{
+main > div.tab_panel{
     width: 100%;
     padding: 100px 10px;
 }

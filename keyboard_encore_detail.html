@@ -15,6 +15,7 @@
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
     <script src="js/tab_panel.js"></script>
+    <script src="js/review.js"></script>
 </head>
 
 <body>
@@ -920,7 +921,7 @@
                 </figure>
             </section>
         </div>
-        <div class="tab_panel" data-category="review">
+        <div class="tab_panel review" data-category="review">
             <div class="review_head">
                 <div class="left_side">
                     <div class="star_cont">
@@ -933,8 +934,9 @@
                     </div>
                     <p class="body-l">Based on 50 reviews</p>
                 </div>
+                <div class="vertical_line"></div>
                 <section class="right_side">
-                    <h2 class="title3">Customer Reviews</h2>
+                    <span class="title3">Customer Reviews</span>
                     <div class="star_numb">
                         <div class="star_cont">
                             <img src="images/icon/icon_star_filled.svg" alt="starImg">
@@ -991,18 +993,24 @@
             <div class="review_center">
                 <ul class="label-s">
                     <li>
-                        <button data-category="review" class="tab_btn trans is-active">Review</button>
+                        <button data-category="review" class="tab_btn trans active">Review</button>
                     </li>
                     <li>
                         <button data-category="question" class="tab_btn trans">Questions</button>
                     </li>
                 </ul>
-                <button class="btn_blue tab_actions write_btn" data-tab-action="review">Write a Review</button>
-                <button class="btn_blue write_btn tab_actions" data-tab-action="question" hidden>Ask a Question</button>
+                <button type="button" class="btn_blue tab_actions write_btn label-m" data-tab-action="review">Write a
+                    Review</button>
+                <button class="btn_blue write_btn tab_actions label-m" data-tab-action="question" hidden>Ask a
+                        Question</button>
             </div>
             <div class="sortBox">
-                <button class="selectedValue label-m">Featured</button>
-                <ul class="option_list label-s">
+                <button class="selectedValue label-m">
+                    <span>Featured</span>
+                    <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                </button>
+                </button>
+                <ul class="option_list label-s" hidden>
                     <li data-value="most-recent">Most Recent</li>
                     <li data-value="highest-rating">Highest Rating</li>
                     <li data-value="lowest-rating">Lowest Rating</li>
@@ -1019,8 +1027,8 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">2 months ago</span>
                             </div>
+                            <span class="label-s">2 weeks ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1030,7 +1038,6 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"Absolute masterpiece in design and acoustic engineering."</h4>
                             <p class="body-l">Having built several custom keyboards over the years, the Mode Encore
                                 stands in a league
                                 of its own. The fit and finish are flawless—the accent piece on the back adds a subtle,
@@ -1061,8 +1068,8 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">3 weeks ago</span>
                             </div>
+                            <span class="label-s">2 months ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1072,18 +1079,12 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"Stunning aesthetics and unmatched craftsmanship."</h4>
-                            <p class="body-l">I was hesitant at first due to the price tag, but seeing it in person
-                                completely eliminated any doubts. The anodization quality is buttery smooth, and the
-                                weight distribution makes the board feel dense and premium. The top-frame chamfers catch
-                                the ambient desk light beautifully. It’s not just a mechanical keyboard; it feels like a
-                                piece of high-end interior decor. Mode Designs continues to set the standard for
-                                minimalist elegance.</p>
+                            <p class="body-l">I was hesitant at first due to the price tag, but seeing it in person completely eliminated any doubts. The anodization quality is buttery smooth, and the weight distribution makes the board feel dense and premium. The top-frame chamfers catch the ambient desk light beautifully. It’s not just a mechanical keyboard; it feels like a piece of high-end interior decor. Mode Designs continues to set the standard for minimalist elegance.</p>
                         </div>
                         <div class="good_and_bad">
                             <div class="thumb_up">
                                 <img src="images/icon/icon_thumbup.svg" alt="thumbup">
-                                <span class="caption-s">19</span>
+                                <span class="caption-s">31</span>
                             </div>
                             <div class="thumb_down">
                                 <img src="images/icon/icon_thumbdown.svg" alt="thumbdown">
@@ -1099,8 +1100,9 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">5 months ago</span>
+
                             </div>
+                            <span class="label-s">5 months ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1110,7 +1112,6 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"Exceptional board with a premium price to match."</h4>
                             <p class="body-l">Pros:
                                 - Top-tier machining and seamless case alignment.
                                 - Incredible sound profile out of the box—virtually zero ping.
@@ -1140,8 +1141,9 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_empty.svg" alt="starImg">
-                                <span class="label-s">1 months ago</span>
+
                             </div>
+                            <span class="label-s">1 months ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1151,8 +1153,11 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"My first high-end custom board, and I'm blown away."</h4>
-                            <p class="body-l">Coming from pre-built keyboards, jumping into the Encore was a massive leap, but the Configurator made choosing parts so intuitive. Assembly was straightforward with the provided guide. The typing feel is soft without feeling mushy, and the sound profile is so clean. It completely changed my daily workflow experience!</p>
+                            <p class="body-l">Coming from pre-built keyboards, jumping into the Encore was a massive
+                                leap, but the Configurator made choosing parts so intuitive. Assembly was
+                                straightforward with the provided guide. The typing feel is soft without feeling mushy,
+                                and the sound profile is so clean. It completely changed my daily workflow experience!
+                            </p>
                         </div>
                         <div class="good_and_bad">
                             <div class="thumb_up">
@@ -1173,8 +1178,9 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">4 months ago</span>
+
                             </div>
+                            <span class="label-s">4 months ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1184,8 +1190,10 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"Sounds incredible both foamed and foam-less!"</h4>
-                            <p class="body-l">Tested it first completely seamless/foam-free with tactile switches, and the natural resonance of the case is so rich. Adding the plate foam gives it that deep, marble-like sound everyone craves. Flex is perfectly balanced across the entire alpha cluster.</p>
+                            <p class="body-l">Tested it first completely seamless/foam-free with tactile switches, and
+                                the natural resonance of the case is so rich. Adding the plate foam gives it that deep,
+                                marble-like sound everyone craves. Flex is perfectly balanced across the entire alpha
+                                cluster.</p>
                         </div>
                         <div class="good_and_bad">
                             <div class="thumb_up">
@@ -1206,41 +1214,8 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">2 weeks ago</span>
                             </div>
-                        </div>
-                        <div class="user_info">
-                            <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
-                            <div>
-                                <span class="user_name label-m">Liam W.</span>
-                                <span class="user_coun caption-s">United Kingdom</span>
-                            </div>
-                        </div>
-                        <div class="user_review">
-                            <h4 class="body-l">"Premium price tag, but you definitely get what you pay for."</h4>
-                            <p class="body-l">Is it expensive? Yes. Is it worth it? Absolutely. The tolerance on the screw holes and the anodization finish are lightyears ahead of mid-range boards. deducted one star only because international shipping and taxes added up quickly, but the product itself is flawless.</p>
-                        </div>
-                        <div class="good_and_bad">
-                            <div class="thumb_up">
-                                <img src="images/icon/icon_thumbup.svg" alt="thumbup">
-                                <span class="caption-s">14</span>
-                            </div>
-                            <div class="thumb_down">
-                                <img src="images/icon/icon_thumbdown.svg" alt="thumbdown">
-                                <span class="caption-s">2</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="review_cont">
-                        <div class="review_head">
-                            <div class="star_cont">
-                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">6 months ago</span>
-                            </div>
+                            <span class="label-s">6 months ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1250,8 +1225,10 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"The ultimate daily driver for work."</h4>
-                            <p class="body-l">I use this for 8+ hours a day typing out documents and code. The angle and front height are extremely comfortable, eliminating wrist strain even without a wrist rest. Combined with silent switches, it’s the quietest, most satisfying office board I've ever owned.</p>
+                            <p class="body-l">I use this for 8+ hours a day typing out documents and code. The angle and
+                                front height are extremely comfortable, eliminating wrist strain even without a wrist
+                                rest. Combined with silent switches, it’s the quietest, most satisfying office board
+                                I've ever owned.</p>
                         </div>
                         <div class="good_and_bad">
                             <div class="thumb_up">
@@ -1272,8 +1249,9 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">2 months ago</span>
+
                             </div>
+                            <span class="label-s">2 months ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1283,8 +1261,8 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"Endgame achieved."</h4>
-                            <p class="body-l">No defects, precise tolerance, and unmatched sound. Mode knocked it out of the park with the Encore. Don't hesitate if you're on the fence!</p>
+                            <p class="body-l">No defects, precise tolerance, and unmatched sound. Mode knocked it out of
+                                the park with the Encore. Don't hesitate if you're on the fence!</p>
                         </div>
                         <div class="good_and_bad">
                             <div class="thumb_up">
@@ -1305,8 +1283,9 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">2 months ago</span>
+
                             </div>
+                            <span class="label-s">2 months ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1316,8 +1295,9 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"Unboxing experience felt like opening a luxury watch."</h4>
-                            <p class="body-l">From the packaging to the included tools, everything about Mode's presentation screams premium quality. Building it was a therapeutic experience. The brass weight gives it a heavy, reassuring thud on the desk that keeps it anchored.</p>
+                            <p class="body-l">From the packaging to the included tools, everything about Mode's
+                                presentation screams premium quality. Building it was a therapeutic experience. The
+                                brass weight gives it a heavy, reassuring thud on the desk that keeps it anchored.</p>
                         </div>
                         <div class="good_and_bad">
                             <div class="thumb_up">
@@ -1338,8 +1318,9 @@
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
                                 <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                                <span class="label-s">5 months ago</span>
+
                             </div>
+                            <span class="label-s">5 months ago</span>
                         </div>
                         <div class="user_info">
                             <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
@@ -1349,8 +1330,77 @@
                             </div>
                         </div>
                         <div class="user_review">
-                            <h4 class="body-l">"Near perfection."</h4>
-                            <p class="body-l">The machining precision is unbelievable—zero seam gaps anywhere on the chassis. My only tiny nitpick is that the Daughterboard cable was a bit tight to route during assembly, but once closed up, it operates flawlessly. High recommended.</p>
+                            <p class="body-l">The machining precision is unbelievable—zero seam gaps anywhere on the
+                                chassis. My only tiny nitpick is that the Daughterboard cable was a bit tight to route
+                                during assembly, but once closed up, it operates flawlessly. High recommended.</p>
+                        </div>
+                        <div class="good_and_bad">
+                            <div class="thumb_up">
+                                <img src="images/icon/icon_thumbup.svg" alt="thumbup">
+                                <span class="caption-s">14</span>
+                            </div>
+                            <div class="thumb_down">
+                                <img src="images/icon/icon_thumbdown.svg" alt="thumbdown">
+                                <span class="caption-s">1</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="review_cont">
+                        <div class="review_head">
+                            <div class="star_cont">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                                <img src="images/icon/icon_star_empty.svg" alt="starImg">
+
+                            </div>
+                            <span class="label-s">2 weeks ago</span>
+                        </div>
+                        <div class="user_info">
+                            <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
+                            <div>
+                                <span class="user_name label-m">Liam W.</span>
+                                <span class="user_coun caption-s">United Kingdom</span>
+                            </div>
+                        </div>
+                        <div class="user_review">
+                            <p class="body-l">Is it expensive? Yes. Is it worth it? Absolutely. The tolerance on the screw holes and the anodization finish are lightyears ahead of mid-range boards. deducted one star only because international shipping and taxes added up quickly, but the product itself is flawless.</p>
+                        </div>
+                        <div class="good_and_bad">
+                            <div class="thumb_up">
+                                <img src="images/icon/icon_thumbup.svg" alt="thumbup">
+                                <span class="caption-s">11</span>
+                            </div>
+                            <div class="thumb_down">
+                                <img src="images/icon/icon_thumbdown.svg" alt="thumbdown">
+                                <span class="caption-s">2</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="review_cont">
+                        <div class="review_head">
+                            <div class="star_cont">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+                                <img src="images/icon/icon_star_filled.svg" alt="starImg">
+
+                            </div>
+                            <span class="label-s">5 months ago</span>
+                        </div>
+                        <div class="user_info">
+                            <img src="images/icon/icon_reviewFace.svg" alt="user_pict">
+                            <div>
+                                <span class="user_name label-m">Henrik S.</span>
+                                <span class="user_coun caption-s">Sweden</span>
+                            </div>
+                        </div>
+                        <div class="user_review">
+                            <p class="body-l">The machining precision is unbelievable—zero seam gaps anywhere on the
+                                chassis. My only tiny nitpick is that the Daughterboard cable was a bit tight to route
+                                during assembly, but once closed up, it operates flawlessly. High recommended.</p>
                         </div>
                         <div class="good_and_bad">
                             <div class="thumb_up">
@@ -1368,14 +1418,103 @@
             </div>
             <div class="tab_panel" data-panel="question" hidden>
                 <div class="question_list">
-                    <article>
-
+                    <article class="question_cont">
+                        <div class="user_name label-m">
+                            <img src="images/icon/icon_reviewFace.svg" alt="userImg">
+                            <span class="label-m">Alex M.</span>
+                            <span class="label-m">2 weeks ago</span>
+                        </div>
+                        <p class="title4">Does the Encore kit include all the tools needed for assembly, or do I need to
+                            buy anything extra?</p>
+                        <div class="reply_cont">
+                            <h3 class="label-m">>> Mode Store repied:</h3>
+                            <p class="body-l">Hi Alex! If you choose the Hotswap PCB option, all the tools required to
+                                assemble the Encore chassis are included in the package. However, if you opt for the
+                                Solder PCB, you will need your own soldering equipment. Additionally, you'll need your
+                                own switches, keycaps, and stabilizers unless you add them to your order during
+                                checkout!</p>
+                        </div>
+                    </article>
+                    <article class="question_cont">
+                        <div class="user_name label-m">
+                            <img src="images/icon/icon_reviewFace.svg" alt="userImg">
+                            <span class="label-m">David K.</span>
+                            <span class="label-m">1 month ago</span>
+                        </div>
+                        <p class="title4">Is the PCB compatible with VIA or VIAL for key remapping?</p>
+                        <div class="reply_cont">
+                            <h3 class="label-m">>> Mode Store repied:</h3>
+                            <p class="body-l">Hello David! Yes, the Encore PCB (designed by Gondolindrim) fully supports
+                                QMK and VIA firmware out of the box, making it super easy to customize your keymaps and
+                                macros!</p>
+                        </div>
+                    </article>
+                    <article class="question_cont">
+                        <div class="user_name label-m">
+                            <img src="images/icon/icon_reviewFace.svg" alt="userImg">
+                            <span class="label-m">Sarah L.</span>
+                            <span class="label-m">3 months ago</span>
+                        </div>
+                        <p class="title4">What is the sound and feel difference between the POM plate and the Copper
+                            plate?</p>
+                        <div class="reply_cont">
+                            <h3 class="label-m">>> Mode Store repied:</h3>
+                            <p class="body-l">Hi Sarah! Great question. The POM plate offers a softer, more flexible
+                                typing feel with a deeper, clackier sound profile. On the other hand, the Copper plate
+                                provides a much stiffer bottom-out feel and a denser, higher-pitched sound profile.</p>
+                        </div>
+                    </article>
+                    <article class="question_cont">
+                        <div class="user_name label-m">
+                            <img src="images/icon/icon_reviewFace.svg" alt="userImg">
+                            <span class="label-m">Marcus T.</span>
+                            <span class="label-m">1 weeks ago</span>
+                        </div>
+                        <p class="title4">Will 5-pin MX-style switches fit into the Hotswap PCB without clipping the
+                            plastic pins?</p>
+                        <div class="reply_cont">
+                            <h3 class="label-m">>> Mode Store repied:</h3>
+                            <p class="body-l">Hi Marcus! Yes, the Hotswap PCB supports standard 5-pin MX-style switches
+                                natively, so you won't need to clip any PCB-mount plastic legs before installing them.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="question_cont">
+                        <div class="user_name label-m">
+                            <img src="images/icon/icon_reviewFace.svg" alt="userImg">
+                            <span class="label-m">Elena R.</span>
+                            <span class="label-m">2 months ago</span>
+                        </div>
+                        <p class="title4">What is the front height and typing angle of the Encore? I want to check if
+                            I'll need a wrist rest.</p>
+                        <div class="reply_cont">
+                            <h3 class="label-m">>> Mode Store repied:</h3>
+                            <p class="body-l">Hello Elena! The Encore features a 5.5-degree typing angle and a front
+                                height of 12.5mm (19.7mm at the chamfered edge). Thanks to the low front profile, most
+                                users find it comfortable to type on even without a wrist rest!</p>
+                        </div>
+                    </article>
+                    <article class="question_cont">
+                        <div class="user_name label-m">
+                            <img src="images/icon/icon_reviewFace.svg" alt="userImg">
+                            <span class="label-m">Brian P.</span>
+                            <span class="label-m">4 months ago</span>
+                        </div>
+                        <p class="title4">How heavy is the fully assembled board, and is it comfortable to carry around
+                            in a backpack?</p>
+                        <div class="reply_cont">
+                            <h3 class="label-m">>> Mode Store repied:</h3>
+                            <p class="body-l">Hi Brian! The fully assembled Encore weighs between 2.9 lbs and 3.2 lbs
+                                (~1.3 kg to 1.45 kg), depending on the plate material you choose. While it has a solid,
+                                premium weight on the desk, it remains compact enough to travel with in the included
+                                microsuede bag!</p>
+                        </div>
                     </article>
                 </div>
             </div>
         </div>
         <div class="tab_panel" data-category="faq">
-            <h2>faq</h2>
+
         </div>
 
     </main>
@@ -1428,31 +1567,75 @@
             </section>
         </div>
     </footer>
-    <div class="modal_overlay" id="reviewModalOverlay" >
+    <div class="modal_overlay" id="reviewModalOverlay" hidden>
         <div class="head_cont">
             <h3 class="title1">Write a review</h3>
-            <button class="close_btn"><img src="images/icon/icon_x_btn.svg" alt="xImg"></button>
+            <button type="button" class="close_btn label-m"><img src="images/icon/icon_x_btn.svg" alt="xImg"></button>
         </div>
         <form id="reviewForm">
-            
-        </form>
-        <div class="review_write_cont">
-            <div>
-                <h4>Rating</h4>
-
+            <div class="rating_input">
+                <span class="title3">Rating</span>
+                <div class="star_select">
+                    <img src="images/icon/icon_star_empty.svg" alt="starImg" data-value="1">
+                    <img src="images/icon/icon_star_empty.svg" alt="starImg" data-value="2">
+                    <img src="images/icon/icon_star_empty.svg" alt="starImg" data-value="3">
+                    <img src="images/icon/icon_star_empty.svg" alt="starImg" data-value="4">
+                    <img src="images/icon/icon_star_empty.svg" alt="starImg" data-value="5">
+                </div>
             </div>
-        </div>
-        <div class="btn_cont">
-            <button class="label-m">Cancel</button>
-            <button class="btn_blue label-m">Submit Reviews</button>
-        </div>
-        
+            <textarea name="reviewText" placeholder="Share your experience with this product" class="label-m"
+                required></textarea>
+            <div class="btn_cont">
+                <button type="button" class="cancel_btn label-m">Cancel</button>
+                <button type="submit" class="btn_blue label-m">Submit Review</button>
+            </div>
+        </form>
     </div>
     <div class="modal_overlay" id="questionModalOverlay" hidden>
-
+        <div class="question_head">
+            <h3 class="title1">Ask a question</h3>
+            <button type="button" class="close_btn label-m"><img src="images/icon/icon_x_btn.svg" alt="xImg"></button>
+        </div>
+        <form id="question_form">
+            <div class="label_cont">
+                <label for="questionName" class="title3">Your name</label>
+                <input type="text" id="questionName" name="userName" placeholder="Display name" class="label-m"
+                    required>
+            </div>
+            <div class="label_cont">
+                <label for="questionEmail" class="title3">Email address</label>
+                <input type="email" id="questionEmail" name="userEmail" placeholder="Your email Address" class="label-m"
+                    required>
+            </div>
+            <div class="label_cont">
+                <label for="questionText" class="title3">Your Question</label>
+                <textarea id="questionText" name="questionText" placeholder="Write your question here" class="label-m"
+                    required></textarea>
+            </div>
+            <div class="btn_cont">
+                <button type="button" class="cancel_btn label-m">Cancel</button>
+                <button type="submit" class="btn_blue label-m">Submit Question</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal_overlay" id="reviewSuccessModalOverlay" hidden>
+        <div class="success_box">
+            <h3 class="title3">Review Submitted</h3>
+            <p class="body-l">Thank you for sharing your feedback. Your review has been successfully submitted and will
+                appear once it has been reviewed.</p>
+            <button type="button" class="btn_blue label-m confirm_btn">Done</button>
+        </div>
+    </div>
+    <div class="modal_overlay" id="questionSuccessModalOverlay" hidden>
+        <div class="success_box">
+            <h3 class="title3">Question Submitted</h3>
+            <p class="body-l">Thank you for your question. We've received your inquiry and will respond as soon as
+                possible.</p>
+            <button type="button" class="btn_blue label-m confirm_btn">Done</button>
+        </div>
     </div>
     <div id="toast" class="toast label-m"></div>
-    
+
 </body>
 
 

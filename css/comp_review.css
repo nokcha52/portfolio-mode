@@ -1,0 +1,392 @@
+.tab_panel[data-category="review"]{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    position: relative;
+}
+.tab_panel[data-category="review"]>*:not(.tab_panel[data-panel="review"], .tab_panel[data-panel="question"]) {
+    border-radius: 10px;
+    background-color: var(--gs09);
+}
+.tab_panel .review_head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 20px;
+}
+.tab_panel .review_head .left_side {
+    text-align: center;
+}
+.tab_panel .review_head .left_side .star_cont {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    color: var(--gs02);
+}
+.star_cont img {
+    width: 16px;
+}
+.vertical_line {
+    width: 1px;
+    background-color: var(--gs02);
+    height: 160px;
+}
+.tab_panel .review_head .right_side {
+    text-align: center;
+}
+.tab_panel .review_head .right_side > span {
+    display: block;
+    margin-bottom: 20px;
+}
+.tab_panel .review_head .right_side .star_numb {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto 5px;
+}
+.tab_panel .review_head .right_side .star_numb .star_cont {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.tab_panel .review_center {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin-bottom: 100px;
+}
+.tab_panel .review_center>ul {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: var(--ys05);
+}
+.tab_panel .review_center > button{
+    width: 160px;
+}
+.tab_panel .sortBox {
+    position: absolute;
+    top: 500px;
+    width: 200px;
+}
+.tab_panel .sortBox button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--gs08);
+    padding: 20px;
+}
+.tab_panel .sortBox button img {
+    transform: rotate(90deg);
+}
+.tab_panel .sortBox ul {
+    padding: 10px 20px;
+}
+.tab_panel .sortBox ul li {
+    padding: 10px;
+}
+.tab_panel .sortBox ul li:hover {
+    background-color: var(--bs06);
+    color: var(--gs09);
+}
+.tab_panel .review_grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.tab_panel .review_grid .review_cont{
+    background-color: var(--gs09);
+    border-radius: 10px;
+    padding: 20px;
+}
+.tab_panel .review_grid .review_cont .review_head{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.tab_panel .review_grid .review_cont .review_head > *{
+    width: 50%;
+}
+.tab_panel .review_grid .review_cont .review_head > span{
+    text-align: right;
+    color: var(--gs04);
+}
+.tab_panel .review_grid .review_cont .user_info{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tab_panel .review_grid .review_cont .user_info img{
+    width: 36px;
+}
+.tab_panel .review_grid .review_cont .user_info > div >span{
+    display: block;    
+}
+.tab_panel .review_grid .review_cont .user_review p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+    min-height: 100px;
+}
+.tab_panel .review_grid .review_cont .good_and_bad{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+.tab_panel .review_grid .review_cont .good_and_bad > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tab_panel .review_grid .review_cont .good_and_bad > div img{
+    width: 20px;
+}
+.tab_panel .question_list .question_cont{
+    margin-bottom: 20px;
+    background-color: var(--gs09);
+    padding: 20px;
+    border-radius: 10px;
+}
+.tab_panel .question_list .question_cont .user_name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tab_panel .question_list .question_cont .user_name img{
+    width: 32px;
+}
+.tab_panel .question_list .question_cont .user_name span:nth-child(2){
+    display: block;
+    width: 15%;
+    min-width: 100px;
+    text-align: left;
+}
+.tab_panel .question_list .question_cont .user_name span:last-child{
+    display: block;
+    width: 85%;
+    text-align: right;
+    color: var(--gs04);
+}
+.tab_panel .question_list .question_cont > p{
+    color: var(--bs03);
+    margin-bottom: 20px;
+}
+.tab_panel .question_list .question_cont .reply_cont{
+    padding: 20px;
+    background-color: var(--ys08);
+    border-radius: 10px;
+}
+.tab_panel .question_list .question_cont .reply_cont h3{
+    margin-bottom: 10px;
+}
+.modal_backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+.modal_overlay{
+    max-width: 600px;
+    width: 100%;
+    background-color: var(--gs09);
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+.modal_overlay .head_cont,
+.modal_overlay .question_head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.modal_overlay .head_cont h3,
+.modal_overlay .question_head h3{
+    color: var(--bs03);
+}
+.modal_overlay .head_cont button,
+.modal_overlay .question_head button{
+    background-color: transparent;
+    border: none;
+}
+.modal_overlay{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.modal_overlay #reviewForm{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.modal_overlay #reviewForm .rating_input{
+    text-align: center;
+    width: 25%;
+}
+.modal_overlay #reviewForm .rating_input span{
+    display: block;
+    margin-bottom: 10px;
+    color: var(--bs04);
+}
+.modal_overlay #reviewForm .rating_input .star_select img{
+    width: 18px;
+}
+.modal_overlay #reviewForm textarea{
+    width: 70%;
+    height: 200px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.modal_overlay #reviewForm .btn_cont,
+.modal_overlay #question_form .btn_cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.modal_overlay .btn_cont .cancel_btn{
+    background-color: transparent;
+    border: 1px solid var(--gs02);
+    padding: 15px;
+    border-radius: 10px;
+    width: 130px;
+    transition: all 0.3s ease;
+}
+.modal_overlay .btn_cont .cancel_btn:hover{
+    background-color: var(--gs08);
+    border: 1px solid var(--gs04);
+}
+.modal_overlay #question_form .label_cont{
+    margin-bottom: 40px;
+}
+.modal_overlay #question_form .label_cont > *{
+    width: 100%;
+}
+.modal_overlay #question_form .label_cont label{
+    text-align: center;
+    color: var(--bs04);
+    display: block;
+    margin-bottom: 20px;
+}
+.modal_overlay #question_form .label_cont input,
+.modal_overlay #question_form .label_cont textarea{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+}
+.modal_overlay #question_form .label_cont textarea{
+    height: 150px;
+}
+.modal_overlay .success_box{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.modal_overlay .success_box h3{
+    width: 100%;
+    color: var(--bs03);
+    margin-bottom: 20px;
+}
+.modal_overlay .success_box p{
+    margin-bottom: 30px;
+}
+.modal_overlay .success_box button{
+    width: 160px;
+}
+@media screen and (min-width:1024px) {   
+    .tab_panel .review_grid .review_cont{
+        width: 32%;
+    }    
+}
+@media screen and (min-width:800px) {
+    .tab_panel .review_head>*:not(.vertical_line){
+        width: 49%;
+    }
+}
+@media screen and (max-width:1024px) and (min-width:800px){
+    .tab_panel .review_grid .review_cont{
+        width: 48%;
+    } 
+}
+@media screen and (max-width:799px) and (min-width:530px){
+    .tab_panel .sortBox {
+        position: absolute;
+        top: 630px;
+        width: 200px;
+    }
+    .tab_panel .review_head{
+        flex-direction: column;
+    }
+    .tab_panel .review_head .left_side{
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--gs05);
+    }
+    .tab_panel .review_head .vertical_line{
+        display: none;
+    }
+    .tab_panel .review_head>*:not(.vertical_line){
+        width: 100%;
+    }
+    .tab_panel .review_grid .review_cont{
+        width: 48%;
+    } 
+}
+@media screen and (max-width:509px){
+    .tab_panel .sortBox {
+        position: absolute;
+        top: 700px;
+        width: 200px;
+    }
+    .tab_panel.review .review_center{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .tab_panel .review_center ul{
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .tab_panel .review_center ul li{
+        width: 48%;
+    }
+    .tab_panel .review_center ul li button,
+    .tab_panel .review_center button{
+        width: 100%;
+    }
+    .tab_panel .review_head{
+        flex-direction: column;
+    }
+    .tab_panel .review_head .left_side{
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--gs05);
+    }
+    .tab_panel .review_head .vertical_line{
+        display: none;
+    }
+    .tab_panel .review_head>*:not(.vertical_line){
+        width: 100%;
+    }
+}

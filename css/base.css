@@ -421,7 +421,7 @@
     color: var(--gs09);
 }
 .tab_btn.trans{
-    background-color: none;
+    background-color: transparent;
     color: var(--gs02);
 }
 .tab_btn.trans:hover{
