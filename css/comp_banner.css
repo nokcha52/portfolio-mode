@@ -21,12 +21,15 @@
     margin-bottom: 20px;
     color: var(--gs08);
 }
-.banner .banner_text_section button{
+.banner .banner_text_section button,
+.banner .banner_text_section a{
+    display: inline-block;
     width: 200px;
     margin-bottom: 30px;
 }
 @media screen and (max-width: 767px){
-    .banner .banner_text_section button{
+    .banner .banner_text_section button,
+    .banner .banner_text_section a{
         margin-bottom: 10px;
     }
     .banner .banner_text_section h2{
