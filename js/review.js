@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initSortBox();
   initStarRating();
   initModals();
+  initVoting();
+  initPagination();
 });
 
-/* ------------------------------------------
+/* ============================================
    1. Review / Questions 탭 전환
-------------------------------------------- */
+============================================ */
 function initReviewQuestionTabs() {
   const reviewCenter = document.querySelector('.review_center');
   if (!reviewCenter) return;
@@ -20,16 +22,13 @@ function initReviewQuestionTabs() {
     btn.addEventListener('click', () => {
       const category = btn.dataset.category; // "review" 또는 "question"
 
-      // 탭 버튼 active 전환
       tabBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // 클릭한 탭과 일치하는 패널만 보이기
       panels.forEach((panel) => {
         panel.hidden = panel.dataset.panel !== category;
       });
 
-      // Write a Review / Ask a Question 버튼도 함께 전환
       writeBtns.forEach((wb) => {
         wb.hidden = wb.dataset.tabAction !== category;
       });
@@ -37,9 +36,9 @@ function initReviewQuestionTabs() {
   });
 }
 
-/* ------------------------------------------
-   2. 정렬(sortBox) 드롭다운
-------------------------------------------- */
+/* ============================================
+   2. 정렬(sortBox) 드롭다운 + 화살표 회전
+============================================ */
 function initSortBox() {
   const sortBox = document.querySelector('.sortBox');
   if (!sortBox) return;
@@ -48,27 +47,40 @@ function initSortBox() {
   const selectedText = selectedBtn.querySelector('span');
   const optionList = sortBox.querySelector('.option_list');
 
-  // 드롭다운 열기/닫기
   selectedBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    optionList.hidden = !optionList.hidden;
+    const willOpen = optionList.hidden;
+    optionList.hidden = !willOpen;
+    sortBox.classList.toggle('is-open', willOpen);
   });
 
-  // 옵션 선택
   optionList.querySelectorAll('li').forEach((li) => {
     li.addEventListener('click', () => {
       selectedText.textContent = li.textContent;
       optionList.hidden = true;
+      sortBox.classList.remove('is-open');
       sortReviews(li.dataset.value);
     });
   });
 
-  // 바깥 클릭 시 닫기
   document.addEventListener('click', (e) => {
     if (!sortBox.contains(e.target)) {
       optionList.hidden = true;
+      sortBox.classList.remove('is-open');
     }
   });
+}
+
+// "2 weeks ago" / "1 months ago" 같은 텍스트를 "며칠 전"인지로 환산 (작을수록 최근)
+function parseRelativeDate(text) {
+  const match = text.match(/(\d+)\s*(day|week|month|year)/i);
+  if (!match) return Infinity;
+
+  const value = parseInt(match[1], 10);
+  const unit = match[2].toLowerCase();
+  const unitToDays = { day: 1, week: 7, month: 30, year: 365 };
+
+  return value * unitToDays[unit];
 }
 
 function sortReviews(sortType) {
@@ -76,13 +88,16 @@ function sortReviews(sortType) {
   if (!grid) return;
   const cards = Array.from(grid.querySelectorAll('.review_cont'));
 
-  const getRating = (card) => {
-    const stars = card.querySelectorAll('.review_head .star_cont img');
-    return Array.from(stars).filter((img) => img.src.includes('filled')).length;
-  };
+  const getRating = (card) =>
+    card.querySelectorAll('.review_head .star_cont img[src*="filled"]').length;
 
   const getLikes = (card) =>
     parseInt(card.querySelector('.thumb_up .caption-s').textContent, 10);
+
+  const getDateValue = (card) => {
+    const dateSpan = card.querySelector('.review_head > span.label-s');
+    return parseRelativeDate(dateSpan?.textContent || '');
+  };
 
   switch (sortType) {
     case 'highest-rating':
@@ -95,20 +110,19 @@ function sortReviews(sortType) {
       cards.sort((a, b) => getLikes(b) - getLikes(a));
       break;
     case 'most-recent':
-      // "2 weeks ago" 같은 텍스트는 정확한 정렬이 불가능해요.
-      // 실제 정렬하려면 article에 data-date="2026-07-01" 같은 실제 날짜값을 추가해주셔야 합니다.
-      console.warn('정확한 최신순 정렬을 위해서는 review_cont에 data-date 속성이 필요합니다.');
-      return;
+      cards.sort((a, b) => getDateValue(a) - getDateValue(b));
+      break;
     default:
-      return; // "Featured"는 원래 순서 유지
+      return; // Featured는 원래 순서 유지
   }
 
   cards.forEach((card) => grid.appendChild(card));
+  refreshPagination();
 }
 
-/* ------------------------------------------
+/* ============================================
    3. 별점 선택 (리뷰 모달 안 star_select)
-------------------------------------------- */
+============================================ */
 function initStarRating() {
   const starSelect = document.querySelector('.star_select');
   if (!starSelect) return;
@@ -146,9 +160,9 @@ function resetStarRating() {
   });
 }
 
-/* ------------------------------------------
+/* ============================================
    4. 모달 (write 버튼 → 입력 모달 → 성공 모달)
-------------------------------------------- */
+============================================ */
 let activeBackdrop = null;
 
 function openModal(modal) {
@@ -174,7 +188,6 @@ function closeModal(modal) {
 }
 
 function initModals() {
-  // Write a Review / Ask a Question 버튼 → 해당 입력 모달 열기
   document.querySelectorAll('.write_btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const targetId = btn.dataset.tabAction === 'review'
@@ -184,14 +197,12 @@ function initModals() {
     });
   });
 
-  // 닫기(X) / 취소 / 완료(Done) 버튼 → 자신이 속한 모달 닫기
   document.querySelectorAll('.modal_overlay').forEach((modal) => {
     modal.querySelector('.close_btn')?.addEventListener('click', () => closeModal(modal));
     modal.querySelector('.cancel_btn')?.addEventListener('click', () => closeModal(modal));
     modal.querySelector('.confirm_btn')?.addEventListener('click', () => closeModal(modal));
   });
 
-  // 리뷰 제출 → 리뷰 입력 모달 닫고 → 리뷰 성공 모달 열기
   document.getElementById('reviewForm')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -203,7 +214,6 @@ function initModals() {
     openModal(document.getElementById('reviewSuccessModalOverlay'));
   });
 
-  // 질문 제출 → 질문 입력 모달 닫고 → 질문 성공 모달 열기
   document.getElementById('question_form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -217,4 +227,124 @@ function initModals() {
     e.target.reset();
     openModal(document.getElementById('questionSuccessModalOverlay'));
   });
+}
+
+/* ============================================
+   5. Good / Bad 투표
+============================================ */
+function initVoting() {
+  document.querySelectorAll('.review_cont').forEach((card) => {
+    const upBtn = card.querySelector('.thumb_up');
+    const downBtn = card.querySelector('.thumb_down');
+
+    upBtn.addEventListener('click', () => toggleVote(card, 'up'));
+    downBtn.addEventListener('click', () => toggleVote(card, 'down'));
+  });
+}
+
+function toggleVote(card, type) {
+  const current = card.dataset.voted || '';
+
+  if (current === type) {
+    setVoteState(card, '');
+  } else {
+    setVoteState(card, type);
+  }
+}
+
+function setVoteState(card, type) {
+  const upBtn = card.querySelector('.thumb_up');
+  const downBtn = card.querySelector('.thumb_down');
+  const previous = card.dataset.voted || '';
+
+  if (previous === 'up') adjustCount(upBtn, -1);
+  if (previous === 'down') adjustCount(downBtn, -1);
+  paintIcon(upBtn, false);
+  paintIcon(downBtn, false);
+
+  card.dataset.voted = type;
+
+  if (type === 'up') {
+    adjustCount(upBtn, 1);
+    paintIcon(upBtn, true);
+  } else if (type === 'down') {
+    adjustCount(downBtn, 1);
+    paintIcon(downBtn, true);
+  }
+}
+
+function adjustCount(btn, delta) {
+  const countSpan = btn.querySelector('.caption-s');
+  const current = parseInt(countSpan.textContent, 10);
+  countSpan.textContent = current + delta;
+}
+
+function paintIcon(btn, isActive) {
+  const img = btn.querySelector('img');
+  const isUp = btn.classList.contains('thumb_up');
+  img.src = isActive
+    ? `images/icon/icon_thumb${isUp ? 'up' : 'down'}_filled.svg`
+    : `images/icon/icon_thumb${isUp ? 'up' : 'down'}.svg`;
+}
+
+/* ============================================
+   6. 반응형 페이지네이션 (3열/9개 · 2열/8개 · 1열/6개)
+============================================ */
+let allReviewCards = [];
+let currentPage = 1;
+
+function getItemsPerPage() {
+  const width = window.innerWidth;
+  if (width >= 1024) return 9; // 데스크톱: 3열
+  if (width >= 768) return 8;  // 태블릿: 2열
+  return 6;                    // 모바일: 1열
+}
+
+function initPagination() {
+  allReviewCards = Array.from(document.querySelectorAll('.review_grid .review_cont'));
+  renderPage(1);
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => renderPage(1), 200);
+  });
+}
+
+function refreshPagination() {
+  allReviewCards = Array.from(document.querySelectorAll('.review_grid .review_cont'));
+  renderPage(1);
+}
+
+function renderPage(page) {
+  const itemsPerPage = getItemsPerPage();
+  const totalPages = Math.ceil(allReviewCards.length / itemsPerPage);
+  currentPage = Math.min(Math.max(page, 1), totalPages || 1);
+
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+
+  allReviewCards.forEach((card, i) => {
+    card.hidden = i < start || i >= end;
+  });
+
+  renderPaginationButtons(totalPages);
+}
+function renderPaginationButtons(totalPages) {
+    const paginationNav = document.querySelector('.pagination');
+    if (!paginationNav) return;
+    paginationNav.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'page_btn' + (i === currentPage ? ' active' : '');
+        btn.textContent = i;
+        btn.dataset.page = i;
+
+        btn.addEventListener('click', () => {
+            renderPage(i);
+        });
+
+        paginationNav.appendChild(btn);
+    }
 }
