@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ============================================
-   1. Review / Questions 탭 전환
+   1. Review / Questions 탭 전환 + sortBox 표시/숨김
 ============================================ */
 function initReviewQuestionTabs() {
   const reviewCenter = document.querySelector('.review_center');
@@ -17,6 +17,7 @@ function initReviewQuestionTabs() {
   const tabBtns = reviewCenter.querySelectorAll('.tab_btn.trans');
   const writeBtns = reviewCenter.querySelectorAll('.write_btn');
   const panels = document.querySelectorAll('.tab_panel[data-panel]');
+  const sortBox = document.querySelector('.sortBox');
 
   tabBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -32,12 +33,17 @@ function initReviewQuestionTabs() {
       writeBtns.forEach((wb) => {
         wb.hidden = wb.dataset.tabAction !== category;
       });
+
+      // sortBox는 review 탭일 때만 보이기
+      if (sortBox) {
+        sortBox.hidden = category !== 'review';
+      }
     });
   });
 }
 
 /* ============================================
-   2. 정렬(sortBox) 드롭다운 + 화살표 회전
+   2. 정렬(sortBox) 드롭다운 + 화살표 회전 + 정렬 로직
 ============================================ */
 function initSortBox() {
   const sortBox = document.querySelector('.sortBox');
@@ -71,7 +77,7 @@ function initSortBox() {
   });
 }
 
-// "2 weeks ago" / "1 months ago" 같은 텍스트를 "며칠 전"인지로 환산 (작을수록 최근)
+// "2 weeks ago" / "1 months ago" 텍스트를 "며칠 전"인지 숫자로 환산 (작을수록 최근)
 function parseRelativeDate(text) {
   const match = text.match(/(\d+)\s*(day|week|month|year)/i);
   if (!match) return Infinity;
@@ -113,7 +119,7 @@ function sortReviews(sortType) {
       cards.sort((a, b) => getDateValue(a) - getDateValue(b));
       break;
     default:
-      return; // Featured는 원래 순서 유지
+      return;
   }
 
   cards.forEach((card) => grid.appendChild(card));
@@ -121,7 +127,7 @@ function sortReviews(sortType) {
 }
 
 /* ============================================
-   3. 별점 선택 (리뷰 모달 안 star_select)
+   3. 별점 선택 (리뷰 모달)
 ============================================ */
 function initStarRating() {
   const starSelect = document.querySelector('.star_select');
@@ -244,12 +250,7 @@ function initVoting() {
 
 function toggleVote(card, type) {
   const current = card.dataset.voted || '';
-
-  if (current === type) {
-    setVoteState(card, '');
-  } else {
-    setVoteState(card, type);
-  }
+  setVoteState(card, current === type ? '' : type);
 }
 
 function setVoteState(card, type) {
@@ -288,16 +289,18 @@ function paintIcon(btn, isActive) {
 }
 
 /* ============================================
-   6. 반응형 페이지네이션 (3열/9개 · 2열/8개 · 1열/6개)
+   6. 반응형 페이지네이션
+   데스크톱(1024px~): 9개 / 태블릿(530~1023px): 8개 / 모바일(~529px): 6개
+   (CSS 미디어쿼리 breakpoint인 1024px, 800px, 530px 기준에 맞춤)
 ============================================ */
 let allReviewCards = [];
 let currentPage = 1;
 
 function getItemsPerPage() {
   const width = window.innerWidth;
-  if (width >= 1024) return 9; // 데스크톱: 3열
-  if (width >= 768) return 8;  // 태블릿: 2열
-  return 6;                    // 모바일: 1열
+  if (width >= 1024) return 9;
+  if (width >= 530) return 8;
+  return 6;
 }
 
 function initPagination() {
@@ -330,21 +333,22 @@ function renderPage(page) {
 
   renderPaginationButtons(totalPages);
 }
+
 function renderPaginationButtons(totalPages) {
-    const paginationNav = document.querySelector('.pagination');
-    if (!paginationNav) return;
-    paginationNav.innerHTML = '';
+  const paginationNav = document.querySelector('.pagination');
+  if (!paginationNav) return;
+  paginationNav.innerHTML = '';
 
-    for (let i = 1; i <= totalPages; i++) {
-        const btn = document.createElement('button');
-        btn.className = 'page_btn' + (i === currentPage ? ' active' : '');
-        btn.textContent = i;
-        btn.dataset.page = i;
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement('button');
+    btn.className = 'page_btn' + (i === currentPage ? ' active' : '');
+    btn.textContent = i;
+    btn.dataset.page = i;
 
-        btn.addEventListener('click', () => {
-            renderPage(i);
-        });
+    btn.addEventListener('click', () => {
+      renderPage(i);
+    });
 
-        paginationNav.appendChild(btn);
-    }
+    paginationNav.appendChild(btn);
+  }
 }
