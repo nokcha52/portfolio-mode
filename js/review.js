@@ -38,6 +38,9 @@ function initReviewQuestionTabs() {
       if (sortBox) {
         sortBox.hidden = category !== 'review';
       }
+
+      const reviewCenter = document.querySelector('.review_center');
+      reviewCenter?.classList.toggle('no-sortbox', category !== 'review');
     });
   });
 }
@@ -317,7 +320,7 @@ function initPagination() {
 function refreshPagination() {
   allReviewCards = Array.from(document.querySelectorAll('.review_grid .review_cont'));
   renderPage(1);
-}
+} 
 
 function renderPage(page) {
   const itemsPerPage = getItemsPerPage();
@@ -328,7 +331,7 @@ function renderPage(page) {
   const end = start + itemsPerPage;
 
   allReviewCards.forEach((card, i) => {
-    card.hidden = i < start || i >= end;
+    card.classList.toggle('is-hidden', i < start || i >= end);
   });
 
   renderPaginationButtons(totalPages);

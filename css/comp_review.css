@@ -60,6 +60,9 @@
     padding: 30px;
     margin-bottom: 100px;
 }
+.tab_panel .review_center.no-sortbox {
+    margin-bottom: 30px;
+}
 .tab_panel .review_center>ul {
     display: flex;
     align-items: center;
@@ -103,10 +106,13 @@
 .tab_panel .review_grid{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     width: 100%;
     gap: 20px;
+}
+.tab_panel .review_grid .review_cont.is-hidden {
+    display: none !important;
 }
 .tab_panel .review_grid .review_cont{
     background-color: var(--gs09);
@@ -365,6 +371,9 @@
     }
 }
 @media screen and (max-width:1024px) and (min-width:800px){
+    .tab_panel .review_grid{
+        gap: 30px;
+    }
     .tab_panel .review_grid .review_cont{
         width: 48%;
     }

@@ -289,7 +289,12 @@ section article.card_slot section .span_align .label-s{
     max-width: 100px;
     display: block;
 }
-
+.accordion{
+    margin-bottom: 20px;
+}
+.accordion .accordion_item button span{
+    color: var(--ls03);
+}
 @media screen and (min-width:1023px){
     section article.card_slot{
         padding: 40px;

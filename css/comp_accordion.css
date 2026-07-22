@@ -1,0 +1,29 @@
+.accordion{
+    width: 100%;
+    background-color: var(--gs09);
+    border-radius: 10px;
+}
+.accordion .accordion_item button{
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.accordion .accordion_item img{
+    transform: rotate(90deg);
+}
+.accordion .accordion_item .accordion_body{
+    max-height: 0;
+    overflow: hidden;
+}
+.accordion_item.is-open .accordion_body {
+    max-height: 500px;
+}
+.accordion .accordion_item .accordion_body p{
+    padding: 20px;
+}
+.accordion_item.is-open .accordion_icon {
+    transform: rotate(270deg);
+}

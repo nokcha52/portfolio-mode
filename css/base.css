@@ -386,6 +386,19 @@
     border: 1px solid var(--gs07);
     color: var(--gs07);
 }
+.btn_gray{
+    padding: 15px;
+    border: none;
+    background-color: var(--gs06);
+    color: var(--gs01);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.btn_gray:hover{
+    background-color: var(--gs04);
+    color: var(--gs09);
+}
+
 /* 탭버튼 스타일 */
 .tab_btn{
     border: none;
@@ -444,4 +457,18 @@ input:focus,textarea:focus, select:focus{
 }
 .searchBox:focus-within {
   border: 1px solid var(--ys04)
+}
+
+
+.modal_overlay.cart .center_cont{
+    margin-bottom: 40px;
+}
+.modal_overlay .button_cont{
+    display: flex;
+    justify-content: space-between;
+}
+.modal_overlay .button_cont > *{
+    width: 48%;
+    display: inline-block;
+    text-align: center;
 }

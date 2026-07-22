@@ -39,6 +39,7 @@
 }
 .product_card .price_policy_cont{
     display: flex;
+    align-items: center;
     gap: 10px;
     margin-bottom: 30px;
 }
@@ -46,9 +47,12 @@
     width: 65%;
     margin: 0;
 }
-.product_card .price_policy_cont button{
+.product_card .price_policy_cont a{
     padding: 10px;
     width: 30%;
+    min-width: 100px;
+    height: 40px;
+    text-align: center;
 }
 .product_card hr{
     opacity: 0.7;
@@ -61,6 +65,10 @@
     justify-content: space-between;
     padding: 10px 0;
 }
+.product_card{
+    overflow: hidden;
+    overflow-y: auto;
+}
 .product_card .policy_cont button span{    
     color: var(--gs06);
     border-bottom: 1px solid var(--gs06);
@@ -69,12 +77,38 @@
     color: var(--gs08);
     border-bottom: 1px solid var(--gs08);
 }
+.modal_overlay.policy .center_cont p{
+    margin-bottom: 20px;
+}
+.modal_overlay.policy .center_cont p a{
+    color: var(--gs01);
+    border-bottom: 1px solid var(--gs01);
+}
+.modal_overlay.policy .center_cont h4{
+    margin-bottom: 10px;
+    color: var(--bs03);
+}
+.modal_overlay.policy .center_cont ul{
+    margin-bottom: 20px;
+}
+.modal_overlay.policy .center_cont ul li{
+    margin-bottom: 5px;
+}
+.modal_overlay.policy .center_cont ul li a{
+    color: var(--gs01);
+    border-bottom: 1px solid var(--gs01);
+}
 @media screen and (min-width: 1024px){
     .product_card{
         max-width: 400px;
     }
     .product_card figure{
         display: none;
+    }    
+    .modal_overlay.policy{
+        max-height: 700px;
+        overflow-y: auto;
+        scrollbar-width: none;
     }
 }
 @media screen and (max-width:1023px){
@@ -87,5 +121,10 @@
     }
     .product_card figure img{
         transform: translateX(-1%);
+    }
+    .modal_overlay.policy{
+        max-height: 500px;
+        overflow-y: auto;
+        scrollbar-width: none;
     }
 }
