@@ -1,4 +1,4 @@
-img{
+section img{
     width: 100%;
 }
 .main_head.detail_page{
@@ -122,6 +122,29 @@ img{
 .main_head.detail_page .left_side ul.no_list li span:first-child{
     max-width: 260px;
     width: 100%;
+}
+.main_head.detail_page .left_side section{
+    margin-bottom: 30px;
+}
+.main_head.detail_page .left_side section.switch_part,
+
+.main_head.detail_page .left_side .edition_part{
+    position: relative;
+}
+.main_head.detail_page .left_side .edition_part > span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+}
+.main_head.detail_page .left_side .edition_part > span:nth-child(3){
+    margin-bottom: 20px;
+    display: block;
+}
+.main_head.detail_page .left_side .tab_cont{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 .accordion{
     margin-bottom: 20px;
