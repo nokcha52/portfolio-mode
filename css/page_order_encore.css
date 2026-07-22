@@ -125,8 +125,39 @@ section img{
 }
 .main_head.detail_page .left_side section{
     margin-bottom: 30px;
+    width: 100%;
 }
-.main_head.detail_page .left_side section.switch_part,
+.main_head.detail_page .left_side section .card_slot{
+    background-color: var(--gs09);
+    border-radius: 10px;
+}
+.main_head.detail_page .left_side section .card_slot .span_cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 10px;
+}
+.main_head.detail_page .left_side section .card_slot .span_cont span{
+    display: block;
+}
+.main_head.detail_page .left_side section.switch_part .card_slot,
+.main_head.detail_page .left_side section.keycap_part .card_slot{
+    display: flex;
+}
+.main_head.detail_page .left_side section.switch_part figure,
+.main_head.detail_page .left_side section.keycap_part figure{
+    width: 200px;
+    height: 150px;
+    background-color: var(--gs07);
+}
+.main_head.detail_page .left_side section.switch_part figure img,
+.main_head.detail_page .left_side section.keycap_part figure img{
+    object-fit: cover;
+    object-position: center;
+    width: 200px;
+    height: 150px;
+}
 
 .main_head.detail_page .left_side .edition_part{
     position: relative;
