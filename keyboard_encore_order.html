@@ -19,6 +19,7 @@
     <script src="js/review.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/policy.js"></script>
+    <script src="js/order_detail.js"></script>
 </head>
 
 <body>
@@ -262,7 +263,7 @@
                 </section>
             </div>
         </div>
-        <form id="login_before" action="/login-process" method="POST" class="popDown login boxShadow">
+        <form id="login_before" action="/login-process" method="POST" class="popDown login">
             <h2 class="title1">Welcome</h2>
             <p class="body-2">Log in or sign up to get started.</p>
             <div class="label_cont">
@@ -282,7 +283,7 @@
                 <span><a href="login_main.html">Sign up</a></span>
             </div>
         </form>
-        <div id="login_after" class="popDown account boxShadow">
+        <div id="login_after" class="popDown account">
             <p class="title2">Welcome back</p>
             <p class="title4">username@gmail.com</p>
             <ul class="label-m">
@@ -517,7 +518,7 @@
                     <h2 class="title1">PCB type</h2>
                     <ul>
                         <li>
-                            <article class="card_slot boxShadow">
+                            <article class="card_slot">
                                 <figure>
                                     <img src="images/keyboards/encore/PCB1.webp" alt="pcb1">
                                 </figure>
@@ -528,7 +529,9 @@
                                         layout support you can consider a solder PCB.</p>
                                 </div>
                             </article>
-                            <article class="card_slot boxShadow">
+                        </li>
+                        <li>
+                            <article class="card_slot">
                                 <figure>
                                     <img src="images/keyboards/encore/PCB2.webp" alt="pcb2">
                                 </figure>
@@ -546,7 +549,7 @@
                     <h2 class="title1">Plate Material</h2>
                     <ul>
                         <li>
-                            <article class="card_slot boxShadow">
+                            <article class="card_slot">
                                 <figure>
                                     <img src="images/keyboards/encore/plate_mat1.webp" alt="plate1">
                                 </figure>
@@ -555,31 +558,37 @@
                                     <p class="label-s">+$0</p>
                                 </div>
                             </article>
-                            <article class="card_slot boxShadow">
+                        </li>
+                        <li>
+                            <article class="card_slot">
                                 <figure>
                                     <img src="images/keyboards/encore/plate_mat2.webp" alt="plate2">
                                 </figure>
                                 <div>
                                     <span class="title4">Aluminum</span>
-                                    <p class="body-s">+$10.00</p>
+                                    <p class="label-s">+$10.00</p>
                                 </div>
                             </article>
-                            <article class="card_slot boxShadow">
+                        </li>
+                        <li>
+                            <article class="card_slot">
                                 <figure>
                                     <img src="images/keyboards/encore/plate_mat3.webp" alt="plate3">
                                 </figure>
                                 <div>
                                     <span class="title4">Carbon Fiber</span>
-                                    <p class="body-s">+$15.00</p>
+                                    <p class="label-s">+$15.00</p>
                                 </div>
                             </article>
-                            <article class="card_slot boxShadow">
+                        </li>
+                        <li>
+                            <article class="card_slot">
                                 <figure>
                                     <img src="images/keyboards/encore/plate_mat4.webp" alt="plate4">
                                 </figure>
                                 <div>
                                     <span class="title4">Copper</span>
-                                    <p class="body-s">+$40.00</p>
+                                    <p class="label-s">+$40.00</p>
                                 </div>
                             </article>
                         </li>
@@ -587,7 +596,7 @@
                 </section>
                 <section class="switch_part">
                     <h2 class="title1">Switches</h2>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/switch1_3.webp" alt="switchImg">
                         </figure>
@@ -596,7 +605,7 @@
                             <span class="label-s">$50.00</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/switch2_3.webp" alt="switchImg">
                         </figure>
@@ -605,7 +614,7 @@
                             <span class="label-s">$62.00</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/switch3_5.webp" alt="switchImg">
                         </figure>
@@ -614,7 +623,7 @@
                             <span class="label-s">$62.00</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/switch4_3.webp" alt="switchImg">
                         </figure>
@@ -623,7 +632,7 @@
                             <span class="label-s">$50.00</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                         </figure>
                         <div class="span_cont">
@@ -633,25 +642,35 @@
                     </article>
                 </section>
                 <section class="stabilizer_part">
-                    <h2 class="title2">Stabilizers</h2>
-                    <p class="body-s">Stabilizers prevent larger keys (spacebar, shift, enter, backspace) from wobbling
+                    <h2 class="title1">Stabilizers</h2>
+                    <p class="body-m">Stabilizers prevent larger keys (spacebar, shift, enter, backspace) from wobbling
                         or tilting when pressed off-center. Required for a complete build, but can be skipped if you
                         already have compatible stabilizers.</p>
-                    <article class="card_slot">
-                        <figure>
-                            <img src="images/keyboards/encore/stablizer1_1.jpg" alt="stabilizerImg">
-                        </figure>
-                        <span class="title4">Mode Stabilizers</span>
-                    </article>
-                    <article class="card_slot">
-                        <figure>
-                        </figure>
-                        <span class="title4">No Stabilizers</span>
-                    </article>
+                    <ul>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                    <img src="images/keyboards/encore/stablizer1_1.jpg" alt="stabilizerImg">
+                                </figure>
+                                <div>
+                                    <span class="title4">Mode Stabilizers</span>
+                                </div>                                
+                            </article>
+                        </li>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                </figure>
+                                <div>
+                                    <span class="title4">No Stabilizers</span>
+                                </div>                                
+                            </article>
+                        </li>
+                    </ul>
                 </section>
                 <section class="keycap_part">
-                    <h2 class="title2">Keycaps</h2>
-                    <article class="card_slot boxShadow">
+                    <h2 class="title1">Keycaps</h2>
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/keycap1.webp" alt="keycap1">
                         </figure>
@@ -660,7 +679,7 @@
                             <span class="label-s">$59.99</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/keycap2.webp" alt="keycap1">
                         </figure>
@@ -669,7 +688,7 @@
                             <span class="label-s">$59.99</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/keycap3.webp" alt="keycap1">
                         </figure>
@@ -678,7 +697,7 @@
                             <span class="label-s">$59.99</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/keycap4.webp" alt="keycap1">
                         </figure>
@@ -687,7 +706,7 @@
                             <span class="label-s">$59.99</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                             <img src="images/keyboards/encore/keycap5.webp" alt="keycap1">
                         </figure>
@@ -696,7 +715,7 @@
                             <span class="label-s">$59.99</span>
                         </div>
                     </article>
-                    <article class="card_slot boxShadow">
+                    <article class="card_slot">
                         <figure>
                         </figure>
                         <div class="span_cont">
@@ -706,24 +725,25 @@
                     </article>
                 </section>
                 <div class="width_cont">
-                    <article class="product_card">
-                        <h2 class="title2">Anthracite</h2>
-                        <p class="body-l">Off-whites and cool grays inspired by modern urban architecture.</p>
-                        <figure class="encore_fig">
-                            <img src="images/keycaps/antharcite/thumb.webp" alt="encoreImg">
-                        </figure>
-                        <div class="star_cont">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <span class="label-s">4.7 (156)</span>
-                        </div>
-                        <span class="title3">$59.99</span>
-                        <p class="body-l">Thick bezels, a chamfered cherry-style front edge, and natural hardwood
-                            accents —
-                            redesigned for 2026 with the Crown Mounting System inside.</p>
+                    <h2 class="title2">Summary</h2>
+                    <article class="product_card">                        
+                        <div class="product_cont">
+                            <h3 class="title2">Encore</h2>
+                            <p class="edit_click body-l"></p>
+                            <p class="pcb_click body-l"></p>
+                            <p class="plate_click body-l"></p>
+                            <p class="switch_click body-l"></p>
+                            <p class="stab_click body-l"></p>
+                            <p class="keycap_click body-l"></p>
+                        </div>         
+                        <div class="product_count">
+                            <span class=" total_price title3">$</span>
+                            <div class="button_cont">
+                                <button type="button" class="minus_btn label-m">-</button>
+                                <span class="count_cont"></span>
+                                <button type="button" class="plus_btn label-m">+</button>
+                            </div>
+                        </div>                        
                         <button type="button" class="btn_blue label-m" data-category="addtocart">Add to cart</button>
                         <div class="price_policy_cont">
                             <p class="body-m">Prices exclude import duties and taxes. Duties and taxes are collected at
@@ -750,24 +770,25 @@
             </div>
             <div class="right_side">
                 <div class="width_cont">
-                    <article class="product_card">
-                        <h2 class="title2">Anthracite</h2>
-                        <p class="body-l">Off-whites and cool grays inspired by modern urban architecture.</p>
-                        <figure class="encore_fig">
-                            <img src="images/keycaps/antharcite/thumb.webp" alt="encoreImg">
-                        </figure>
-                        <div class="star_cont">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                            <span class="label-s">4.7 (156)</span>
-                        </div>
-                        <span class="title3">$59.99</span>
-                        <p class="body-l">Thick bezels, a chamfered cherry-style front edge, and natural hardwood
-                            accents —
-                            redesigned for 2026 with the Crown Mounting System inside.</p>
+                    <h2 class="title2">Summary</h2>
+                    <article class="product_card">                        
+                        <div class="product_cont">
+                            <h3 class="title2">Encore</h2>
+                            <p class="edit_click body-l"></p>
+                            <p class="pcb_click body-l"></p>
+                            <p class="plate_click body-l"></p>
+                            <p class="switch_click body-l"></p>
+                            <p class="stab_click body-l"></p>
+                            <p class="keycap_click body-l"></p>
+                        </div>         
+                        <div class="product_count">
+                            <span class=" total_price title3"></span>
+                            <div class="button_cont">
+                                <button type="button" class="minus_btn label-m">-</button>
+                                <span class="count_cont label-m"></span>
+                                <button type="button" class="plus_btn label-m">+</button>
+                            </div>
+                        </div>                        
                         <button type="button" class="btn_blue label-m" data-category="addtocart">Add to cart</button>
                         <div class="price_policy_cont">
                             <p class="body-m">Prices exclude import duties and taxes. Duties and taxes are collected at
