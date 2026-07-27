@@ -50,9 +50,6 @@ main section.right_side{
     gap: 30px;
     padding: 20px 10px 100px;
 }
-main section.right_side h2{
-    margin-bottom: 30px;
-}
 main section.right_side > a{
     display: flex;
     align-items: center;
@@ -125,6 +122,9 @@ main section.right_side article a{
     display: block;
     text-align: center;
 }
+main section.right_side > button:hover{
+    color: var(--rs02);
+}
 main.account_main h3,
 main.account_main .accordion .accordion_item > button span{
     color: var(--rs03);
@@ -152,6 +152,36 @@ main.account_main .right_side > button{
     text-align: left;
     border: none;
 }
+main.benefits_main .right_side h2{
+    color: var(--ls02);
+}
+main.benefits_main .right_side > p{
+    color: var(--ls03);
+}
+main.benefits_main .right_side .card_cont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+main.benefits_main .right_side .card_cont span{
+    display: block;
+    margin-bottom: 10px;
+}
+main.benefits_main .right_side .card_cont h3{
+    color: var(--ls02);
+}
+main.benefits_main .right_side .card_cont span:first-of-type{
+    color: var(--ls03);
+}
+main.benefits_main .right_side .card_cont span:nth-of-type(2){
+    color: var(--ls04);
+}
+main.benefits_main .right_side .card_cont span:nth-of-type(3){
+    color: var(--gs04);
+}
+main.benefits_main .right_side .card_cont p{
+    min-height: 50px;
+}
 .toast {
     white-space: pre-line;
 }
@@ -171,7 +201,7 @@ main.account_main .right_side > button{
     }
     main div.left_side{
         width: 350px;
-        padding: 100px 20px;
+        padding: 100px 50px;
     }
 }
 @media screen and (max-width: 1024px) and (min-width:900px){
@@ -183,6 +213,16 @@ main.account_main .right_side > button{
         padding: 50px 20px;
     }
 }
+@media screen and (min-width: 900px){
+    main.benefits_main .right_side .card_cont article{
+        width: 48%;
+    }
+}
+@media screen and (max-width: 899px){
+    main.benefits_main .right_side .card_cont article{
+        width: 100%;
+    }
+}
 @media screen and (max-width: 899px) and (min-width:650px){
     main section.right_side{
         max-width: 450px;
@@ -191,6 +231,7 @@ main.account_main .right_side > button{
         width: 200px;
         padding: 50px 20px;
     }
+    
 }
 @media screen and (max-width: 649px){
     main{
@@ -211,8 +252,10 @@ main.account_main .right_side > button{
     main div.left_side ul li a{
         display: block;
     }
+    .title2,.title3{
+        font-size: 18px;
+    }
 }
-
 @media screen and (min-width:650px){
     main div.left_side{
         position: relative;
@@ -225,14 +268,5 @@ main.account_main .right_side > button{
     main .right_side .user_info_cont figure{
         display: none;
     }
-    /* main .right_side .user_info_cont .user_info{
-        flex-direction: column;
-    }
-    main .right_side .user_info_cont .user_info div{
-        width: 100%;
-    }
-    main button,
-    main a{
-        width: 100%;
-    } */
 }
+
