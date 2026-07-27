@@ -1,0 +1,92 @@
+.modal_overlay{
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--gs09);
+}
+.modal_overlay .head_cont{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.modal_overlay .head_cont button{
+    background-color: transparent;
+    border: none;
+}
+.modal_overlay.change_name ul{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.modal_overlay.change_name ul li{
+    width: 48%;
+}
+.modal_overlay.change_name ul li > *{
+    width: 100%;
+    display: block;
+}
+.modal_overlay.change_name ul li label{
+    margin-bottom: 10px;
+}
+.modal_overlay.change_name ul li input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+}
+.modal_overlay .center_cont h4{
+    margin-bottom: 10px;
+}
+.modal_overlay .center_cont p,
+.modal_overlay p{
+    margin-bottom: 20px;
+}
+.modal_overlay .btn_cont{
+    gap: 10px;
+}
+.modal_overlay .btn_cont button{
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+}
+.modal_overlay.policy{
+    flex-direction: column;
+}
+.modal_overlay.policy .head_cont{
+    display: flex;
+    width: 100%;
+}
+.modal_overlay a{
+    color: var(--gs02);
+    border-bottom: 1px solid var(--gs02);
+}
+#modal_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.modal_overlay {
+    z-index: 1000;     
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+@media screen and (min-width:400px){
+    .modal_overlay .btn_cont{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .modal_overlay .btn_cont li,
+    .modal_overlay .btn_cont li button{
+        width: 100%;
+    }
+}
+@media screen and (max-width:399px){
+    .modal_overlay .btn_cont button,
+    .modal_overlay .btn_cont li:not(:last-child){
+        margin-bottom: 10px;
+    }
+}

@@ -1,6 +1,3 @@
-// product-list-core.js 다음에 로드되어야 합니다.
-// <script src="product-list-core.js"></script>
-// <script src="product-list-tabs.js"></script>
 document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.tab_btn');
     if (!tabButtons.length) return;
@@ -19,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // URL의 ?category= 파라미터에 맞춰 초기 탭 상태 동기화
     const urlParams = new URLSearchParams(window.location.search);
     const categoryFromURL = urlParams.get('category');
 

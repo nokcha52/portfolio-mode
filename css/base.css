@@ -352,15 +352,15 @@
 }
 .btn_green{
     padding: 15px;
-    background-color: var(--ys05);
-    color: var(--rs02);
+    background-color: var(--ls05);
+    color: var(--ls02);
     border: none;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
 .btn_green:hover{
-    background-color: var(--ys06);
-    color: var(--rs03);
+    background-color: var(--ls06);
+    color: var(--ls03);
 }
 .btn_blue{
     padding: 15px;

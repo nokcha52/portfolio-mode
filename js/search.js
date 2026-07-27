@@ -1,8 +1,6 @@
 $(document).ready(function(){
     searchBox()
 })
-
-// 키워드 → 이동할 페이지 매핑
 var searchPageMap = {
     "keyboard": "search_keyboard.html",
     "keycap": "search_keycap.html",
@@ -25,8 +23,6 @@ function searchBox(){
             if(keyword === ""){
                 return;
             }
-
-            // 키워드 목록 중 입력값을 포함하는(부분 일치) 첫 번째 항목 찾기
             var matchedKey = Object.keys(searchPageMap).find(function(key){
                 return key.includes(keyword);
             });

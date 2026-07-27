@@ -24,7 +24,7 @@
 .product_card .star_cont span{
     color: var(--gs06);
 }
-.product_card span.title3{
+.product_card span.title3:not(.total_price){
     color: var(--gs07);    
     margin-bottom: 20px;
     display: block;
@@ -41,7 +41,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 30px;
 }
 .product_card .price_policy_cont p{
     width: 65%;

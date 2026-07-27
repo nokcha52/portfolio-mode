@@ -1,0 +1,109 @@
+main{
+    padding-top: 100px;
+}
+main > div{
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gs09);
+    border-radius: 20px;
+    overflow: hidden;
+}
+main > div > figure{
+    background-color: var(--ys07);
+}
+main > div > figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translateY(-25px);
+}
+main > div article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    gap: 30px;
+    align-items: center;
+}
+main > div article h2{
+    color: var(--bs03);
+}
+main > div article input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+    color: var(--gs05);
+}
+main > div article .btn_cont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+main > div article .btn_cont button{
+    background-color: transparent;
+    border: none;
+    color: var(--gs05);
+}
+main > div article .btn_cont button:hover{
+    color: var(--ys04);
+}
+main > div article a,
+main > div article > button{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.toast {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: var(--bs07);
+    color: var(--gs01);
+    padding: 15px 30px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+@media screen and (min-width:1024px){
+    main > div{
+        max-width: 1100px;
+    }
+    main > div > *{
+        width: 50%;
+        height: 450px;
+    }    
+}
+@media screen and (max-width:1023px) {
+    main > div{
+        max-width: 600px !important;
+        flex-wrap: wrap;
+    }
+    main > div > *{
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px){
+    .title1{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:380px){
+    main div figure img{
+        transform: translateY(-10px);
+    }
+    main div article{
+        padding: 20px;
+    }
+}

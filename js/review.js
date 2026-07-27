@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPagination();
 });
 
-/* ============================================
-   1. Review / Questions 탭 전환 + sortBox 표시/숨김
-============================================ */
 function initReviewQuestionTabs() {
   const reviewCenter = document.querySelector('.review_center');
   if (!reviewCenter) return;
@@ -21,7 +18,7 @@ function initReviewQuestionTabs() {
 
   tabBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      const category = btn.dataset.category; // "review" 또는 "question"
+      const category = btn.dataset.category;
 
       tabBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
@@ -34,7 +31,6 @@ function initReviewQuestionTabs() {
         wb.hidden = wb.dataset.tabAction !== category;
       });
 
-      // sortBox는 review 탭일 때만 보이기
       if (sortBox) {
         sortBox.hidden = category !== 'review';
       }
@@ -45,9 +41,6 @@ function initReviewQuestionTabs() {
   });
 }
 
-/* ============================================
-   2. 정렬(sortBox) 드롭다운 + 화살표 회전 + 정렬 로직
-============================================ */
 function initSortBox() {
   const sortBox = document.querySelector('.sortBox');
   if (!sortBox) return;
@@ -80,7 +73,6 @@ function initSortBox() {
   });
 }
 
-// "2 weeks ago" / "1 months ago" 텍스트를 "며칠 전"인지 숫자로 환산 (작을수록 최근)
 function parseRelativeDate(text) {
   const match = text.match(/(\d+)\s*(day|week|month|year)/i);
   if (!match) return Infinity;
@@ -129,9 +121,6 @@ function sortReviews(sortType) {
   refreshPagination();
 }
 
-/* ============================================
-   3. 별점 선택 (리뷰 모달)
-============================================ */
 function initStarRating() {
   const starSelect = document.querySelector('.star_select');
   if (!starSelect) return;
@@ -169,9 +158,6 @@ function resetStarRating() {
   });
 }
 
-/* ============================================
-   4. 모달 (write 버튼 → 입력 모달 → 성공 모달)
-============================================ */
 let activeBackdrop = null;
 
 function openModal(modal) {
@@ -238,9 +224,6 @@ function initModals() {
   });
 }
 
-/* ============================================
-   5. Good / Bad 투표
-============================================ */
 function initVoting() {
   document.querySelectorAll('.review_cont').forEach((card) => {
     const upBtn = card.querySelector('.thumb_up');
@@ -291,11 +274,6 @@ function paintIcon(btn, isActive) {
     : `images/icon/icon_thumb${isUp ? 'up' : 'down'}.svg`;
 }
 
-/* ============================================
-   6. 반응형 페이지네이션
-   데스크톱(1024px~): 9개 / 태블릿(530~1023px): 8개 / 모바일(~529px): 6개
-   (CSS 미디어쿼리 breakpoint인 1024px, 800px, 530px 기준에 맞춤)
-============================================ */
 let allReviewCards = [];
 let currentPage = 1;
 

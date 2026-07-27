@@ -1,0 +1,238 @@
+
+main{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: stretch;
+}
+main div.left_side{
+    background-color: var(--gs09);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+}
+main div.left_side ul li{
+    margin-bottom: 20px;
+}
+main div.left_side ul li a{
+    color: var(--gs01);
+}
+main div.left_side ul li:first-child a.active{
+    color: var(--bs03);
+}
+main div.left_side ul li:nth-child(2) a.active{
+    color: var(--ls03);
+}
+main div.left_side ul li:nth-child(3) a.active{
+    color: var(--ys03);
+}
+main div.left_side ul li:last-child a.active{
+    color: var(--rs03);
+}
+main div.left_side a{
+    text-align: center;
+}
+.modal_overlay{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    flex-direction: column;
+    border-radius: 10px;
+}
+.modal_overlay h3{
+    color: var(--rs02);
+}
+main section.right_side{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 10px 100px;
+}
+main section.right_side h2{
+    margin-bottom: 30px;
+}
+main section.right_side > a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main section.right_side > a > *{
+    display: block;
+}
+main section.right_side > a > img{
+    transform: rotate(180deg);
+}
+main section.right_side > a span{
+    color: var(--gs03);
+}
+main.account_main .right_side h2{
+    color: var(--rs03);
+}
+main section.right_side .user_info_cont{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+main section.right_side .user_info_cont > .user_img img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: var(--gs09);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+main section.right_side .user_info_cont .user_info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+main section.right_side .user_info_cont .user_info .span_cont{
+    width: 50%;
+}
+main section.right_side .user_info_cont .user_info .span_cont span{
+    display: block;
+    margin-bottom: 10px;
+}
+main section.right_side .user_info_cont .user_info .span_cont span:last-child{
+    color: var(--gs03);
+}
+main section.right_side .user_info_cont > button{
+    border: none;
+}
+main section.right_side .user_info_cont > button img{
+    width:30px;
+    height: 30px;
+    border: 1px solid var(--rs03);
+    background-color: var(--ys08);
+    border-radius: 5px;
+}
+main section.right_side article{
+    background-color: var(--gs09);
+    padding: 20px;
+    border-radius: 10px;
+}
+main section.right_side article h3{
+    margin-bottom: 20px;
+}
+main section.right_side article p{
+    margin-bottom: 30px;
+}
+main section.right_side article a{
+    max-width: 200px;
+    display: block;
+    text-align: center;
+}
+main.account_main h3,
+main.account_main .accordion .accordion_item > button span{
+    color: var(--rs03);
+}
+.accordion .accordion_body{
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+}
+.accordion .accordion_body > *:not(p){
+    margin: 10px 20px;
+}
+.accordion .accordion_body input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+}
+.accordion .accordion_body input:first-of-type{
+    background-color: var(--bs08);
+}
+.accordion .accordion_body button{
+    margin-bottom: 20px;
+}
+main.account_main .right_side > button{
+    text-align: left;
+    border: none;
+}
+.toast {
+    white-space: pre-line;
+}
+.toast.toast_success {
+    background-color: var(--ls03);
+    color: var(--gs09);
+}
+.toast.toast_fail {
+    background-color: var(--rs03);
+}
+@media screen and (min-width: 1024px){
+    main{
+        gap: 30px;
+    }
+    main section.right_side{
+        max-width: 800px;
+    }
+    main div.left_side{
+        width: 350px;
+        padding: 100px 20px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width:900px){
+    main section.right_side{
+    max-width: 600px;
+    }    
+    main div.left_side{
+        width: 250px;
+        padding: 50px 20px;
+    }
+}
+@media screen and (max-width: 899px) and (min-width:650px){
+    main section.right_side{
+        max-width: 450px;
+    }    
+    main div.left_side{
+        width: 200px;
+        padding: 50px 20px;
+    }
+}
+@media screen and (max-width: 649px){
+    main{
+        flex-direction: column;
+    }
+    main div.left_side{
+        padding: 20px;
+    }
+    main div.left_side ul{
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    main div.left_side ul li{
+        min-width: 100px;
+    }
+    main div.left_side ul li a{
+        display: block;
+    }
+}
+
+@media screen and (min-width:650px){
+    main div.left_side{
+        position: relative;
+    }
+    main div.left_side ul{
+        position: sticky;
+    }
+}
+@media screen and (max-width:400px){    
+    main .right_side .user_info_cont figure{
+        display: none;
+    }
+    /* main .right_side .user_info_cont .user_info{
+        flex-direction: column;
+    }
+    main .right_side .user_info_cont .user_info div{
+        width: 100%;
+    }
+    main button,
+    main a{
+        width: 100%;
+    } */
+}

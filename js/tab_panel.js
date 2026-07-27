@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const parent = tabCont.parentElement;
         if (!parent) return;
-
-        // [수정] tabCont 바로 뒤에 나오는 형제 요소들 중 data-category를 가진 요소만 필터링
-        // 이렇게 하면 div.tab_panel 내부의 article들은 상위 tab_cont의 영향을 받지 않습니다.
+        
         const panels = Array.from(parent.children).filter(
             el => el !== tabCont && el.dataset.category !== undefined
         );
@@ -17,10 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function showPanel(category) {
             panels.forEach(panel => {
-                // [수정] 기존 flex 레이아웃을 유지하기 위해 display 속성을 빈값('')으로 초기화하거나 
-                // block 대신 각 요소의 원래 기본값 또는 적절한 상태로 변경합니다.
                 if (panel.dataset.category === category) {
-                    panel.style.display = ''; // CSS에 정의된 원래 display(flex 등)가 작동하도록 함
+                    panel.style.display = ''; 
                 } else {
                     panel.style.display = 'none';
                 }

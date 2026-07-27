@@ -22,10 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     noResultMsg.style.textAlign = 'center';
     productList.appendChild(noResultMsg);
 
-    // 실제 상품 아이템만 메모리에 보관 (DOM에서 나중에 뗐다 붙였다 함)
     const allItems = Array.from(productList.children).filter(item => item !== noResultMsg);
 
-    // 화면 너비에 따라 페이지당 개수 결정 (데스크탑 9개, 그 외 8개)
     function getItemsPerPage() {
         return window.innerWidth >= 1024 ? 9 : 8;
     }
@@ -116,14 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const end = start + itemsPerPage;
         const visibleItems = result.slice(start, end);
 
-        // 핵심: display:none이 아니라, 안 보일 아이템은 DOM에서 아예 제거
         allItems.forEach(item => {
             if (item.parentNode === productList) {
                 productList.removeChild(item);
             }
         });
 
-        // 이번 페이지에 보일 것만 순서대로 다시 삽입
         visibleItems.forEach(item => {
             productList.insertBefore(item, noResultMsg);
         });
@@ -152,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 화면 크기 변경 시 페이지당 개수 재계산
     window.addEventListener('resize', () => {
         const newItemsPerPage = getItemsPerPage();
         if (newItemsPerPage !== itemsPerPage) {
@@ -162,9 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 탭 버튼 모듈(product-list-tabs.js)에서 카테고리를 바꿀 수 있도록 공개 API 노출
-    // (이 파일이 먼저 로드되고, DOMContentLoaded 리스너도 먼저 등록되므로
-    //  탭 모듈의 DOMContentLoaded 콜백이 실행될 때는 아래 API가 이미 준비되어 있음)
     window.ProductListCore = {
         setCategory(category) {
             currentCategory = category;
