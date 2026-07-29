@@ -123,6 +123,14 @@ section .card_overflow .card_slot_cont .text_cont .span_align span:first-child{
     width: 100%;
     display: block;
 }
+section.envoy_pale .card_overflow{
+    display: flex;
+    justify-content: center!important;
+    padding: 0 10px;
+}
+section.envoy_pale .card_overflow .card_slot_cont{
+    width: 50%;
+}
 section .card_slot .text_sec span:last-child{
     width: 100%;
     min-width: 100px;

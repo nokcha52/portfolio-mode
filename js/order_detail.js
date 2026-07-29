@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('스크립트 실행됨!'); // 
     function setTextAll(className, text) {
         document.querySelectorAll('.' + className).forEach(el => {
             el.textContent = text;
@@ -81,11 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const sectionConfigs = [
-        { selector: '.pcb_part',        clickClass: 'pcb_click',    key: 'pcb' },
-        { selector: '.plate_part',      clickClass: 'plate_click',  key: 'plate' },
-        { selector: '.switch_part',     clickClass: 'switch_click', key: 'switch' },
-        { selector: '.stabilizer_part', clickClass: 'stab_click',   key: 'stabilizer' },
-        { selector: '.keycap_part',     clickClass: 'keycap_click', key: 'keycap' },
+        { selector: '.pcb_part', clickClass: 'pcb_click', key: 'pcb' },
+        { selector: '.plate_part', clickClass: 'plate_click', key: 'plate' },
+        { selector: '.switch_part', clickClass: 'switch_click', key: 'switch' },
+        { selector: '.stabilizer_part', clickClass: 'stab_click', key: 'stabilizer' },
+        { selector: '.keycap_part', clickClass: 'keycap_click', key: 'keycap' },
     ];
 
     sectionConfigs.forEach(({ selector, clickClass, key }) => {
@@ -139,10 +140,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const addToCartButtons = document.querySelectorAll('[data-category="addtocart"]');
+    if (!window.__cartListenerBound) {
+        window.__cartListenerBound = true;
 
-    addToCartButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
+        document.body.addEventListener('click', (e) => {
+            const btn = e.target.closest('[data-category="addtocart"]');
+            if (!btn) return;
+
+            console.log('클릭 핸들러 실행됨!');
+            
             const unitPrice = BASE_PRICE + Object.values(selectedPrices).reduce((sum, p) => sum + p, 0);
 
             const cartItem = {
@@ -158,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cart.push(cartItem);
             localStorage.setItem('cart', JSON.stringify(cart));
         });
-    });
+    }
 
     updateQuantityDisplay();
     updateTotalPrice();

@@ -180,6 +180,9 @@ section figure{
 .main_head.detail_page .left_side section .card_slot .span_cont span{
     display: block;
 }
+.main_head.detail_page .left_side section ul li div span{
+    color: var(--gs03);
+}
 .main_head.detail_page .left_side section.switch_part .card_slot,
 .main_head.detail_page .left_side section.keycap_part .card_slot{
     display: flex;
@@ -273,6 +276,18 @@ section.card_slot_section .card_slot_cont .card_slot_product > div a{
 .product_card .policy_cont button:hover span{
     border-bottom: 1px solid var(--gs04);
     color: var(--gs04);
+}
+.tab_cont.tempo li{
+    width: 30%;
+}
+.tab_cont.tempo li button{
+    width: 100%;
+}
+.tab_cont.envoy li{
+    width: 50%;
+}
+.tab_cont.envoy li button{
+    width: 100%;
 }
 
 @media screen and (min-width:1024px) {

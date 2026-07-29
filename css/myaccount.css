@@ -117,7 +117,7 @@ main section.right_side article h3{
 main section.right_side article p{
     margin-bottom: 30px;
 }
-main section.right_side article a{
+main section.right_side > article > a{
     max-width: 200px;
     display: block;
     text-align: center;
@@ -182,6 +182,142 @@ main.benefits_main .right_side .card_cont span:nth-of-type(3){
 main.benefits_main .right_side .card_cont p{
     min-height: 50px;
 }
+main.cart_main section.right_side{
+    display: flex;
+    width: 100%;
+}
+main.cart_main section.right_side div.cart_left{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    width: 100%;
+}
+main.cart_main section.right_side h2{
+    color: var(--ys02);
+}
+main.cart_main section.right_side div.cart_left >a{
+    display: flex;
+    gap: 10px;
+}
+main.cart_main section.right_side div.cart_left >a img{
+    transform: rotate(180deg);
+}
+main.cart_main section.right_side div.cart_left >a span{
+    color: var(--gs01);
+}
+main.cart_main section.right_side div.cart_left div h3{
+    color: var(--ys03);
+    margin-bottom: 10px;
+}
+main.cart_main section.right_side div.cart_left #cart_list .cart_item{
+    padding: 15px;
+}
+main.cart_main section.right_side div.cart_left #cart_list .cart_item:not(:last-child){
+    margin-bottom: 20px;
+}
+main.cart_main section.right_side div.cart_left .cart_item{    
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+main.cart_main section.right_side div.cart_left .cart_item
+figure,
+main.cart_main section.right_side div.cart_left .cart_item figure img{
+    max-width: 120px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+main.cart_main section.right_side div.cart_left .cart_item h4{
+    color: var(--gs04);
+    margin-bottom: 20px;
+}
+main.cart_main section.right_side div.cart_left .cart_item > .cart_item_price{
+    color: var(--gs03);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+main.cart_main section.right_side div.cart_left .cart_item .cart_item_qty{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    line-height: 24px;
+}
+main.cart_main section.right_side div.cart_left .cart_item .cart_item_qty > *{
+    background-color: transparent;
+}
+main.cart_main section.right_side div.cart_left .cart_item .cart_item_qty > *:first-child{
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+main.cart_main section.right_side div.cart_left .cart_item .cart_item_qty > *:not(:first-child){
+    border: 2px solid var(--gs06);
+    border-radius: 5px;    
+    color: var(--gs02);
+    height: 24px;
+}
+main.cart_main section.right_side div.cart_left .cart_item .cart_item_qty > span{
+    display: inline-block;
+    height: 24px;
+    width: 40px;
+    text-align: center;
+}
+main.cart_main section.right_side div.cart_left .delivery_opt > p{
+    margin-bottom: 20px;
+}
+main.cart_main section.right_side div.cart_left .delivery_opt > div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+main.cart_main section.right_side div.cart_left .delivery_opt > div .active{
+    background-color: var(--ys07);
+}
+main.cart_main section.right_side div.cart_left .delivery_opt > div .active h4{
+    color: var(--ys03);
+}
+main.cart_main section.right_side div.cart_left .delivery_opt > div article:not(.active):hover{
+    background-color: var(--ys08);
+}
+main.cart_main section.right_side div.cart_left .delivery_opt > div h4{
+    color: var(--ys04);
+    margin-bottom: 10px;
+}
+main.cart_main section.right_side div.cart_left .delivery_opt > div span{
+    display: block;
+}
+main.cart_main section.right_side div.cart_left .delivery_opt > div span:first-of-type{
+    margin-bottom: 5px;
+}
+main.cart_main section.right_side div.cart_right .width_cont h2{
+    margin-bottom: 20px;
+}
+main.cart_main section.right_side div.cart_right .width_cont > article div section{
+    display: flex;
+    justify-content: space-between;
+}
+main.cart_main section.right_side div.cart_right .width_cont > article div section:nth-child(2){
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--gs07);
+}
+main.cart_main section.right_side div.cart_right .width_cont > article > a{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+main.cart_main section.right_side div.cart_right .width_cont > article div.price_policy_cont p{
+    max-height: 40px;
+    color: var(--gs01);
+    overflow: hidden;
+}
+
+
+
 .toast {
     white-space: pre-line;
 }
@@ -203,14 +339,33 @@ main.benefits_main .right_side .card_cont p{
         width: 350px;
         padding: 100px 50px;
     }
+    main.cart_main section.right_side{
+        flex-direction: column;
+    }
+    main.cart_main section.right_side .cart_right{
+        max-width: 300px;
+    }
+    main.cart_main section.right_side div.cart_left .delivery_opt > div article{
+        width: 48%;
+    }
 }
-@media screen and (max-width: 1024px) and (min-width:900px){
+@media screen and (min-width: 1023px){
+    main.cart_main section.right_side{
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 1023px) and (min-width:900px){
     main section.right_side{
     max-width: 600px;
     }    
     main div.left_side{
         width: 250px;
         padding: 50px 20px;
+    }
+}
+@media screen and (max-width: 1023px) and (min-width:520px){
+    main.cart_main section.right_side div.cart_left .delivery_opt > div article{
+        width: 32%;
     }
 }
 @media screen and (min-width: 900px){
@@ -222,6 +377,9 @@ main.benefits_main .right_side .card_cont p{
     main.benefits_main .right_side .card_cont article{
         width: 100%;
     }
+    main.cart_main section.right_side div.cart_left .delivery_opt > div article{
+        width: 32%;
+    }
 }
 @media screen and (max-width: 899px) and (min-width:650px){
     main section.right_side{
@@ -230,6 +388,8 @@ main.benefits_main .right_side .card_cont p{
     main div.left_side{
         width: 200px;
         padding: 50px 20px;
+    }main.cart_main section.right_side div.cart_left .delivery_opt > div article{
+        width: 48%;
     }
     
 }
@@ -264,9 +424,17 @@ main.benefits_main .right_side .card_cont p{
         position: sticky;
     }
 }
+@media screen and (max-width: 519px){
+    main.cart_main section.right_side div.cart_left .delivery_opt > div article{
+        width: 100%;
+    }
+}
 @media screen and (max-width:400px){    
     main .right_side .user_info_cont figure{
         display: none;
+    }
+    main.cart_main section.right_side div.cart_left .cart_item{
+        flex-direction: column;
     }
 }
 
