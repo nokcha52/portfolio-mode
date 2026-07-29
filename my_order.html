@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My account</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/comp_modal.css">
+    <link rel="stylesheet" href="css/myaccount.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/account.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headerTop">
+            <h1>
+                <a href="index.html"><img src="images/header/logo.svg" alt="logo"></a>
+            </h1>
+            <nav class="menu label-m">
+                <ul>
+                    <li data-tabName="keyboard"><a href="javascript:void(0)">Keyboards</a></li>
+                    <li data-tabName="keycap"><a href="javascript:void(0)">Keycaps</a></li>
+                    <li data-tabName="component"><a href="javascript:void(0)">Component</a></li>
+                    <li data-tabName="about"><a href="javascript:void(0)">About</a></li>
+                    <li data-tabName="help"><a href="javascript:void(0)">Help</a></li>
+                </ul>
+            </nav>
+            <ul class="subMenu">
+                <li data-tabName="search"><a href="javascript:void(0)"><img src="images/icon/icon_search.svg"
+                            alt="searchIcon"></a></li>
+                <li data-tabName="login"><a href="javascript:void(0)"><img src="images/icon/icon_personal.svg"
+                            alt="personalIcon"></a></li>
+                <li data-tabName="cart"><a href="my_cart.html"><img src="images/icon/icon_cart.svg" alt="cartIcon"></a>
+                </li>
+                <li data-tabName="menuBar"><a href="javascript:void(0)"><img src="images/icon/icon_menuBar.svg"
+                            alt="menuBar"></a></li>
+            </ul>
+        </div>
+        <div id="keyboard" class="megaMenu keyboards">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">keyboards</h2>
+            <ul>
+                <li><a href="keyboard_encore_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_2encore.jpg" alt="encoreImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Encore</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+                <li><a href="keyboard_sonnet_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_3sonn.jpg" alt="sonnetImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Sonnet</span>
+                            <span class="body-m">75%</span>
+                        </div>
+                    </a></li>
+                <li><a href="keyboard_tempo_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_4temp.jpg" alt="tempoImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Tempo</span>
+                            <span class="body-m">60%</span>
+                        </div>
+                    </a></li>
+                <li><a href="keyboard_envoy_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_5env.jpg" alt="envoyImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Envoy</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+                <li><a href="keyboard_sixtyFive_detail.html">
+                        <figure>
+                            <img src="images/header/keyboards_6six.jpg" alt="sixtyfiveImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">SixtyFive</span>
+                            <span class="body-m">65%</span>
+                        </div>
+                    </a></li>
+            </ul>
+            <a href="keyboards_list.html" class="arrow_go">
+                <div class="icon_arrow_bg red">
+                    <i class="icon_arrow red"></i>
+                </div>
+                <span class="arrowText red label-m">View all Keyboards</span>
+            </a>
+        </div>
+        <div id="keycap" class="megaMenu keycaps">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">Keycaps</h2>
+            <ul>
+                <li><a href="keycap_cacao_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_1cacao.webp" alt="cacaoImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Cacao</span>
+                        </div>
+                    </a></li>
+                <li><a href="keycap_monterey_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_2Mon.webp" alt="montereyImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Monterey</span>
+                        </div>
+                    </a></li>
+                <li><a href="keycap_obscura_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_3ob.webp" alt="obscuraImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Obscura</span>
+                        </div>
+                    </a></li>
+                <li><a href="keycap_anthracite_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_4an.webp" alt="anthraciteImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Anthracite</span>
+                        </div>
+                    </a></li>
+                <li><a href="keycap_lotus_detail.html">
+                        <figure>
+                            <img src="images/header/keycap_5Lot.webp" alt="lotusImg">
+                        </figure>
+                        <div class="textBox">
+                            <span class="label-m">Lotus</span>
+                        </div>
+                    </a></li>
+            </ul>
+            <a href="keycaps_list.html" class="arrow_go">
+                <div class="icon_arrow_bg yellow">
+                    <i class="icon_arrow yellow"></i>
+                </div>
+                <span class="arrowText yellow label-m">View all Keycaps</span>
+            </a>
+        </div>
+        <div id="component" class="megaMenu component">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">Components</h2>
+            <div class="section_row">
+                <section class="switch">
+                    <h3 class="title4">Switches</h3>
+                    <ul class="body-l">
+                        <li><a href="switch_obscura_detail.html">Obscura Linear</a></li>
+                        <li><a href="switch_tommorow_detail.html">Tomorrow Tactile</a></li>
+                        <li><a href="switch_anthracite_detail.html">Anthracite Silent</a></li>
+                        <li><a href="switch_lotus_detail.html">Lotus Linear</a></li>
+                    </ul>
+                </section>
+                <section class="extraPart">
+                    <h3 class="title4">Extra Parts</h3>
+                    <ul class="body-l">
+                        <li><a href="components_list.html?category=encore">Encore</a></li>
+                        <li><a href="components_list.html?category=sonnet">Sonnet</a></li>
+                        <li><a href="components_list.html?category=envoy">Envoy</a></li>
+                        <li><a href="components_list.html?category=tempo">Tempo</a></li>
+                        <li><a href="components_list.html?category=sixtyfive">SixtyFive</a></li>
+                        <li><a href="components_list.html?category=loop">Loop</a></li>
+                        <li><a href="components_list.html?category=eighty">Eighty</a></li>
+                        <li><a href="components_list.html?category=others">Others</a></li>
+                    </ul>
+                </section>
+            </div>
+            <a href="components_list.html" class="arrow_go">
+                <div class="icon_arrow_bg green">
+                    <i class="icon_arrow green"></i>
+                </div>
+                <span class="arrowText green label-m">View all Components</span>
+            </a>
+        </div>
+        <div id="about" class="megaMenu about">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">About</h2>
+            <div class="section_row">
+                <section class="contact">
+                    <h3 class="title4">About us</h3>
+                    <ul class="body-l">
+                        <li><a href="about_us.html">Our Story</a></li>
+                    </ul>
+                </section>
+                <section class="notes">
+                    <h3 class="title4">Notes</h3>
+                    <ul class="body-l">
+                        <li><a href="notes_list.html">News</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div id="help" class="megaMenu help">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <h2 class="title3">Help</h2>
+            <div class="section_row">
+                <section class="contact">
+                    <h3 class="title4">Contact</h3>
+                    <ul class="body-l">
+                        <li><a href="contact_support_main.html">Contact Support</a></li>
+                    </ul>
+                </section>
+                <section class="guides">
+                    <h3 class="title4">Guides</h3>
+                    <ul class="body-l">
+                        <li><a href="bulid_guides_encore.html">Encore</a></li>
+                        <li><a href="bulid_guides_sonnet.html">Sonnet</a></li>
+                        <li><a href="bulid_guides_sonnet2024.html">Sonnet 2024</a></li>
+                        <li><a href="bulid_guides_tempo.html">Tempo</a></li>
+                        <li><a href="bulid_guides_envoy.html">Envoy</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div id="search" class="megaMenu search">
+            <div class="searchBox">
+                <img src="images/icon/icon_search.svg" alt="searchIcon">
+                <input type="text" id="searchInput" placeholder="Search keyboards, switches, keycaps" class="body-l">
+                <button class="clear_btn"><img src="images/icon/icon_x_btn.svg" alt="xIcon"></button>
+            </div>
+            <div class="section_row">
+                <section class="quicklink">
+                    <h3 class="title4">Quick Links</h3>
+                    <ul class="body-l">
+                        <li><a href="bulid_guides_list.html">Build Guides</a></li>
+                        <li><a href="contact_support_main.html">Contact Support</a></li>
+                        <li><a href="notes_list.html">Notes</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <form id="login_before" action="/login-process" method="POST" class="popDown login boxShadow">
+            <h2 class="title1">Welcome</h2>
+            <p class="body-2">Log in or sign up to get started.</p>
+            <div class="label_cont">
+                <label for="loginEmail" class="title4">Email<span>*</span></label>
+                <input type="email" id="loginEmail" name="email" placeholder="Enter your Email" class="label-m"
+                    required>
+            </div>
+            <div class="label_cont">
+                <label for="loginPassword" class="title4">Password<span>*</span></label>
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password"
+                    class="label-m" required>
+            </div>
+            <span class="forgotpw"><a href="password_change.html" class="label-m">Forgot password?</a></span>
+            <button type="submit" class="btn_yellow label-m">Log in</button>
+            <div class="signup_text label-m">
+                <span>No account?</span>
+                <span><a href="login_main.html">Sign up</a></span>
+            </div>
+        </form>
+        <div id="login_after" class="popDown account boxShadow">
+            <p class="title2">Welcome back</p>
+            <p class="title4">username@gmail.com</p>
+            <ul class="label-m">
+                <li><a href="my_order.html"><img src="images/icon/icon_orders.svg" alt="orderIcon"><span>My
+                            Orders</span></a></li>
+                <li><a href="my_account.html"><img src="images/icon/icon_setting.svg" alt="settingIcon"><span>Account
+                            Settings</span></a></li>
+                <li><a href="javascript:void(0)" class="logout_btn">
+                        <img src="images/icon/icon_logOut.svg" alt="logoutIcon">
+                        <span>Log Out</span>
+                    </a></li>
+            </ul>
+        </div>
+        <div id="menuBar" class="megaMenu tablet login_before">
+            <button class="close_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">close</span>
+            </button>
+            <ul>
+                <li>
+                    <button data-target="keyboard">
+                        <span class="label-l">keyboards</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="keycap">
+                        <span class="label-l">keycaps</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="component">
+                        <span class="label-l">Components</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="about">
+                        <span class="label-l">About</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="help">
+                        <span class="label-l">Help</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="login_main.html">
+                        <img src="images/icon/icon_personal.svg" alt="personalIcon">
+                        <span class="label-m">Log in</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my_cart.html">
+                        <img src="images/icon/icon_cart.svg" alt="cartIcon">
+                        <span class="label-m">Shopping Cart</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="tablet_menu_after" class="megaMenu tablet login_after">
+            <button class="close_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">close</span>
+            </button>
+            <ul>
+                <li>
+                    <button data-target="keyboard">
+                        <span class="label-l">keyboards</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="keycap">
+                        <span class="label-l">keycaps</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="component">
+                        <span class="label-l">Components</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="about">
+                        <span class="label-l">About</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+                <li>
+                    <button data-target="help">
+                        <span class="label-l">Help</span>
+                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                    </button>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="login_main.html">
+                        <img src="images/icon/icon_personal.svg" alt="personalIcon">
+                        <span class="label-m">My account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my_cart.html">
+                        <img src="images/icon/icon_cart.svg" alt="cartIcon">
+                        <span class="label-m">Shopping Cart</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="tablet_account_detail" class="megaMenu tablet login_after">
+            <button class="back_btn">
+                <img src="images/icon/icon_chevron.svg" alt="chevronIcon">
+                <span class="label-l">Back</span>
+            </button>
+            <p class="label-xl">user@gmail.com</p>
+            <ul>
+                <li>
+                    <a href="my_order.html" class="label-l">My Orders</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="my_benefit.html" class="label-l">My Benefits</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="my_account.html" class="label-l">My Account</a>
+                </li>
+            </ul>
+            <div class="log_out_btn">
+                <button class="label-l">
+                    Log out
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="order_main">
+        <div class="left_side">
+            <ul>
+                <li>
+                    <a href="my_order.html" class="label-l active">My Orders</a>
+                </li>
+                <li>
+                    <a href="my_benefit.html" class="label-l">My Benefits</a>
+                </li>
+                <li>
+                    <a href="my_cart.html" class="label-l">My Cart</a>
+                </li>
+                <li>
+                    <a href="my_account.html" class="label-l">My Account</a>
+                </li>
+            </ul>
+            <a href="contact_support_main.html" class="btn_yellow label-m">Contact Us</a>
+        </div>
+        <section class="right_side">
+            <h2 class="title1">My Orders</h2>
+            <a href="index.html">
+                <img src="images/icon/icon_arrow.svg" alt="back_btn">
+                <span class="body-l">Go back home</span>
+            </a>
+            <article>
+                <h3 class="title4">Can't find your order?</h3>
+                <p class="body-l">Some orders may not be visible in your order history while the coleman system is being
+                    upgraded. To learn how toolve this issue <a href="contact_support_main.html">FAQ</a> Please visit
+                    the page.</p>
+            </article>
+            <article class="boxShadow order_cont">
+                <figure>
+                    <img src="images/keyboards/sonnet/edition1_2.jpeg" alt="img">
+                </figure>
+                <div class="center_cont">
+                    <div>
+                        <span class="label-m status">Preparing</span>
+                        <h4 class="title3">Sonnet</h4>
+                        <span class="label-m">Ordered on Jun 6, 2026</span>
+                        <button class="label-s">+ 2 items more</button>
+                    </div>
+                    <div>
+                        <span class="label-s">SKU : 2000037218</span>
+                        <span class="label-s">Option : Black Sesame/ Hotswap/ POM</span>
+                    </div>
+                </div>
+                <div class="btn_cont">
+                    <button type="button" class="btn_red label-m">Cancel order</button>
+                </div>
+            </article>
+            <article class="boxShadow order_cont">
+                <figure>
+                    <img src="images/swichtes/tommorow/thumb.webp" alt="img">
+                </figure>
+                <div class="center_cont">
+                    <div>
+                        <span class="label-m status">Shipping</span>
+                        <h4 class="title3">Tommorow Tactile Switches</h4>
+                        <span class="label-m">Ordered on Jun 3, 2026</span>
+                    </div>
+                    <div>
+                        <span class="label-s">SKU : 205482604667</span>
+                        <span class="label-s">Option : Swtich</span>
+                    </div>
+                </div>
+                <div class="btn_cont">
+                    <button type="button" class="btn_blue label-m">View order detail</button>
+                    <button type="button" class="btn_yellow label-m">Track shipment</button>
+                </div>
+            </article>
+            <article class="boxShadow order_cont">
+                <figure>
+                    <img src="images/swichtes/tommorow/thumb.webp" alt="img">
+                </figure>
+                <div class="center_cont">
+                    <div>
+                        <span class="label-m status">Shipping</span>
+                        <h4 class="title3">Tommorow Tactile Switches</h4>
+                        <span class="label-m">Ordered on Jun 3, 2026</span>
+                    </div>
+                    <div>
+                        <span class="label-s">SKU : 205482604667</span>
+                        <span class="label-s">Option : Swtich</span>
+                    </div>
+                </div>
+                <div class="btn_cont">
+                    <button type="button" class="btn_blue label-m">View order detail</button>
+                    <button type="button" class="btn_yellow label-m">Track shipment</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section class="footer_front">
+            <h2 class="heading2">From Mode.<br>
+                with love</h2>
+            <p class="body-l">Product updates, news, and launches</p>
+            <form method="POST" class="subscribe-form">
+                <input type="email" id="emailInput" placeholder="Enter your email address">
+                <button class="btn_yellow label-s">Subscribe</button>
+            </form>
+            <p class="body-l">© 2026 Mode Designs. All rights reserved.</p>
+        </section>
+        <div class="alignHr">
+            <section class="footer_about">
+                <h3 class="heading3">About</h3>
+                <ul class="caption-s">
+                    <li><a href="about_us.html">Our Story</a></li>
+                    <li><a href="notes_list.html">Notes</a></li>
+                </ul>
+            </section>
+            <section class="footer_help">
+                <h3 class="heading3">Get Help</h3>
+                <ul class="caption-s">
+                    <li><a href="bulid_guides_list.html">Build Guides</a></li>
+                    <li><a href="contact_support_main.html">Contact Support</a></li>
+                </ul>
+            </section>
+            <section class="footer_policy">
+                <h3 class="heading3">Policy</h3>
+                <ul class="caption-s">
+                    <li><a href="policy_refund.html">Refund & Returns</a></li>
+                    <li><a href="policy_shipping.html">Shipping</a></li>
+                    <li><a href="policy_service.html">Terms of Service</a></li>
+                    <li><a href="policy_privacy.html">Privacy</a></li>
+                </ul>
+            </section>
+            <section class="footer_sns">
+                <h3 class="heading3">Mode</h3>
+                <p class="body-m">Challenge the industry with us</p>
+                <ul>
+                    <li><a href="https://www.instagram.com/modekeyboards/"><img src="images/icon/icon_instagram.svg"
+                                alt="instaIcon"></a></li>
+                    <li><a href="https://discord.com/invite/Mvsq4BP"><img src="images/icon/icon_discord.svg"
+                                alt="discordIcon"></a></li>
+                    <li><a href="https://www.youtube.com/@modekeyboards"><img src="images/icon/icon_youtube.svg"
+                                alt="youtubeIcon"></a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <div class="modal_overlay change_name" data-policy="change_name" hidden>
+        <div class="head_cont">
+            <h3 class="title2">Change your user name</h3>
+            <button type="button" class="close_btn label-m"><img src="images/icon/icon_x_btn.svg" alt="xImg"></button>
+        </div>
+        <ul>
+            <li>
+                <label for="firstName" class="label-l">First Name</label>
+                <input type="text" id="firstName" placeholder="first name">
+            </li>
+            <li>
+                <label for="lastName" class="label-l">Last Name</label>
+                <input type="text" id="lastName" placeholder="last name">
+            </li>
+        </ul>
+        <div class="btn_cont">
+            <button type="button" class="btn_gray label-m">Discard</button>
+            <button type="button" class="btn_yellow label-m">Save</button>
+        </div>
+    </div>
+    <div class="modal_overlay personal_data" id="personal_data_overlay" data-policy="delete_acc" hidden>
+        <div class="head_cont">
+            <h3 class="title2">Delete account</h3>
+            <button type="button" class="close_btn label-m"><img src="images/icon/icon_x_btn.svg" alt="xImg"></button>
+        </div>
+        <div class="center_cont">
+            <p class="body-l">You can either delete only your Wooting Hub account, or request a full data erasure.</p>
+            <h4 class="title4">Delete account</h4>
+            <p class="body-l">Removes your Wooting Hub account. Your personal data remains stored according to our
+                Privacy Policy.</p>
+            <h4 class="title4">Erase all data</h4>
+            <p class="body-l">Requests the deletion of all personal data linked to your email address, including any
+                rewards you may be eligible for. This is not reversible, so please consider downloading your data
+                package and any invoices you may wish to keep first.</p>
+            <div>
+                <h4 class="title4">Erase all data</h4>
+                <p class="body-l">Requests the deletion of all personal data linked to your email address, including any
+                    rewards you may be eligible for. This is not reversible, so please consider downloading your data
+                    package and any invoices you may wish to keep first.</p>
+                <p class="label-m">Learn more in <a href="policy_privacy.html">our Privacy Policy</a>.</p>
+            </div>
+            <ul class="btn_cont">
+                <li>
+                    <button type="button" class="btn_gray label-m">Cancel</button>
+                </li>
+                <li>
+                    <button type="button" class="btn_red label-m" data-open-modal="delete_account_confirm">Delete Hub
+                        Account</button>
+                </li>
+                <li>
+                    <button type="button" class="btn_yellow label-m" data-open-modal="erase_data_confirm">Erase All
+                        Data</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal_overlay" data-modal="delete_account_confirm" hidden>
+        <div class="head_cont">
+            <h3 class="title3">Delete Hub Account?</h3>
+        </div>
+        <p class="body-l">Deleting your account is permanent. Your profile, settings, order history, and saved
+            information cannot be recovered.</p>
+        <ul class="btn_cont">
+            <li>
+                <button type="button" class="btn_gray label-m">Cancel</button>
+            </li>
+            <li>
+                <button type="button" class="btn_red label-m" data-open-modal="delete_acc_suc">Delete Account</button>
+            </li>
+        </ul>
+    </div>
+    <div class="modal_overlay" data-modal="delete_acc_suc" hidden>
+        <div class="head_cont">
+            <h3 class="title2">Account Deleted</h3>
+            <button type="button" class="close_btn label-m"><img src="images/icon/icon_x_btn.svg" alt="xImg"></button>
+        </div>
+        <p class="body-l">Your Mode Hub account has been permanently deleted. We're sorry to see you go.</p>
+    </div>
+    <div class="modal_overlay" data-modal="erase_data_confirm" hidden>
+        <div class="head_cont">
+            <h3 class="title3">Erase All Data?</h3>
+        </div>
+        <p class="body-l">This will permanently remove all saved data from your account, including preferences and
+            synced information. Your account will remain active.</p>
+        <ul class="btn_cont">
+            <li>
+                <button type="button" class="btn_gray label-m">Cancel</button>
+            </li>
+            <li>
+                <button type="button" class="btn_red label-m" data-open-modal="erase_data_suc">Erase Data</button>
+            </li>
+        </ul>
+    </div>
+    <div class="modal_overlay" data-modal="erase_data_suc" hidden>
+        <div class="head_cont">
+            <h3 class="title2">Data Erase</h3>
+            <button type="button" class="close_btn label-m"><img src="images/icon/icon_x_btn.svg" alt="xImg"></button>
+        </div>
+        <p class="body-l">All saved data has been permanently removed. Your account remains active and ready for a fresh
+            start.</p>
+    </div>
+    <div class="modal_overlay policy" id="policy_privacy_overlay" data-policy="privacy" hidden>
+        <div class="head_cont">
+            <h3 class="title2">Privacy policy</h3>
+            <button type="button" class="close_btn label-m"><img src="images/icon/icon_x_btn.svg" alt="xImg"></button>
+        </div>
+        <div class="center_cont">
+            <p class="body-l">
+                This Privacy Policy describes how your personal information is collected, used, and shared when you
+                visit or make a purchase from shop.modedesigns.com (the “Site”).
+            </p>
+            <h4 class="title4">Personal information we collect</h4>
+            <p class="body-l">
+                Purchases may not be exchanged.
+            </p>
+            <h4 class="title4">Shipping</h4>
+            <p class="body-l">
+                When you visit the Site, we automatically collect certain information about your device, including
+                information about your web browser, IP address, time zone, and some of the cookies that are installed on
+                your device. Additionally, as you browse the Site, we collect information about the individual web pages
+                or products that you view, what websites or search terms referred you to the Site, and information about
+                how you interact with the Site. We refer to this automatically-collected information as “Device
+                Information”.
+            </p>
+            <p class="body-l">
+                We collect Device Information using the following technologies:
+                - “Cookies” are data files that are placed on your device or computer and often include an anonymous
+                unique identifier. For more information about cookies, and how to disable cookies, visit
+                <a href="policy_cookie.html">http://www.allaboutcookies.org.</a>
+            </p>
+            <p class="body-l">
+                - “Log files” track actions occurring on the Site, and collect data including your IP address, browser
+                type, Internet service provider, referring/exit pages, and date/time stamps.
+                - “Web beacons”, “tags”, and “pixels” are electronic files used to record information about how you
+                browse the Site.
+            </p>
+            <p class="body-l">
+                Additionally when you make a purchase or attempt to make a purchase through the Site, we collect certain
+                information from you, including your name, billing address, shipping address, payment information
+                (including credit card numbers), email address, and phone number. We refer to this information as “Order
+                Information”.
+            </p>
+            <p class="body-l">
+                When we talk about “Personal Information” in this Privacy Policy, we are talking both about Device
+                Information and Order Information.
+            </p>
+            <h4 class="title4">How do we use your personal information?</h4>
+            <p class="body-l">
+                We use the Order Information that we collect generally to fulfill any orders placed through the Site
+                (including processing your payment information, arranging for shipping, and providing you with invoices
+                and/or order confirmations). Additionally, we use this Order Information to:
+            <ul class="body-l">
+                <li>- Communicate with you;</li>
+                <li>- Screen our orders for potential risk or fraud; and</li>
+                <li>- When in line with the preferences you have shared with us, provide you with information or
+                    advertising relating to our products or services.</li>
+            </ul>
+            </p>
+            <p class="body-l">
+                We share your Personal Information with third parties to help us use your Personal Information, as
+                described above. For example, we use Shopify to power our online store.
+            </p>
+            <ul class="body-l">
+                <li>you can read more about how Shopify uses your Personal Information here: </li>
+                <li><a href="policy_privacy.html">https://www.shopify.com/legal/privacy.</a></li>
+                <li>We also use Google Analytics to help us understand how our customers use the Site-- you can read
+                    more about how Google uses your Personal Information here: </li>
+                <li><a
+                        href="https://www.google.com/intl/en/policies/privacy/">https://www.google.com/intl/en/policies/privacy/</a>
+                </li>
+                <li>You can also opt-out of Google Analytics here:</li>
+                <li><a href="https://tools.google.com/dlpage/gaoptout.">https://tools.google.com/dlpage/gaoptout.</a>
+                </li>
+            </ul>
+            <p class="body-l">
+                Finally, we may also share your Personal Information to comply with applicable laws and regulations, to
+                respond to a subpoena, search warrant or other lawful request for information we receive, or to
+                otherwise protect our rights.
+            </p>
+            <h4 class="title4">Behavioural advertising</h4>
+            <p class="body-l">
+                As described above, we use your Personal Information to provide you with targeted advertisements or
+                marketing communications we believe may be of interest to you.
+            </p>
+            <ul class="body-l">
+                <li>For more information about how targeted
+                    advertising works, you can visit the Network Advertising Initiative’s (“NAI”) educational page at
+                </li>
+                <li><a
+                        href="http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.">http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.</a>
+                </li>
+                <li>
+                    You can opt out of targeted advertising by using the links below:
+                </li>
+                <li>
+                    - Facebook:<a
+                        href="https://www.facebook.com/settings/?tab=ads">https://www.facebook.com/settings/?tab=ads</a>
+                </li>
+                <li>Additionally, you can opt out of some of these services by visiting the Digital Advertising
+                    Alliance’s opt-out portal at:</li>
+                <li><a href=" http://optout.aboutads.info/."> http://optout.aboutads.info/.</a></li>
+            </ul>
+            <h4 class="title4">Do not track</h4>
+            <p class="body-l">Please note that we do not alter our Site’s data collection and use practices when we see
+                a Do Not Track signal from your browser.</p>
+            <h4 class="title4">Your rights</h4>
+            <p class="body-l">If you are a European resident, you have the right to access personal information we hold
+                about you and to ask that your personal information be corrected, updated, or deleted. If you would like
+                to exercise this right, please contact us through the contact information below.</p>
+            <p class="body-l">Additionally, if you are a European resident we note that we are processing your
+                information in order to fulfill contracts we might have with you (for example if you make an order
+                through the Site), or otherwise to pursue our legitimate business interests listed above. Additionally,
+                please note that your information will be transferred outside of Europe, including to Canada and the
+                United States.</p>
+            <h4 class="title4">Data retention</h4>
+            <p class="body-l">When you place an order through the Site, we will maintain your Order Information for our
+                records unless and until you ask us to delete this information.</p>
+            <h4 class="title4">Changes</h4>
+            <p class="body-l">We may update this privacy policy from time to time in order to reflect, for example,
+                changes to our practices or for other operational, legal or regulatory reasons.</p>
+            <h4 class="title4">Contact us</h4>
+            <p class="body-l">For more information about our privacy practices, if you have questions, or if you would
+                like to make a complaint, please contact us by e-mail at <a
+                    href="mailto:support@modedesigns.com">support@modedesigns.com</a>
+            </p>
+        </div>
+    </div>
+</body>
+<div id="modal_backdrop" hidden></div>
+<div id="toast" class="toast">
+    <p class="toast_title label-l"></p>
+    <p class="toast_message body-l"></p>
+</div>
+
+</html>

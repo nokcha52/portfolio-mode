@@ -4,6 +4,14 @@ section img{
 section:not(.pcb_part) img{
     object-fit: cover;
 }
+section.pcb_part figure{
+    overflow: hidden;
+}
+section.pcb_part img{
+    object-fit: contain;
+    transform: scale(1.8);
+    object-position: center;
+}
 section figure{
     flex-shrink: 0;
 }
@@ -278,7 +286,7 @@ section.card_slot_section .card_slot_cont .card_slot_product > div a{
     color: var(--gs04);
 }
 .tab_cont.tempo li{
-    width: 30%;
+    width: 33%;
 }
 .tab_cont.tempo li button{
     width: 100%;

@@ -315,7 +315,52 @@ main.cart_main section.right_side div.cart_right .width_cont > article div.price
     color: var(--gs01);
     overflow: hidden;
 }
-
+main.order_main .order_cont{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+main.order_main .order_cont figure img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+main.order_main .order_cont .center_cont{
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main.order_main .order_cont .center_cont .status{
+    color: var(--bs05);
+    margin-bottom: 5px;
+}
+main.order_main .order_cont .center_cont h4{
+    color: var(--gs02);
+}
+main.order_main .order_cont .center_cont span{
+    color: var(--gs05);
+}
+main.order_main .order_cont .center_cont button{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--gs07);
+    padding: 0;
+    color: var(--gs04);
+}
+main.order_main .order_cont div.btn_cont button{
+    min-width: 200px;
+    height: 50px;
+}
+main.order_main .order_cont div.btn_cont button:not(:last-child){
+    margin-bottom: 20px;
+}
+main.order_main .order_cont span{
+    display: block;
+}
 
 
 .toast {
