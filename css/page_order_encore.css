@@ -285,18 +285,6 @@ section.card_slot_section .card_slot_cont .card_slot_product > div a{
     border-bottom: 1px solid var(--gs04);
     color: var(--gs04);
 }
-.tab_cont.tempo li{
-    width: 33%;
-}
-.tab_cont.tempo li button{
-    width: 100%;
-}
-.tab_cont.envoy li{
-    width: 50%;
-}
-.tab_cont.envoy li button{
-    width: 100%;
-}
 
 @media screen and (min-width:1024px) {
     .main_head.detail_page .left_side{
@@ -359,6 +347,14 @@ section.card_slot_section .card_slot_cont .card_slot_product > div a{
         flex-wrap: nowrap;
     }
 }
+@media screen and (max-width:1023px) and (min-width:600px){
+    .main_head.detail_page .left_side section ul.tab_cont:not(.envoy, .tempo) li{
+        width: 20%;
+    }
+    .main_head.detail_page .left_side section ul.tab_cont li button{
+        width: 100%;
+    }
+}
 @media screen and (max-width:799px) and (min-width:530px){    
     .tab_panel .sortBox{
         top: 530px;
@@ -396,6 +392,9 @@ section.card_slot_section .card_slot_cont .card_slot_product > div a{
         width: 100%;
         height: 300px;
     }
+    .main_head.detail_page .left_side section ul.tab_cont{
+        justify-content: start;
+    }
 }
 @media screen and (max-width:529px) and (min-width:510px){    
     .tab_panel .sortBox{
@@ -423,4 +422,17 @@ section.card_slot_section .card_slot_cont .card_slot_product > div a{
     width: 150px;
     height: 100px;
 }
+}
+
+.tab_cont.tempo li{
+    width: 33%;
+}
+.tab_cont.tempo li button{
+    width: 100%;
+}
+.tab_cont.envoy li{
+    width: 50%;
+}
+.tab_cont.envoy li button{
+    width: 100%;
 }
