@@ -14,6 +14,8 @@ div.main_head .width_cont{
     display: flex;
     align-items: center;
     gap: 20px;
+}div.main_head .width_cont .product_card figure{
+    margin-bottom: 20px;
 }
 div.main_head>figure{
     max-width: 600px;
@@ -155,6 +157,9 @@ section.detail_spec article.card_slot:not(.first){
 section.detail_spec article.card_slot > article{
     display: flex;
     gap: 10px;
+}
+section.detail_spec article.card_slot > article section{
+    max-width: 350px;
 }
 section.detail_spec article.card_slot > article section figure img{
     width: 100%;

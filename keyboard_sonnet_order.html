@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonnet detail</title>
+    <title>sonnet keyboard order</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/comp_product_card.css">
     <link rel="stylesheet" href="css/comp_review.css">
     <link rel="stylesheet" href="css/comp_accordion.css">
-    <link rel="stylesheet" href="css/page_detail_keyboard.css">
+    <link rel="stylesheet" href="css/page_order_encore.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
@@ -19,6 +19,7 @@
     <script src="js/review.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/policy.js"></script>
+    <script src="js/order_detail.js"></script>
 </head>
 
 <body>
@@ -262,7 +263,7 @@
                 </section>
             </div>
         </div>
-        <form id="login_before" action="/login-process" method="POST" class="popDown login boxShadow">
+        <form id="login_before" action="/login-process" method="POST" class="popDown login">
             <h2 class="title1">Welcome</h2>
             <p class="body-2">Log in or sign up to get started.</p>
             <div class="label_cont">
@@ -282,7 +283,7 @@
                 <span><a href="login_main.html">Sign up</a></span>
             </div>
         </form>
-        <div id="login_after" class="popDown account boxShadow">
+        <div id="login_after" class="popDown account">
             <p class="title2">Welcome back</p>
             <p class="title4">username@gmail.com</p>
             <ul class="label-m">
@@ -429,36 +430,327 @@
         </div>
     </header>
     <main>
-        <div class="main_head">
-            <div class="width_cont">
-                <figure>
-                    <img src="images/keyboards/sonnet/thumb.png" alt="keyboardImg">
-                </figure>
-                <article class="product_card">
-                    <h2 class="title2">Sonnet</h2>
-                    <p class="body-l">75% Gaming Keyboard</p>
-                    <figure class="encore_fig">
-                        <img src="images/keyboards/sonnet/thumb.png" alt="keyboardImg">
-                    </figure>
-                    <div class="star_cont">
-                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                        <img src="images/icon/icon_star_filled.svg" alt="starImg">
-                        <span class="label-s">4.8(57)</span>
+        <div class="main_head detail_page">
+            <div class="left_side">
+                <a href="keyboard_encore_detail.html">
+                    <img src="images/icon/icon_arrow.svg" alt="arrowIcon">
+                    <span class="label-m">Back to Overview</span>
+                </a>
+                <section class="edition_part">
+                    <h2 class="title1">Edition</h2>
+                    <span class="label-m">Encore body</span>
+                    <ul class="tab_cont">
+                        <li>
+                            <button type="button" data-category="edition1" class="tab_btn yellow">Black Sesame</button>
+                        </li>
+                        <li>
+                            <button type="button" data-category="edition2" class="tab_btn yellow">Matcha Cream</button>
+                        </li>
+                        <li>
+                            <button type="button" data-category="edition3" class="tab_btn yellow">Mocha
+                                Mushroom</button>
+                        </li>
+                        <li>
+                            <button type="button" data-category="edition4" class="tab_btn yellow">Monterey Dune</button>
+                        </li>
+                        <li>
+                            <button type="button" data-category="edition5" class="tab_btn yellow">Studio Light</button>
+                        </li>
+                    </ul>
+                    <div class="img_cont" data-category="edition1">
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition1_1.webp" alt="ed1">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition1_2.webp" alt="ed2">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition1_3.webp" alt="ed3">
+                        </figure>
                     </div>
-                    <span class="title3">From $289.99</span>
-                    <p class="body-l">Thick bezels, a chamfered cherry-style front edge, and natural hardwood accents —
-                        redesigned for 2026 with the Crown Mounting System inside.</p>
-                    <a href="keyboard_encore_order.html" class="btn_red label-m">Order now</a>
-                    <div class="price_policy_cont">
-                        <p class="body-m">Prices exclude import duties and taxes. Duties and taxes are collected at
-                            checkout.</p>
-                        <a href="policy_shipping.html" class="btn_white label-s">Learn more</a>
+                    <div class="img_cont" data-category="edition2">
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition2_1.webp" alt="ed1">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition2_2.webp" alt="ed2">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition2_3.webp" alt="ed3">
+                        </figure>
                     </div>
-                    <hr>
-                    <div class="policy_cont">
+                    <div class="img_cont" data-category="edition3">
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition3_1.webp" alt="ed1">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition3_2.webp" alt="ed2">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition3_3.webp" alt="ed3">
+                        </figure>
+                    </div>
+                    <div class="img_cont" data-category="edition4">
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition4_1.webp" alt="ed1">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition4_2.webp" alt="ed2">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition4_3.webp" alt="ed3">
+                        </figure>
+                    </div>
+                    <div class="img_cont" data-category="edition5">
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition5_1.webp" alt="ed1">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition5_2.webp" alt="ed2">
+                        </figure>
+                        <figure class="boxShadow">
+                            <img src="images/keyboards/encore/edition5_3.webp" alt="ed3">
+                        </figure>
+                    </div>
+                </section>
+                <section class="pcb_part">
+                    <h2 class="title1">PCB type</h2>
+                    <ul>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                    <img src="images/keyboards/encore/PCB1.webp" alt="pcb1">
+                                </figure>
+                                <div>
+                                    <span class="title4">Hotswap PCB</span>
+                                    <p class="body-s">Hotswap sockets allow you to easily swap switches. No soldering
+                                        required — just pull out the old switch and push in a new one. For additional
+                                        layout support you can consider a solder PCB.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                    <img src="images/keyboards/encore/PCB2.webp" alt="pcb2">
+                                </figure>
+                                <div>
+                                    <span class="title4">Solder PCB</span>
+                                    <p class="body-s">Requires soldering iron, solder, and desoldering tools for switch
+                                        removal. Best for builders who prefer to solder their PCBs. For assembly without
+                                        soldering you can consider a hotswap PCB.</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+                <section class="plate_part">
+                    <h2 class="title1">Plate Material</h2>
+                    <ul>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                    <img src="images/keyboards/encore/plate_mat1.webp" alt="plate1">
+                                </figure>
+                                <div>
+                                    <span class="title4">POM</span>
+                                    <p class="label-s">+$0</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                    <img src="images/keyboards/encore/plate_mat2.webp" alt="plate2">
+                                </figure>
+                                <div>
+                                    <span class="title4">Aluminum</span>
+                                    <p class="label-s">+$10.00</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                    <img src="images/keyboards/encore/plate_mat3.webp" alt="plate3">
+                                </figure>
+                                <div>
+                                    <span class="title4">Carbon Fiber</span>
+                                    <p class="label-s">+$15.00</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                    <img src="images/keyboards/encore/plate_mat4.webp" alt="plate4">
+                                </figure>
+                                <div>
+                                    <span class="title4">Copper</span>
+                                    <p class="label-s">+$40.00</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+                <section class="switch_part">
+                    <h2 class="title1">Switches</h2>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/switch1_3.webp" alt="switchImg">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Obscura Linear</span>
+                            <span class="label-s">$50.00</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/switch2_3.webp" alt="switchImg">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Tomorrow Tactile</span>
+                            <span class="label-s">$62.00</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/switch3_5.webp" alt="switchImg">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Anthracite Silent Tactile</span>
+                            <span class="label-s">$62.00</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/switch4_3.webp" alt="switchImg">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Lotus Linear</span>
+                            <span class="label-s">$50.00</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">No switches</span>
+                            <span class="label-s"></span>
+                        </div>
+                    </article>
+                </section>
+                <section class="stabilizer_part">
+                    <h2 class="title1">Stabilizers</h2>
+                    <p class="body-m">Stabilizers prevent larger keys (spacebar, shift, enter, backspace) from wobbling
+                        or tilting when pressed off-center. Required for a complete build, but can be skipped if you
+                        already have compatible stabilizers.</p>
+                    <ul>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                    <img src="images/keyboards/encore/stablizer1_1.jpg" alt="stabilizerImg">
+                                </figure>
+                                <div>
+                                    <span class="title4">Mode Stabilizers</span>
+                                </div>                                
+                            </article>
+                        </li>
+                        <li>
+                            <article class="card_slot">
+                                <figure>
+                                </figure>
+                                <div>
+                                    <span class="title4">No Stabilizers</span>
+                                </div>                                
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+                <section class="keycap_part">
+                    <h2 class="title1">Keycaps</h2>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/keycap1.webp" alt="keycap1">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Anthracite</span>
+                            <span class="label-s">$59.99</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/keycap2.webp" alt="keycap1">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Obscura</span>
+                            <span class="label-s">$59.99</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/keycap3.webp" alt="keycap1">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Lotus</span>
+                            <span class="label-s">$59.99</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/keycap4.webp" alt="keycap1">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Cacao</span>
+                            <span class="label-s">$59.99</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                            <img src="images/keyboards/encore/keycap5.webp" alt="keycap1">
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">Monterey</span>
+                            <span class="label-s">$59.99</span>
+                        </div>
+                    </article>
+                    <article class="card_slot">
+                        <figure>
+                        </figure>
+                        <div class="span_cont">
+                            <span class="title4">No keycap</span>
+                            <span class="label-s"></span>
+                        </div>
+                    </article>
+                </section>
+                <div class="width_cont">
+                    <h2 class="title2">Summary</h2>
+                    <article class="product_card">                        
+                        <div class="product_cont">
+                            <h3 class="title2">Encore</h2>
+                            <p class="edit_click body-l"></p>
+                            <p class="pcb_click body-l"></p>
+                            <p class="plate_click body-l"></p>
+                            <p class="switch_click body-l"></p>
+                            <p class="stab_click body-l"></p>
+                            <p class="keycap_click body-l"></p>
+                        </div>         
+                        <div class="product_count">
+                            <span class=" total_price title3">$</span>
+                            <div class="button_cont">
+                                <button type="button" class="minus_btn label-m">-</button>
+                                <span class="count_cont label-m"></span>
+                                <button type="button" class="plus_btn label-m">+</button>
+                            </div>
+                        </div>                        
+                        <button type="button" class="btn_blue label-m" data-category="addtocart">Add to cart</button>
+                        <div class="price_policy_cont">
+                            <p class="body-m">Prices exclude import duties and taxes. Duties and taxes are collected at
+                                checkout.</p>
+                            <a href="policy_shipping.html" class="label-s">Learn more</a>
+                        </div>
+                        <hr>
+                        <div class="policy_cont">
                             <button class="refund_policy" data-policy="refund">
                                 <span class="body-s">Refund policy</span>
                                 <img src="images/icon/icon_chevron_gray.png" alt="">
@@ -472,404 +764,114 @@
                                 <img src="images/icon/icon_chevron_gray.png" alt="">
                             </button>
                         </div>
-                </article>
+                    </article>
+                </div>
+            </div>
+            <div class="right_side">
+                <div class="width_cont">
+                    <h2 class="title2">Summary</h2>
+                    <article class="product_card">                        
+                        <div class="product_cont">
+                            <h3 class="title2">Encore</h2>
+                            <p class="edit_click body-l"></p>
+                            <p class="pcb_click body-l"></p>
+                            <p class="plate_click body-l"></p>
+                            <p class="switch_click body-l"></p>
+                            <p class="stab_click body-l"></p>
+                            <p class="keycap_click body-l"></p>
+                        </div>         
+                        <div class="product_count">
+                            <span class=" total_price title3"></span>
+                            <div class="button_cont">
+                                <button type="button" class="minus_btn label-m">-</button>
+                                <span class="count_cont label-m"></span>
+                                <button type="button" class="plus_btn label-m">+</button>
+                            </div>
+                        </div>                        
+                        <button type="button" class="btn_blue label-m" data-category="addtocart">Add to cart</button>
+                        <div class="price_policy_cont">
+                            <p class="body-m">Prices exclude import duties and taxes. Duties and taxes are collected at
+                                checkout.</p>
+                            <a href="policy_shipping.html" class="label-s">Learn more</a>
+                        </div>
+                        <hr>
+                        <div class="policy_cont">
+                            <button class="refund_policy" data-policy="refund">
+                                <span class="body-s">Refund policy</span>
+                                <img src="images/icon/icon_chevron_gray.png" alt="">
+                            </button>
+                            <button class="privacy_policy" data-policy="privacy">
+                                <span class="body-s">Privacy policy</span>
+                                <img src="images/icon/icon_chevron_gray.png" alt="">
+                            </button>
+                            <button class="refund_policy" data-policy="service">
+                                <span class="body-s">Terms of service</span>
+                                <img src="images/icon/icon_chevron_gray.png" alt="">
+                            </button>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
-        <div class="tab_cont">
-            <ul class="btn_cont">
-                <li>
-                    <button class="tab_btn active" data-category="product">Product</button>
-                </li>
-                <li>
-                    <button class="tab_btn" data-category="review">Reviews</button>
-                </li>
-                <li>
-                    <button class="tab_btn" data-category="faq">FAQ</button>
-                </li>
-            </ul>
-        </div>
-        <div class="tab_panel" data-category="product">
-            <section>
-                <h2 class="heading2">Like a Fine-tuned Instrument</h2>
-                <p class="body-l">The Sonnet is built to make daily work feel better—through materials, acoustics, and a design that complements your space.</p>
-                <figure><img src="images/keyboards/sonnet/detail1.jpg" alt="detail1"></figure>
-            </section>
-            <section>
-                <h2 class="heading2">Explore the Mode Sonnet</h2>
-                <figure><img src="images/keyboards/sonnet/detail2.webp" alt="detail2"></figure>
-                <div class="text_align fl">
-                    <div class="span_cont">
-                        <span class="title4">Works with</span>
-                        <span class="body-m">macOS, Windows, Linux</span>
-                    </div>
-                    <div class="span_cont">
-                        <span class="title4">Superior Feel</span>
-                        <span class="body-m">Using our new Crown Mounting System</span>
-                    </div>
-                    <div class="span_cont">
-                        <span class="title4">Easy Key Mapping</span>
-                        <span class="body-m">With QMK + VIA Firmware</span>
-                    </div>
-                    <div class="span_cont">
-                        <span class="title4">Tune Your Sound</span>
-                        <span class="body-m">Swap plates, switches, and mounts</span>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h2 class="heading2">Find Your Perfect Palette</h2>
-                <div class="card_overflow">
-                    <article class="card_slot_cont">
-                        <figure>
-                            <img src="images/keyboards/sonnet/detail_card1.jpeg" alt="card1">
-                        </figure>
-                        <div class="text_cont">
-                            <h3 class="title2">Black Sesame</h3>
-                            <hr>
-                            <div class="span_align">
-                                <span class="label-m">Top</span>
-                                <span class="caption-s">Charcoal Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Middle</span>
-                                <span class="caption-s">Black Satin Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Bottom</span>
-                                <span class="caption-s">Black Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Released</span>
-                                <span class="caption-s">ss 2026 </span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card_slot_cont">
-                        <figure>
-                            <img src="images/keyboards/sonnet/detail_card2.webp" alt="card2">
-                        </figure>
-                        <div class="text_cont">
-                            <h3 class="title2">Matcha Cream</h3>
-                            <hr>
-                            <div class="span_align">
-                                <span class="label-m">Top</span>
-                                <span class="caption-s">Forest Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Middle</span>
-                                <span class="caption-s">Walnut</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Bottom</span>
-                                <span class="caption-s">Mocha Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Released</span>
-                                <span class="caption-s">ss 2026 </span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card_slot_cont">
-                        <figure>
-                            <img src="images/keyboards/sonnet/detail_card3.webp" alt="card3">
-                        </figure>
-                        <div class="text_cont">
-                            <h3 class="title2">Golden Beige</h3>
-                            <hr>
-                            <div class="span_align">
-                                <span class="label-m">Top</span>
-                                <span class="caption-s">Crema Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Middle</span>
-                                <span class="caption-s">Maple</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Bottom</span>
-                                <span class="caption-s">Dawn Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Released</span>
-                                <span class="caption-s">ss 2026 </span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card_slot_cont">
-                        <figure>
-                            <img src="images/keyboards/sonnet/detail_card4.webp" alt="card4">
-                        </figure>
-                        <div class="text_cont">
-                            <h3 class="title2">Studio Light</h3>
-                            <hr>
-                            <div class="span_align">
-                                <span class="label-m">Top</span>
-                                <span class="caption-s">Soft White Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Middle</span>
-                                <span class="caption-s">Polished Steel</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Bottom</span>
-                                <span class="caption-s">Silver Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Released</span>
-                                <span class="caption-s">ss 2026 </span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card_slot_cont">
-                        <figure>
-                            <img src="images/keyboards/sonnet/detail_card5.webp" alt="card5">
-                        </figure>
-                        <div class="text_cont">
-                            <h3 class="title2">Studio Light</h3>
-                            <hr>
-                            <div class="span_align">
-                                <span class="label-m">Top</span>
-                                <span class="caption-s">Mushroom Aluminum</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Middle</span>
-                                <span class="caption-s">Polished Steel</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Bottom</span>
-                                <span class="caption-s">Brushed Steel</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-m">Released</span>
-                                <span class="caption-s">ss 2026 </span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section>
-                <h2 class="heading2">The 75% Layout</h2>
-                <figure><img src="images/header/keyboards_3sonn.jpg" alt="detail4"></figure>
-                <p class="body-l">Comprised of 75% of the keys found on a full-size keyboard. Desk space is precious, and if you don’t use the numpad, it’s a great way to save space and reduce the distance your hand travels to reach the mouse. Our take on the 75% layout keeps the footprint minimal and visually balanced, while giving the keys room to breathe.</p>
-            </section>
-            <section class="detail_spec">
-                <h2 class="heading2">Details & specs</h2>
-                <ul class="tab_cont">
-                    <li>
-                        <button data-category="mounting" class="tab_btn active">Mounting</button>
-                    </li>
-                    <li>
-                        <button data-category="measurements" class="tab_btn">Measurements</button>
-                    </li>
-                    <li>
-                        <button data-category="pcblayouts" class="tab_btn">PCB & Layouts</button>
-                    </li>
-                    <li>
-                        <button data-category="materials" class="tab_btn">Materials</button>
-                    </li>
-                    <li>
-                        <button data-category="whatsincluded" class="tab_btn">What's Included</button>
-                    </li>
-                </ul>
-                <article data-category="mounting" class="card_slot boxShadow first">
-                    <h3 class="title1">Mounting Block System</h3>
-                    <p class="body-l">The mounting system connects the keyboard plate, switch, pcb assembly to the chassis. It impacts typing sound and feel. The Mode Mounting Block System uses three block types to hold the internal assembly in place each offering varying levels of softness.</p>
-                    <article>                        
-                        <section>
-                            <figure>
-                            <img src="images/keyboards/sonnet/detail_spec1_1.jpeg"></img>
-                            </figure>
-                            <h4 class="title4">Lattice Block</h4>
-                            <p class="body-m">Offers the softest typing feel. The Lattice block is made of EPU 41, a soft, highly elastic material.</p>
-                        </section>
-                        <section>
-                            <figure>
-                            <img src="images/keyboards/sonnet/detail_spec1_2.jpeg"></img>
-                            </figure>
-                            <h4 class="title4">Black Lattice Block</h4>
-                            <p class="body-m">A firmer option than the standard lattice block.</p>
-                        </section>
-                        <section>
-                            <figure>
-                            <img src="images/keyboards/sonnet/detail_spec1_1.jpeg"></img>
-                            </figure>
-                            <h4 class="title4">Top Mount Block</h4>
-                            <p class="body-m">Allows for the Sonnet to use a classic top-mount. It provides some isolation between the plate and the case.</p>
-                        </section>
-                    </article>
-                </article>
-                <article data-category="measurements" class="card_slot boxShadow">
+        <section class="card_slot_section">
+            <h2 class="title3">You might also like</h2>
+            <div class="card_slot_cont">
+                <article class="card_slot_product">
                     <figure>
-                        <img src="images/keyboards/sonnet/detail_spec2.webp" alt="measurements">
+                        <img src="images/swichtes/anthracite/thumb2.png" alt="swtichImg">
                     </figure>
-                    <section>
-                        <h3 class="title2">Sonnet Measurements</h3>
-                        <p class="body-m">The Mode Sonnet is a compact yet refined 75% keyboard, offering a balanced footprint that maximizes desk space without sacrificing functionality. The low-profile case design and thoughtful proportions contribute to its sleek aesthetic while maintaining a comfortable typing experience.</p>
-                        <div class="span_align">
-                            <span class="label-s">Typing Angle</span>
-                            <span class="caption-s">5.5 Degrees</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Front Height</span>
-                            <span class="caption-s">19mm</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Width</span>
-                            <span class="caption-s">315mm</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Depth</span>
-                            <span class="caption-s">143mm</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Back Height</span>
-                            <span class="caption-s">24mm</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Assembled Weight</span>
-                            <span class="caption-s">2.9lbs–3.2lbs</span>
-                        </div>
-                    </section>
+                    <div>
+                        <span class="label-m">$50.00</span>
+                        <h3 class="title3">Anthracite Silent Tactile</h3>
+                        <p class="body-l">70x switches are recommended for the Tempo or Envoy and 90x for the Sonnet,
+                            Loop or Eighty.</p>
+                        <a href="switch_anthracite_detail.html">
+                            <div class="icon_arrow_bg black">
+                                <i class="icon_arrow black"></i>
+                            </div>
+                            <span class="arrowText black label-m">Learn more</span>
+                        </a>
+                    </div>
+
                 </article>
-                <article data-category="pcblayouts" class="card_slot boxShadow">
+                <article class="card_slot_product">
                     <figure>
-                        <img src="images/keyboards/sonnet/detail_spec3_1.webp" alt="measurements">
+                        <img src="images/extra_parts/others/stablizer1.jpg" alt="swtichImg">
                     </figure>
-                    <section class="text_sec">
-                        <h3 class="title2">PCB & Layouts</h3>
-                        <div class="span_align">
-                            <span class="label-s">Switches</span>
-                            <span class="caption-s">80-83 MX-Style</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Connection</span>
-                            <span class="caption-s">USB-C</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Thickness</span>
-                            <span class="caption-s">1.6mm</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Firmware</span>
-                            <span class="caption-s">QMK/VIA Supported</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">Designer</span>
-                            <span class="caption-s">ARM</span>
-                        </div>
-                        <div class="span_align">
-                            <span class="label-s">MCU</span>
-                            <span class="caption-s">Gondolindrim</span>
-                        </div>
-                    </section>
-                </article>
-                <article data-category="materials" class="card_slot boxShadow first">
-                    <div class="align_row">
-                        <section>
-                            <h3 class="title2">Materials</h3>
-                            <p class="body-m">Every material is chosen for its quality, durability, and aesthetics. The materials shown here are used throughout the different case editions. Apart from looks, the material used in the plate can also impact the sound profile. Below are a few notes on what you can expect.</p>
-                        </section>
-                        <section>
-                            <h3 class="title2">PCB & Layouts</h3>
-                            <div class="span_align">
-                                <span class="label-s">POM</span>
-                                <span class="caption-s">Softest plate with a muted sound</span>
+                    <div>
+                        <span class="label-m">$15.00</span>
+                        <h3 class="title3">Mode Stabilizers</h3>
+                        <p class="body-l">Upgrade your mechanical keyboard experience with stabilizers designed in-house
+                            by Mode.</p>
+                        <a href="component_othersstabilizerdetail.html">
+                            <div class="icon_arrow_bg black">
+                                <i class="icon_arrow black"></i>
                             </div>
-                            <div class="span_align">
-                                <span class="label-s">Aluminum</span>
-                                <span class="caption-s">Most neutral feel and sound</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-s">Carbon Fiber</span>
-                                <span class="caption-s">Slightly stiff with a bright sound</span>
-                            </div>
-                            <div class="span_align">
-                                <span class="label-s">Copper</span>
-                                <span class="caption-s">Stiff feel with deeper open sound</span>
-                            </div>
-                        </section>
+                            <span class="arrowText black label-m">Learn more</span>
+                        </a>
                     </div>
-                    <div class="mini_card">
-                        <div>
-                            <figure>
-                                <img src="images/keyboards/sonnet/detail_spec4_1.jpeg" alt="mate1">
-                            </figure>
-                            <span class="label-m">Aluminum</span>
-                            <span class="body-s">Media-blasted, Anodized</span>
-                        </div>
-                        <div>
-                            <figure>
-                                <img src="images/keyboards/sonnet/detail_spec4_2.webp" alt="mate2">
-                            </figure>
-                            <span class="label-m">Aluminum</span>
-                            <span class="body-s">Anodized, Polished</span>
-                        </div>
-                        <div>
-                            <figure>
-                                <img src="images/keyboards/sonnet/detail_spec4_3.webp" alt="mate3">
-                            </figure>
-                            <span class="label-m">Maple</span>
-                            <span class="body-s">Media-blasted, Sealed</span>
-                        </div>
-                        <div>
-                            <figure>
-                                <img src="images/keyboards/sonnet/detail_spec4_4.webp" alt="mate4">
-                            </figure>
-                            <span class="label-m">Walnut</span>
-                            <span class="body-s">Media-blasted, Sealed</span>
-                        </div>
-                        <div>
-                            <figure>
-                                <img src="images/keyboards/sonnet/detail_spec4_5.webp" alt="mate4">
-                            </figure>
-                            <span class="label-m">White Oak</span>
-                            <span class="body-s">Media-blasted, Sealed</span>
-                        </div>
+
+                </article>
+                <article class="card_slot_product">
+                    <figure>
+                        <img src="images/extra_parts/eighty/plate_detail1.webp" alt="swtichImg">
+                    </figure>
+                    <div>
+                        <span class="label-m">$35.00</span>
+                        <h3 class="title3">Eighty Plate</h3>
+                        <p class="body-l">For plate materials, bottom-out firmness and acoustics are considerations of
+                            preference</p>
+                        <a href="component_eightyplatedetail.html">
+                            <div class="icon_arrow_bg black">
+                                <i class="icon_arrow black"></i>
+                            </div>
+                            <span class="arrowText black label-m">Learn more</span>
+                        </a>
                     </div>
+
                 </article>
-                <article data-category="whatsincluded" class="card_slot boxShadow last">
-                    <section>
-                        <h3 class="title2">What's Included</h3>
-                        <p class="body-m">This keyboard comes as a kit that you assemble yourself. Below are the components included in the base kit.</p>
-                        <ul class="body-m">
-                            <li>Case</li>
-                            <li>PCB and Daughterboard</li>
-                            <li>Assembly Tools</li>
-                            <li>Microsuede Bag</li>
-                            <li>Mounting System</li>
-                            <li>Feet</li>
-                            <li>Fastener Pack</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3 class="title2">You'll Also Need</h3>
-                        <p class="body-m">In addition to the base kit, the following components are required for a full build. Many customers prefer to bring their own switches, keycaps, and stabilizers to match specific preferences.</p>
-                        <ul class="body-m">
-                            <li>Keycaps</li>
-                            <li>Switches</li>
-                            <li>Stabilizers</li>
-                        </ul>
-                    </section>
-                </article>
-            </section>
-            <section>
-                <h2 class="heading2">Developing the Sonnet's Sound</h2>
-                <figure>
-                    <img src="images/keyboards/sonnet/detail3.jpeg" alt="detail5">
-                </figure>
-                <p class="body-l">Every component of the Sonnet forms an acoustic chain that defines its sound profile. Each component is tuned to remove undesirable sound characteristics and allowing your selection of switches, keycaps, and plate material to do most of the talking.</p>
-                <a href="note2.html" class="btn_blue label-m">Read the story</a>
-            </section>
-            <section>
-                <h2 class="heading2">what sounds like</h2>
-                <figure class="video_container">
-                    <iframe src="https://www.youtube.com/embed/arGAATqeM_o?si=ZtgngIgzjo9OXn36"
-                        title="Mode Sonnet 2026 - Keyboard Typing Sound Tests"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </figure>
-            </section>
-        </div>
+            </div>
+        </section>
         <div class="tab_panel review" data-category="review">
             <div class="review_head">
                 <div class="left_side">
@@ -1037,7 +1039,7 @@
                         <div class="good_and_bad">
                             <div class="thumb_up">
                                 <img src="images/icon/icon_thumbup.svg" alt="thumbup">
-                                <span class="caption-s">31</span>
+                                <span class="caption-s">57</span>
                             </div>
                             <div class="thumb_down">
                                 <img src="images/icon/icon_thumbdown.svg" alt="thumbdown">
@@ -1469,178 +1471,6 @@
                 </div>
             </div>
         </div>
-        <div class="tab_panel" data-category="faq">
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Does the Encore come fully assembled?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">No. The Encore is a keyboard kit that requires assembly. All essential
-                            assembly hardware and tools are included, but switches, keycaps, and stabilizers must be
-                            selected separately.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>What switches are compatible with the Encore?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">The Encore supports most MX-style mechanical switches. You can choose your
-                            preferred switches during configuration or install compatible switches of your choice.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Is the Encore compatible with Mac and Windows?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">Yes. The Encore is compatible with macOS, Windows, and Linux, and supports QMK
-                            and VIA for easy key remapping and customization.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Can I customize the typing feel and sound?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">Yes. The Encore is designed for customization. You can adjust the typing
-                            experience by choosing different plate materials, switches, and mounting configurations to
-                            achieve your preferred sound and feel.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>What is the Crown Mounting System?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">Yes. The Encore is designed for customization. You can adjust the typing
-                            experience by choosing different plate materials, switches, and mounting configurations to
-                            achieve your preferred sound and feel.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Does the Encore support hot-swappable switches?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">Yes. The Encore features a hot-swappable PCB, allowing you to install and
-                            replace compatible MX-style switches without soldering.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>What layout does the Encore use?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">The Encore features a compact 65% layout, offering dedicated arrow keys while
-                            maintaining a minimal footprint for improved desk space.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Are stabilizers included with the kit?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">Stabilizers are not included by default. Please review the product
-                            configuration options to select the components that best fit your build.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>How difficult is the assembly process?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">The Encore is designed to be beginner-friendly. Detailed assembly guides are
-                            provided, making it accessible for both first-time builders and experienced enthusiasts.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Can I disassemble and modify my Encore later?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">Yes. The Encore is designed with customization in mind, allowing you to
-                            disassemble, modify, and upgrade components as your preferences evolve.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Does the Encore support custom key remapping?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">Yes. The Encore supports key remapping through VIA, allowing you to customize
-                            layouts, shortcuts, and macros without additional software installation.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>What mounting options are available?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">The Encore utilizes Mode's Crown Mounting System, engineered to provide a
-                            balanced typing experience with improved acoustics and reduced vibration.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Is a USB cable included?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">A USB cable may be included depending on your selected configuration. Please
-                            review the product contents before completing your purchase.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <button type="button" class="accordion_header label-m">
-                        <span>Can I disassemble and modify my Encore later?</span>
-                        <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                    </button>
-                    <div class="accordion_body">
-                        <p class="body-l">Yes. The Encore is designed with customization in mind, allowing you to
-                            disassemble, modify, and upgrade components as your preferences evolve.</p>
-                    </div>
-                </div>
-            </div>
     </main>
     <footer>
         <section class="footer_front">
@@ -1691,6 +1521,21 @@
             </section>
         </div>
     </footer>
+    <div class="modal_overlay cart" data-category="addtocart" hidden>
+        <div class="head_cont">
+            <h3 class="title1">Add to Cart</h3>
+        </div>
+        <div class="center_cont">
+            <p class="body-l">Your item has been added to your cart. contunue shopping or proceed to checkout whenever
+                you're ready.</p>
+        </div>
+        <div class="button_cont">
+            <button class="btn_gray label-m">
+                Continue Shopping
+            </button>
+            <a href="my_cart.html" class="btn_blue label-m">View Cart</a>
+        </div>
+    </div>
     <div class="modal_overlay policy" id="policy_refund_overlay" data-policy="refund" hidden>
         <div class="head_cont">
             <h3 class="title1">Refund policy</h3>
@@ -2171,8 +2016,6 @@
         </div>
     </div>
     <div id="toast" class="toast label-m"></div>
-
 </body>
-
 
 </html>
