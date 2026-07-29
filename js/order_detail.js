@@ -13,7 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const match = priceEl.textContent.match(/[\d.]+/);
         return match ? parseFloat(match[0]) : 0;
     }
-    const BASE_PRICE = 299.00;
+
+    const KEYBOARD_PRICES = {
+        encore: 299.00,
+        sonnet: 289.00,
+        sixtyfive: 270.00,
+        envoy: 190.00,
+        tempo: 215.00
+    };
+
+    const mainEl = document.querySelector('main');
+    const keyboardType = mainEl ? mainEl.dataset.keyboard : '';
+    const BASE_PRICE = KEYBOARD_PRICES[keyboardType] || 0;
+
     const selectedPrices = {
         pcb: 0,
         plate: 0,
@@ -22,13 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
         keycap: 0
     };
 
+    const selectedNames = {
+        edition: '',
+        pcb: '',
+        plate: '',
+        switch: '',
+        stabilizer: '',
+        keycap: ''
+    };
+
+    let selectedImage = '';
     let quantity = 1;
-    
+
     function updateTotalPrice() {
         const partsSum = Object.values(selectedPrices).reduce((sum, p) => sum + p, 0);
         const total = (BASE_PRICE + partsSum) * quantity;
         setTextAll('total_price', `$${total.toFixed(2)}`);
     }
+
     const editionButtons = document.querySelectorAll('.edition_part .tab_btn');
     const editionImgConts = document.querySelectorAll('.edition_part .img_cont');
 
@@ -42,6 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         setTextAll('edit_click', getCleanText(btn));
+        selectedNames.edition = getCleanText(btn);
+
+        const activeImgCont = document.querySelector(`.img_cont[data-category="${category}"]`);
+        const firstImg = activeImgCont ? activeImgCont.querySelector('img') : null;
+        selectedImage = firstImg ? firstImg.src : '';
     }
 
     editionButtons.forEach(btn => {
@@ -75,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const price = extractPrice(card);
 
                 selectedPrices[key] = price;
+                selectedNames[key] = name;
 
                 setTextAll(clickClass, name);
                 updateTotalPrice();
@@ -110,8 +139,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 초기 렌더링
+    const addToCartButtons = document.querySelectorAll('[data-category="addtocart"]');
+
+    addToCartButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const unitPrice = BASE_PRICE + Object.values(selectedPrices).reduce((sum, p) => sum + p, 0);
+
+            const cartItem = {
+                id: Date.now(),
+                name: keyboardType.charAt(0).toUpperCase() + keyboardType.slice(1),
+                options: { ...selectedNames },
+                price: parseFloat(unitPrice.toFixed(2)),
+                qty: quantity,
+                image: selectedImage
+            };
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(cartItem);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        });
+    });
+
     updateQuantityDisplay();
     updateTotalPrice();
-
 });
