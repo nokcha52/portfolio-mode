@@ -152,6 +152,21 @@ section.detail_spec article.card_slot:not(.first){
     align-items: center;
     justify-content: space-between;
 }
+section.detail_spec article.card_slot > article{
+    display: flex;
+    gap: 10px;
+}
+section.detail_spec article.card_slot > article section figure img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+section.detail_spec article.card_slot > article section h4{
+    text-align: left;
+    margin-bottom: 10px;
+}
+section.detail_spec article.card_slot > article section p{
+    text-align: left;
+}
 section article.card_slot h3{
     color: var(--gs03);
     margin-bottom: 20px;
@@ -304,7 +319,7 @@ section article.card_slot section .span_align .label-s{
         gap: 30px;
     }
     section article.card_slot div figure,
-    section article.card_slot figure,
+    section article.card_slot > figure,
     section article.card_slot figure+section,
     section article.card_slot div section{
         width: 48%;
