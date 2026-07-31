@@ -168,6 +168,7 @@ section.detail_spec article.card_slot > article{
 }
 section.detail_spec article.card_slot > article section{
     max-width: 350px;
+    width: 100%;
 }
 section.detail_spec article.card_slot > article section figure img{
     width: 100%;
