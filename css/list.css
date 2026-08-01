@@ -7,6 +7,9 @@ main{
 .banner.keycap{    
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/keycaps/banner.webp);
 }
+.banner.notes{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/note_page/banner.webp);
+}
 .banner .banner_text_section{
     text-align: right;
     padding-right: 20px;
@@ -146,18 +149,40 @@ main{
 .product_list > ul li .card_slot_cont figure img:first-child{
     object-position: center;
 }
-.product_list > ul li .card_slot_cont figure img{
+.product_list > ul li .card_slot_cont figure:not(.news_img) img{
     width: 100%;
     height: 100px;
     object-fit: contain;
     object-position: center;
     transition: all 0.3s ease;
 }
+.product_list > ul li .card_slot_cont figure.news_img{
+    background-color: var(--gs09);
+    padding: 20px;
+}
+.product_list > ul li .card_slot_cont figure.news_img img{
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product_list > ul li .card_slot_cont.news .text_cont p{
+    margin-bottom: 10px;
+}
+.product_list > ul li .card_slot_cont.news .text_cont h3{
+    width: 100%;
+    color: var(--bs03);
+    margin-bottom: 20px;
+    min-height: 53px;
+}
+.product_list > ul li .card_slot_cont.news .text_cont a{
+    margin-top: 30px;
+}
 .product_list > ul li .card_slot_cont .text_cont{
     padding: 20px;
     position: relative;
 }
-.product_list > ul li .card_slot_cont .text_cont h3{
+.product_list > ul li .card_slot_cont:not(.news) .text_cont h3{
     color: var(--ls03);
     margin-bottom: 20px;
     max-width: 250px;
