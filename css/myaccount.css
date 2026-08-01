@@ -315,6 +315,7 @@ main.cart_main section.right_side div.cart_right .width_cont > article div.price
     color: var(--gs01);
     overflow: hidden;
 }
+main.order_main .right_side 
 main.order_main .order_cont{
     display: flex;
     justify-content: space-between;

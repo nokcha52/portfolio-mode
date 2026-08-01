@@ -165,6 +165,16 @@ section.text_section p{
 .card_slot_section .card_slot_cont_news .card_slot_news p{
     color: var(--gs01);
 }
+.card_slot_section.row_align:last-child article h3{
+    color: var(--bs05);
+}
+.card_slot_section.row_align:last-child article{
+    background-color: var(--gs09);
+}
+.card_slot_section.row_align:last-child article a{
+    display: block;
+    text-align: center;
+}
 @media screen and (max-width: 1023px) and (min-width: 768px){
     .card_slot_section.row_align .card_slot_inner{
         flex-wrap: nowrap;

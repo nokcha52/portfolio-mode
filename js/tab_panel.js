@@ -45,39 +45,49 @@ document.addEventListener('DOMContentLoaded', () => {
         let startX;
         let scrollLeft;
 
-        // 1. 마우스를 누르는 순간 (클릭 시작)
         slider.addEventListener('mousedown', (e) => {
             isDown = true;
             slider.classList.add('active');
-            // 클릭한 시작 지점 좌표와 원래 스크롤 위치 저장
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
-            slider.style.cursor = 'grabbing'; // 마우스 커서 모양을 잡는 모양으로 변경
+            slider.style.cursor = 'grabbing'; 
         });
 
-        // 2. 마우스가 박스 영역을 벗어났을 때 (조작 중단)
         slider.addEventListener('mouseleave', () => {
             isDown = false;
             slider.style.cursor = 'grab';
         });
 
-        // 3. 마우스 클릭을 뗐을 때 (움직임 끝)
         slider.addEventListener('mouseup', () => {
             isDown = false;
             slider.style.cursor = 'grab';
         });
-
-        // 4. 마우스를 클릭한 채로 움직일 때 (실제 드래그 스크롤)
         slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return; // 마우스가 눌려있지 않다면 실행 안 함
-            e.preventDefault();  // 이미지나 텍스트가 블록 지정되는 기본 현상 막기
+            if (!isDown) return; 
+            e.preventDefault(); 
             
             const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 1.5; // 곱하는 숫자가 커질수록 드래그 속도가 빨라집니다.
+            const walk = (x - startX) * 1.5; 
             slider.scrollLeft = scrollLeft - walk;
         });
-
-        // 초기 커서 모양 스타일 지정
         slider.style.cursor = 'grab';
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const packBtns = document.querySelectorAll('.pack_tab_cont .tab_btn'); 
+    const priceSpans = document.querySelectorAll('.price_span');
+
+    packBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            packBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const price = btn.dataset.price;
+            priceSpans.forEach(span => {
+                span.textContent = `$${price}`;
+            });
+        });
     });
 });
