@@ -7,19 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const parent = tabCont.parentElement;
         if (!parent) return;
-        
+
+        const categories = Array.from(tabButtons).map(btn => btn.dataset.category);
+
         const panels = Array.from(parent.children).filter(
-            el => el !== tabCont && el.dataset.category !== undefined
+            el => el !== tabCont && categories.includes(el.dataset.category)
         );
         if (!panels.length) return;
 
         function showPanel(category) {
             panels.forEach(panel => {
-                if (panel.dataset.category === category) {
-                    panel.style.display = ''; 
-                } else {
-                    panel.style.display = 'none';
-                }
+                panel.style.display = (panel.dataset.category === category) ? '' : 'none';
             });
         }
 
