@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('스크립트 실행됨!'); // 
     function setTextAll(className, text) {
         document.querySelectorAll('.' + className).forEach(el => {
             el.textContent = text;
@@ -143,12 +142,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!window.__cartListenerBound) {
         window.__cartListenerBound = true;
 
+        let isProcessing = false;
+
         document.body.addEventListener('click', (e) => {
-            const btn = e.target.closest('[data-category="addtocart"]');
+            const btn = e.target.closest('button[data-category="addtocart"]');
             if (!btn) return;
 
+            if (isProcessing) return;
+            isProcessing = true;
+
             console.log('클릭 핸들러 실행됨!');
-            
+
             const unitPrice = BASE_PRICE + Object.values(selectedPrices).reduce((sum, p) => sum + p, 0);
 
             const cartItem = {
@@ -163,6 +167,10 @@ document.addEventListener('DOMContentLoaded', () => {
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             cart.push(cartItem);
             localStorage.setItem('cart', JSON.stringify(cart));
+
+            setTimeout(() => {
+                isProcessing = false;
+            }, 500);
         });
     }
 
