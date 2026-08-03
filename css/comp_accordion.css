@@ -22,7 +22,7 @@
     max-height: 1000px;
 }
 .accordion .accordion_item .accordion_body p{
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 .accordion_item.is-open .accordion_icon {
     transform: rotate(270deg);
