@@ -106,6 +106,97 @@ main section.grid_bg div div article span{
 main section.grid_bg div div img{
     width: 100%;
 }
+main section p.align_right{
+    border-bottom: 1px solid var(--gs05);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    text-align: right;
+}
+main section p.align_right+p{
+    margin-bottom: 50px;
+}
+main section div.card_overflow{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    cursor: grab;
+}
+main section div.card_overflow.dragging{
+    cursor: grabbing;
+    user-select: none;
+}
+main section div.card_overflow article{
+    background-color: var(--gs09);
+    padding: 10px;
+    flex-shrink: 0;
+}
+main section div.card_overflow article figure{
+    background-size: cover;
+    width: 100%;
+    height: 425px;
+    overflow: hidden;
+}
+main section div.card_overflow article:hover figure{
+    width: 100%;
+    background-size: cover;
+    transform: translateY(-2px);
+}
+main section div.card_overflow article:first-of-type figure{
+    background-image: url(../images/about/team1.webp);
+}
+main section div.card_overflow article:nth-of-type(2) figure{
+    background-image: url(../images/about/team2.webp);
+}
+main section div.card_overflow article:nth-of-type(3) figure{
+    background-image: url(../images/about/team3.webp);
+}
+main section div.card_overflow article:nth-of-type(4) figure{
+    background-image: url(../images/about/team4.png);
+}
+main section div.card_overflow article:nth-of-type(5) figure{
+    background-image: url(../images/about/team5.webp);
+}
+main section div.card_overflow article:first-of-type:hover figure{
+    background-image: url(../images/about/team1_color.png); 
+}
+main section div.card_overflow article:nth-of-type(2):hover figure{
+    background-image: url(../images/about/team2_color.png); 
+}
+main section div.card_overflow article:nth-of-type(3):hover figure{
+    background-image: url(../images/about/team3_color.png); 
+}
+main section div.card_overflow article:nth-of-type(4):hover figure{
+    background-image: url(../images/about/team4_color.png); 
+}
+main section div.card_overflow article:nth-of-type(5):hover figure{
+    background-image: url(../images/about/team5_color.png); 
+}
+main section div.card_overflow article .text_cont{
+    padding: 10px 0;
+}
+main section div.card_overflow article .text_cont h4{
+    margin-bottom: 10px;
+    color: var(--gs04);
+}
+main section div.card_overflow article .text_cont div{
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid var(--gs04);
+}
+main section div.card_overflow article .text_cont div span{
+    display: block;
+    color: var(--gs02);
+}
+main section div.card_overflow article .text_cont div span:first-of-type{
+    width: 40%;
+}
+main section div.card_overflow article .text_cont div span:last-of-type{
+    width: 60%;
+}
 @media screen and (min-width:1024px) {
     main.about_main section .div_row{
         gap: 4%;
@@ -145,11 +236,24 @@ main section.grid_bg div div img{
         max-width: 450px;
         width: 100%;
         margin: 0 auto;
-    }
-    
+    }    
 }
-@media screen and (max-width:400){
+@media screen and (min-width:400px){
+    main section div.card_overflow article{
+        width: 360px;
+    }
+    main section div.card_overflow article figure{
+        height: 430px;
+    }
+}
+@media screen and (max-width:400px){
     main section.grid_bg{
         padding: 10px;
+    }
+    main section div.card_overflow article{
+        width: 260px;
+    }
+    main section div.card_overflow article figure{
+        height: 300px;
     }
 }
