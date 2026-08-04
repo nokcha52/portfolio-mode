@@ -472,3 +472,12 @@ input:focus,textarea:focus, select:focus{
     display: inline-block;
     text-align: center;
 }
+
+/* 리스트 스타일 */
+ul.list_style{    
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+ul.list_style li{
+    list-style: disc;
+}
