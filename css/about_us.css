@@ -197,6 +197,252 @@ main section div.card_overflow article .text_cont div span:first-of-type{
 main section div.card_overflow article .text_cont div span:last-of-type{
     width: 60%;
 }
+main section h3+p:not(.align_right){
+    margin-bottom: 30px;
+}
+main section .alignHr article figure img{
+    object-fit: cover;
+}
+main section .alignHr article .text_cont h4{
+    margin-bottom: 15px;
+    color: var(--ys03);
+}
+main section .alignHr article .text_cont h4+p{
+    margin-bottom: 10px;
+    color: var(--ys04);
+}
+main section .back_img article{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateY(60%);
+}
+main section div.back_img article figure img{
+    width: 10px;
+}
+main section div.back_img {
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/about/detail4.webp);
+    background-size: cover;
+    border-radius: 10px;
+}
+main section .infinite_track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    height: 100%;
+    animation: infinite 60s linear infinite;
+}
+main section .infinite_track article {
+    flex-shrink: 0;
+    width: 300px; 
+    height: 250px;
+}
+main section h3+p.title2{
+    color: var(--ys03);
+}
+
+main section div.back_img:hover .infinite_track {
+    animation-play-state: paused;
+}
+
+main section .accordion .accordion_item{
+    margin-bottom: 20px;
+}
+main section .accordion .accordion_item button span{
+    color: var(--ls02);
+}
+main section .accordion .accordion_item p{
+    color: var(--gs03);
+}
+main article.back_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/about/detail5.webp);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+}
+main article.back_img > *:not(.btn_cont){
+    color: var(--gs09);
+}
+main article.back_img span{
+    display: block;
+    margin-bottom: 10px;
+}
+main article.back_img p{
+    width: 80%;
+    max-width: 800px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+main article.back_img .btn_cont{
+    display: flex;
+    gap: 20px;
+}
+main article.back_img .btn_cont > *{
+    display: block;
+    min-width: 200px;
+    text-align: center;
+}
+
+.modal_overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+
+}
+.modal_close_btn{
+    background-color: transparent;
+    border: none;
+}
+.modal_overlay.active {
+    display: flex;
+}
+.sr-only{
+    display: none;
+}
+.modal_box {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 600px;
+    height: 600px;
+    overflow-y: auto;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    scrollbar-width: none;
+}
+.modal_box .head_cont{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.modal_box .head_cont h3{
+    color: var(--bs02);
+}
+.modal_box fieldset{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.modal_box input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+}
+.modal_box fieldset div:first-of-type{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.modal_box select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--gs05);
+    border-radius: 10px;
+    color: var(--gs05);
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('images/icon/icon_chevron.svg');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+.modal_box select:valid {
+    color: var(--bs02);
+}
+.modal_box select option{
+    padding: 10px 0;
+}
+.modal_box select option:hover{
+    color: var(--gs09);
+    background-color: var(--bs06);
+}
+.modal_box fieldset div.row div:not(.custom_select){
+    gap: 10px;
+}
+.modal_box .row label:nth-of-type(2){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gs05);
+    border: 1px solid var(--gs05);
+    padding: 15px;
+    border-radius: 10px;
+}
+.modal_box .warning{
+    display: none;
+    color: var(--rs05);
+}
+.warning.show {
+    display: block;
+}
+.modal_box .question_box p{
+    margin-bottom: 10px;
+}
+.modal_box .question_box ol{
+    padding-left: 30px;
+}
+.modal_box .coverLetter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.modal_box .coverLetter > *{
+    display: block;
+    width: 100%;
+}
+.modal_box .coverLetter label{
+    margin-bottom: 10px;
+}
+.modal_box .coverLetter textarea{
+    height: 200px;
+    border-radius: 10px;
+    padding: 10px;
+}
+#successOverlay .success_box{
+    text-align: center;
+    max-width: 500px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#successOverlay .success_box h3,
+#successOverlay .success_box p{
+    text-align: left;
+}
+
+@keyframes infinite {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
 @media screen and (min-width:1024px) {
     main.about_main section .div_row{
         gap: 4%;
@@ -238,6 +484,72 @@ main section div.card_overflow article .text_cont div span:last-of-type{
         margin: 0 auto;
     }    
 }
+@media screen and (min-width:600px){
+    main section .alignHr article{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 600px;
+    }
+    main section .alignHr article .line img{
+        height: 600px;
+        opacity: 0.9;
+    }
+    main section .alignHr article > *:not(.line),
+    main section .alignHr article figure img{
+        width: 45%;
+        max-width: 400px;
+    }
+    main section .alignHr article figure img{        
+        height: 400px;
+        width: 100%;
+    }
+    .modal_box fieldset div.row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4%;
+    }
+    .modal_box fieldset div.row div:not(.custom_select){
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 48%;
+    }
+}
+@media screen and (max-width:599px){
+    main section .alignHr article{
+        margin-bottom: 30px;
+    }
+    main section .alignHr article:nth-of-type(2n+1){
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main section .alignHr article .line img{
+        display: none;
+    }
+    main section .alignHr article > *:not(.line),
+    main section .alignHr article figure img{
+        width: 100%;
+    }
+    main section .alignHr article figure img{
+        height: 300px;
+    }
+    main section .alignHr article .text_cont p{
+        margin-bottom: 20px;
+    }
+    .modal_box{
+        height: 500px;
+    }
+    .modal_box fieldset div.row{
+        flex-direction: column;
+    }
+    .modal_box fieldset div label{
+        margin-bottom: 10px;
+    }
+    .modal_box fieldset div.row > *{
+        width: 100%;
+    }
+}
 @media screen and (min-width:400px){
     main section div.card_overflow article{
         width: 360px;
@@ -246,7 +558,7 @@ main section div.card_overflow article .text_cont div span:last-of-type{
         height: 430px;
     }
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:399px){
     main section.grid_bg{
         padding: 10px;
     }
@@ -255,5 +567,9 @@ main section div.card_overflow article .text_cont div span:last-of-type{
     }
     main section div.card_overflow article figure{
         height: 300px;
+    }
+    main article.back_img .btn_cont{
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
