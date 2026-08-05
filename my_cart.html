@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +13,9 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/tab_btn.js"></script>
     <script src="js/cart.js"></script>
 </head>
-
 <body>
     <header>
         <div class="headerTop">
@@ -618,6 +617,9 @@
             </p>
         </div>
     </div>
+</body>
+<div id="modal_backdrop" hidden></div>
+
     <div class="modal_overlay policy" id="policy_privacy_overlay" data-policy="privacy" hidden>
         <div class="head_cont">
             <h3 class="title1">Privacy policy</h3>
@@ -996,8 +998,6 @@
             </p>
         </div>
     </div>
-</body>
-<div id="modal_backdrop" hidden></div>
 <div id="toast" class="toast">
     <p class="toast_title label-l"></p>
     <p class="toast_message body-l"></p>

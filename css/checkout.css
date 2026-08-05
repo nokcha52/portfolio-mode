@@ -1,0 +1,219 @@
+main{
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+main > div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;    
+}
+main div.left_side section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+main div.left_side section h2{
+    color: var(--bs03);
+}
+main div.left_side section:first-of-type{
+    text-align: center;
+}
+main div.left_side section:first-of-type > span{
+    color: var(--gs04);
+}
+main div.left_side section:first-of-type button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: var(--gs01);
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: var(--gs09);
+}
+main .input_box{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+    background-color: var(--gs09);
+}
+main .input_box:hover,
+.input_row input:hover,
+.select_box:hover{
+    border: 1px solid var(--bs05);
+}
+main .input_box label {
+    display: block;
+    font-size: 13px;
+    border-bottom: 5px;
+    color: var(--gs05);
+}
+main .input_box:not(.checkbox_row) input{
+    border: none!important;
+    width: 100%;
+    font-size: 15px;    
+}
+main .input_box input::placeholder{
+    font-family: 'Manrope';
+    font-size: 12px;
+    color: var(--gs06);
+}
+main section > input,
+main section .input_row input{
+    padding: 20px ;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+}
+main section .input_row{
+    display: flex;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px dashed var(--gs05);
+}
+.divider span {
+    padding: 0 16px; 
+    color: #888;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.checkbox_row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.shipping_price_cont{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background-color: var(--gs09);
+    padding: 10px;
+    border: 1px solid var(--gs05);
+    border-radius: 10px;
+}
+.shipping_price_cont .radio_row{
+    display: flex;
+    gap: 10px;
+}
+
+.select_box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+    background-color: var(--gs09);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+}
+.select_box > span{
+    color: var(--gs04);
+}
+.select_box ul li{
+    padding: 10px 0;
+    background-color: var(--gs09);
+    color: var(--gs05);
+}
+.select_box ul li:hover{
+    background-color: var(--bs05);
+    color: var(--gs09);
+}
+.select_box button{
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 0;
+}
+.select_box img{
+    position: absolute;
+    top: 25px;
+    transform: rotate(90deg);
+    right: 20px;
+    width: 20px;
+}
+.input_box.tel{
+    display: flex;
+    padding: 20px 10px;
+    position: relative;
+}
+.input_box.tel input::placeholder{
+    font-size: 14px;
+    color: var(--gs04);
+    padding-left: 5px;
+}
+.tel_hover{
+    display: none;
+    position: absolute;
+    top: -25px;
+    right: -75px;
+    background-color: var(--gs01);
+    color: var(--gs09);
+    width: 180px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.icon_question:hover + .tel_hover{
+    display: block;
+    cursor: pointer;
+}
+.checkbox_row label {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+main .icon_question{
+    display: block;
+    background-color: transparent;
+    border: 2px solid var(--gs01);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 14px;
+    text-align: center;
+    font-size: 10px;
+}
+@media screen and (min-width:1024px) {
+    main{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5%;
+    }
+    main > div{
+        width: 45%;
+    }
+    main section .input_row{
+        flex-direction: row;
+        gap: 2%;
+    }
+    main section .input_row > *{
+        width: 49%;
+    }
+}
+@media screen and (max-width:1023px){
+    main{
+        flex-direction: column;
+        gap: 50px;
+    }
+    main > div{
+        width: 100%;
+    }
+    main section .input_row{
+        flex-direction: column;
+        gap: 30px;
+    }
+    main section .input_row > *{
+        width: 100%;
+    }
+}

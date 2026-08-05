@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.__cartPageInitialized) return; // 이미 초기화됐으면 즉시 종료
+    if (window.__cartPageInitialized) return;
     window.__cartPageInitialized = true;
 
     const cartListEl = document.getElementById('cart_list');
@@ -92,15 +92,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const policyButtons = document.querySelectorAll('[data-policy]');
+    const policyButtons = document.querySelectorAll('.policy_cont [data-policy]');
     const policyOverlays = document.querySelectorAll('.modal_overlay.policy');
+    const modalBackdrop = document.getElementById('modal_backdrop');
+
+    function openModal(overlay) {
+        overlay.hidden = false;
+        if (modalBackdrop) modalBackdrop.hidden = false;
+    }
+
+    function closeModal(overlay) {
+        overlay.hidden = true;
+        if (modalBackdrop) modalBackdrop.hidden = true;
+    }
 
     policyButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const type = btn.dataset.policy;
             const overlay = document.getElementById(`policy_${type}_overlay`);
             if (overlay) {
-                overlay.hidden = false;
+                openModal(overlay);
             }
         });
     });
@@ -108,10 +119,28 @@ document.addEventListener('DOMContentLoaded', () => {
     policyOverlays.forEach(overlay => {
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) {
-                overlay.hidden = true;
+                closeModal(overlay);
             }
         });
+
+        const closeBtn = overlay.querySelector('.close_btn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeModal(overlay);
+            });
+        }
     });
+
+    if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', () => {
+            policyOverlays.forEach(overlay => {
+                if (!overlay.hidden) {
+                    closeModal(overlay);
+                }
+            });
+        });
+    }
 
     renderCart();
     updateSummary();
