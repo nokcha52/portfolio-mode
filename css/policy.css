@@ -5,8 +5,8 @@ main.policy{
     justify-content: space-between;
     align-items: stretch;
 }
-main.policy .right_side{
-    gap: 50px;
+main.policy .left_side h3{
+    margin-bottom: 30px;
 }
 main.policy .left_side ul{
     padding-left: 20px;
@@ -23,6 +23,14 @@ main.policy .left_side ul li:hover{
 main.policy .left_side ul li.active{
     color: var(--ls03);
 }
+main.policy .right_side{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+main.policy .right_side section{
+    border-bottom: 1px solid var(--gs04);
+}
 main.policy .right_side h2{
     color: var(--gs04);
 }
@@ -35,13 +43,13 @@ main.policy .right_side p:not(:last-child){
 }
 main.policy .right_side p:last-child{
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--gs04);
 }
 main.policy .right_side h4{
-    color: var(--gs02);
+    color: var(--ls03);
     margin-bottom: 10px;
 }
 main.policy .right_side span{
+    display: block;
     color: var(--rs04);
     margin-bottom: 10px;
 }
@@ -49,6 +57,12 @@ main.policy .right_side a{
     display: block;
     color: var(--gs02);
     margin-bottom: 20px;
+}
+main.policy .right_side a.under_line{
+    text-decoration: underline;
+}
+.right_side section[id^="section_move"] {
+    scroll-margin-top: 60px;
 }
 @media screen and (min-width:1024px){
     main.policy{
@@ -62,9 +76,6 @@ main.policy .right_side a{
         height: 100%;
         padding: 20px 0 20px 30px;
     }
-    main.policy .left_side h3{
-        margin-bottom: 30px;
-    }
     main.policy .right_side{
         display: flex;
         flex-direction: column;
@@ -75,5 +86,13 @@ main.policy .right_side a{
 @media screen and (max-width:1023px){
     main.policy{
         flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    main.policy .left_side{
+        width: 100%;
+    }
+    main.policy .left_side ul{
+        width: 100%;
     }
 }
