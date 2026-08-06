@@ -352,11 +352,11 @@ main .right_side section div.price_area div{
     display: flex;
     justify-content: space-between;
 }
-main .right_side section div:not(:last-of-type) span{
+main .right_side section div:not(:last-child) span{
     color: var(--gs04);
 }
-main .right_side section div:last-of-type span{
-    color: var(--gs04);
+main .right_side section div:last-child span{
+    color: var(--bs04);
 }
 @media screen and (min-width:1024px) {
     main{
