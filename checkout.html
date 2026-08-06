@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/option_acc.js"></script>
 </head>
 
 <body>
@@ -498,21 +499,111 @@
                             <li role="option" data-value="seo" class="label-m">Seoul</li>
                             <li role="option" data-value="uls" class="label-m">Ulsan</li>
                         </ul>
-                    </div>                    
+                    </div>
                     <input type="text" placeholder="City" class="label-m">
                 </div>
                 <input type="address" placeholder="Address" class="label-m">
-                <input type="address" placeholder="Apartment, suite, etc (optional)" class="label-m">                
+                <input type="address" placeholder="Apartment, suite, etc (optional)" class="label-m">
                 <div class="label-m input_box tel">
                     <input type="tel" placeholder="Phone" class="label-m">
                     <span class="icon_question">?</span>
                     <div class="tel_hover label-s">In case we need to contact you about your order</div>
                 </div>
             </section>
+            <section>
+                <h2 class="title2">Payment</h2>
+                <p class="body-l">All transactions are secure and encryped.</p>
+                <div class="accordion">
+                    <button type="button" class="option active label-m" data-target="card">
+                        <span class="radio"><span class="radio_dot"></span></span>
+                        <span>Credit card</span>
+                    </button>
+                    <div class="panel open" id="panel_card">
+                        <div class="panel_inner">
+                            <div class="panel_content">
+                                <input type="text" placeholder="Card number" class="label-m">
+                                <div class="input_row">
+                                    <div>
+                                        <input type="text" placeholder="Expiration date (MM/YY)" class="label-m">
+                                    </div>
+                                    <div class="input_box">
+                                        <input type="text" placeholder="Security code" class="label-m">
+                                        <span class="icon_question security label-m">?</span>
+                                        <div class="secu_hover body-m">
+                                            3-digit security code usually found on the back of your card. American
+                                            Express cards have a 4-digit code locatde on the front.
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="text" placeholder="Post code" class="label-m">
+                                <label class="checkbox-label label-m">
+                                    <input type="checkbox">
+                                    Use shipping address as billing address
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="option label-m" data-target="alipay">
+                        <span class="radio"><span class="radio_dot"></span></span>
+                        <span>Alipay+</span>
+                    </button>
+                    <div class="panel" id="panel_alipay">
+                        <div class="panel_inner">
+                            <div class="panel_content">
+                                <p class="alipay_note body-l">You'll be redirected to Alipay+ to complete your payment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="label-m">
+                <a href="policy_refund.html">Refund policy</a>
+                <a href="policy_privacy.html">Privacy policy</a>
+                <a href="policy_service.html">Trems of service</a>
+            </div>
         </div>
         <div class="right_side">
             <section>
                 <h2 class="title2">Your Order</h2>
+                <div>
+                    <article class="cart_item boxShadow">
+                        <figure class="cart_item_img">
+                            <img src="" alt="">
+                        </figure>
+                        <section>
+                            <h4 class="cart_item_name title4"></h4>
+                            <p class="cart_item_options body-m"></p>
+                        </section>                        
+                        <span class="cart_item_price label-s"></span>
+                    </article>
+                </div>
+            </section>
+            <section>
+                <div class="discount_input_area">
+                    <input type="text" class="label-m" placeholder="Discount code">
+                    <button class="apply_btn">Apply</button>
+                </div>
+                <div class="price_area">
+                    <div class="sub_price_cont">
+                        <span class="label-l">Subtotal</span>
+                        <span class="label-s sub_price"></span>
+                    </div>
+                    <div class="disc_price_cont">
+                        <span class="label-l">Discount</span>
+                        <span class="label-s disc_price"></span>
+                        <p class="label-m"><span class="coupon_applied">applied</span></p>
+                    </div>
+                    <div class="shipp_price_cont">
+                        <span class="label-l">Shipping</span>
+                        <span class="label-s shipping_price"></span>
+                    </div>
+                    <div class="total_price_cont">
+                        <span class="label-l">Total</span>
+                        <span class="label-s total_price"></span>
+                    </div>
+                </div>
+                <button class="btn_blue label-m">Pay now</button>
             </section>
         </div>
     </main>

@@ -2,18 +2,19 @@ main{
     display: flex;
     max-width: 1100px;
     margin: 0 auto;
+    align-items: flex-start;
 }
 main > div{
     display: flex;
     flex-direction: column;
-    gap: 30px;    
+    gap: 30px;
 }
 main div.left_side section{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-main div.left_side section h2{
+main div section h2{
     color: var(--bs03);
 }
 main div.left_side section:first-of-type{
@@ -175,7 +176,7 @@ main section .input_row{
 }
 main .icon_question{
     display: block;
-    background-color: transparent;
+    background-color: var(--gs09);
     border: 2px solid var(--gs01);
     border-radius: 50%;
     width: 20px;
@@ -183,6 +184,179 @@ main .icon_question{
     line-height: 14px;
     text-align: center;
     font-size: 10px;
+    cursor: pointer;
+}
+main .icon_question.security{
+    height: 18px;
+}
+main .accordion{
+    border: 1px solid var(--gs05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+main .accordion button{
+    width: 100%;
+    padding: 15px 10px;
+    text-align: left;
+    display: flex;
+    gap: 10px;
+}
+main .accordion button:first-of-type{
+    border: none;
+}
+main .accordion button.active:first-of-type{
+    border-bottom: 1px solid var(--bs05);
+}
+main .accordion button:nth-of-type(2){
+    border: 1px solid var(--gs05);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+main .accordion button.active:nth-of-type(2){
+    border-bottom: 1px solid var(--bs05);
+}
+main .accordion button .radio_dot{
+    display: block;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    border: 5px solid var(--gs04);
+}
+main .accordion button.active{
+    background-color: var(--bs08);
+    color: var(--bs04);
+}
+main .accordion button.active .radio_dot{
+    border: 5px solid var(--bs04);
+}
+main .accordion .panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
+}
+main .accordion .panel.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+main .accordion .panel_inner {
+    overflow: hidden;
+}
+main .accordion .panel_content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+main .accordion .panel_content > input{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+}
+main .accordion .panel_content input::placeholder{
+    color: var(--gs06);
+}
+main .accordion .panel_content .input_box{
+    position: relative;
+}
+main .accordion .panel_content .input_box .secu_hover{
+    display: none;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background-color: var(--gs01);
+    border-radius: 10px;
+    color: var(--gs09);
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+}
+main .accordion .panel_content .input_row .icon_question:hover + .secu_hover{
+    display: block;
+}
+main .accordion .panel_content .input_row .input_box{
+    display: flex;
+    align-items: center;
+}
+main .accordion .panel_content .input_row .input_box input{
+    padding: 0;
+}
+main .accordion .panel_content .input_row .input_box input::placeholder{
+    font-size: 14px;
+}
+main div.label-m{
+    display: flex;
+    gap: 20px;
+}
+main div.label-m a{
+    color: var(--bs05);
+    text-decoration: underline var(--bs05);
+}
+main .right_side section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+main .right_side section .cart_item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+main .right_side section .cart_item .cart_item_img{
+    width: 60px;
+    height: 60px;
+}
+main .right_side section .cart_item .cart_item_img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+main .right_side section .cart_item section{
+    width: 70%;
+}
+main .right_side section .cart_item section h4{
+    color: var(--gs02);
+    margin-bottom: 5px;
+}
+main .right_side section .discount_input_area{
+    display: flex;
+    gap: 5%;
+}
+main .right_side section .discount_input_area input{
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+}
+main .right_side section .discount_input_area button{
+    width: 25%;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--gs07);
+    color: var(--gs03);
+    font-family: "Manrope";
+    font-weight: 700;
+}
+main .right_side section div.price_area{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+main .right_side section div.price_area div{
+    display: flex;
+    justify-content: space-between;
+}
+main .right_side section div:not(:last-of-type) span{
+    color: var(--gs04);
+}
+main .right_side section div:last-of-type span{
+    color: var(--gs04);
 }
 @media screen and (min-width:1024px) {
     main{
