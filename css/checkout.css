@@ -344,6 +344,7 @@ main .right_side section .discount_input_area button{
     font-weight: 700;
 }
 main .right_side section div.price_area{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -352,11 +353,67 @@ main .right_side section div.price_area div{
     display: flex;
     justify-content: space-between;
 }
+main .right_side section div.disc_price_cont{
+    flex-wrap: wrap;
+}
+main .right_side section div.disc_price_cont > span{
+    display: block;
+    width: 50%;
+}
+main .right_side section div.disc_price_cont p{
+    width: 100%;
+    text-align: right;
+}
 main .right_side section div:not(:last-child) span{
     color: var(--gs04);
 }
 main .right_side section div:last-child span{
     color: var(--bs04);
+}
+.modal_backdrop{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+}
+body{
+    position: relative;
+}
+.modal_overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--gs09);
+    border-radius: 10px;
+    text-align: center;
+}
+.modal_overlay .head_cont{
+    display: flex;
+    justify-content: space-between;
+}
+.modal_overlay .head_cont p{
+    width: 95%;
+    text-align: center;
+}
+.modal_overlay figure{
+    width: 100%;
+    text-align: center;
+}
+.modal_overlay div:not(:last-child){
+    display: flex;
+    justify-content: space-between;
+}
+.modal_overlay div:last-child{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 5px;
 }
 @media screen and (min-width:1024px) {
     main{
