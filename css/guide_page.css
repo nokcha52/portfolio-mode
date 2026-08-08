@@ -1,0 +1,65 @@
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+main > *{
+    width: 100%;
+}
+main div.top_cont,
+main section,
+main section ul.section_list,
+main section ul.list_style{
+    display: flex;
+    flex-direction: column;
+}
+main div.top_cont{
+    width: 100%;
+    gap: 20px;
+}
+main div.top_cont > a{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+main div.top_cont > a > img{
+    transform: rotate(180deg);
+    width: 20px;
+}
+main div.top_cont > a > span{
+    text-align: left;
+    color: var(--gs04);
+}
+main div.top_cont h2{
+    width: 100%;
+    text-align: left;
+}
+main div.top_cont p{
+    color: var(--gs02);
+}
+main section{
+    gap: 10px;
+}
+main section h3{
+    color: var(--ls02);
+    margin-bottom: 10px;
+}
+main section h4{
+    color: var(--gs03);
+}
+main section p:not(:last-of-type){
+    margin-bottom: 20px;
+}
+main section ul.section_list{
+    gap: 10px;
+}
+main section ul.section_list li:hover{
+    color: var(--ls04);
+    cursor: pointer;
+}
+main section ul.list_style{
+    gap: 5px;
+}
+main section[id^="section_move"] {
+    scroll-margin-top: 80px;
+}

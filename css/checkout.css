@@ -34,7 +34,13 @@ main div.left_side section:first-of-type button{
     padding: 15px;
     color: var(--gs09);
 }
-main .input_box{
+main .input_box:not(.padd){
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+    background-color: var(--gs09);
+}
+main .input_box.padd{
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid var(--gs05);
@@ -468,5 +474,13 @@ body{
     }
     main section .input_row > *{
         width: 100%;
+    }
+    main input.expiration{
+        width: 100%;
+    }
+}
+@media screen and (max-width:300px){
+    main input{
+        /* padding: 10px; */
     }
 }
