@@ -116,6 +116,22 @@ main section .input_row{
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid var(--gs05);
+    position: relative;
+}
+.select_box .option_list{
+    position: absolute;
+    top: calc(100%);  /* select_btn 바로 아래에 붙기 */
+    left: 0;
+    width: 100%;
+    z-index: 10;            /* 다른 요소 위로 겹치게 */
+    background-color: var(--gs09, #fff);
+    border: 1px solid var(--gs04);
+    border-top: none;
+    max-height: 240px;
+    overflow-y: auto; 
+}
+.select_box .option_list li{
+    padding: 10px;
 }
 .select_box > span{
     color: var(--gs04);
@@ -141,6 +157,9 @@ main section .input_row{
     transform: rotate(90deg);
     right: 20px;
     width: 20px;
+}
+.select_box + input{
+    height: 65px;
 }
 .input_box.tel{
     display: flex;
