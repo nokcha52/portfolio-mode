@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envoy Building Guide
-    </title>
+    <title>Support login</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/guide_page.css">
+    <link rel="stylesheet" href="css/support_login.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
-    <script src="js/step_img_change.js"></script>
-    <script src="js/guide_page.js"></script>
 </head>
 <body>
     <header>
@@ -423,319 +421,28 @@
         </div>
     </header>
     <main>
-        <div class="top_cont">
-            <a href="bulid_guides_list.html">
-                <img src="images/icon/icon_chevron.svg" alt="back">
-                <span class="label-xl">Building Guides</span>
-            </a>
-            <h2 class="heading1">Envoy Build Guides</h2>
-            <p class="label-m">Last updated: 14/05/2026</p>
+        <div>
+            <figure>
+                <img src="images/support/login_img.webp" alt="img">
+            </figure>
+            <section>
+                <div>
+                    <h2 class="title1">Mode Support</h2>
+                    <p class="body-l">Please log in to your Mode account so that we can link your orders and personal
+                        details and help you faster.</p>
+                </div>
+                <form id="support_login_form">
+                    <fieldset class="label-m">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required placeholder="email@gmail.com">
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" name="password" required placeholder="......">
+                    </fieldset>
+                    <button type="submit" class="btn_yellow label-m">Login</button>
+                </form>
+                <a href="contact_support_main.html" class="without_log label-m">Continue without logging in</a>
+            </section>
         </div>
-        <section>
-            <h3 class="title4">On this page</h3>
-            <ul class="label-s section_list">
-                <li data-target="section_move1">01. Introduction</li>
-                <li data-target="section_move2">02. What's inside the box?</li>
-                <li data-target="section_move4">03. Step-by-step Assembly</li>
-                <li data-target="section_move5">04. Customization & Software</li>
-                <li data-target="section_move6">05. Still need help?</li>
-            </ul>
-        </section>
-        <section id="section_move1">
-            <h3 class="title1">Introduction</h3>
-            <p class="body-xl">The Mode Envoy is a sharp, premium 65% mechanical keyboard featuring an elegant, accessible design with versatile mounting behaviors. This guide covers the complete hardware assembly process. Please follow the instructions linearly to achieve the ideal sound signature and avoid damage to internal elements.</p>
-            <h4 class="title3">Join the Mode Community!</h4>
-            <p class="body-xl">If you have any questions before or during your build, join our Discord server to connect
-                with fellow builders and get real-time tips. Once you finish your masterpiece, tag us at @modekeyboards
-                on Instagram—we love seeing your builds!</p>
-        </section>
-        <section id="section_move2">
-            <h3 class="title1">What's inside the box?</h3>
-            <p class="body-xl">Clear your workspace on a plush micro-fiber mat and organize the following pieces:</p>
-            <h4 class="title3">Hardware Components:</h4>
-            <ul class="list_style body-l">
-                <li>1x Envoy Chassis (Top Case and Bottom Case pre-assembled)</li>
-                <li>1x Envoy Accent Piece</li>
-                <li>1x Custom PCB & Daughterboard (with JST cable)</li>
-                <li>1x Plate (if selected)</li>
-                <li>1x Fastener Pack (Assorted screws and hex keys)</li>
-                <li>1x Poron Dampening Foam Kit (Plate & Case Foam)</li>
-                <li>1x Silicone Feet Set & Mounting Blocks (Lattice and Solid options)</li>
-            </ul>
-            <h4 class="title3">Required Hardware (User Supplied):</h4>
-            <ul class="list_style body-l">
-                <li>1x Stabilizer Set (Screw-in type recommended)</li>
-                <li>Mechanical Switches & Keycap Set</li>
-            </ul>
-        </section>
-        <section id="section_move4">
-            <h3 class="title1">Step-by-step Assembly</h3>
-            <h4 class="title2">[01] Test the PCB</h4>
-            <p class="body-xl">Open your web browser and navigate to the online VIA testing suite. Toggle on the 'Key Tester' layout.</p>
-            <article>
-                <h4 class="title3">01. Launch VIA Configurator</h4>
-                <p class="body-xl">Open your web browser and navigate to the online VIA testing suite. Toggle on the 'Key Tester' layout. Plug the daughterboard JST wire into the main PCB, then connect it to your computer via USB-C. Take a pair of metal tweezers and touch both copper contact leaves on every hot-swap socket sequentially. Ensure the grid boxes on your monitor light up</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide1_1.webp" alt="guide1">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide1_2.webp" alt="guide1">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/envoy/guide1_3.webp" alt="guide1">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Open the Enclosure</h4>
-                <p class="body-xl">Place the pre-assembled chassis upside down on a soft microfiber towel. Remove the case screws to separate the top case from the bottom housing frame.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide2_1.webp" alt="guide2">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide2_2.webp" alt="guide2">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/envoy/guide2_3.webp" alt="guide2">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">03. Mount the Accent Trim</h4>
-                <p class="body-xl">Align your chosen decorative exterior accent piece into its designated track position on the case frame and secure it tightly from the inside.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                    <li class="tab_btn" data-step="4">step 4</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide3_1.webp" alt="guide3">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide3_2.webp" alt="guide3">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/envoy/guide3_3.webp" alt="guide3">
-                </figure>
-                <figure class="tab_panel" data-step="4">
-                    <img src="images/guides/envoy/guide3_4.webp" alt="guide3">
-                </figure>
-                <div class="warning_cont">
-                <img src="images/icon/icon_danger.svg" alt="icon_danger">
-                <h4 class="body-l">Pro tip: Dead Socket?</h3>
-                    <p class="body-l">If a specific key fails to trigger an on-screen reaction, check if the hot-swap metal leaf on the back of the PCB is accidentally bent wide open. Reach out to <a
-                            href="contact_support_main.html">support@modedesigns.com</a></p>
-            </div>
-            </article>          
-            <h4 class="title2">[02] Prepare Lower Case Components</h4>
-            <article>
-                <h4 class="title3">01. Secure Exterior Feet</h4>
-                <p class="body-xl">Flip the bottom chassis over and smoothly press the non-slip exterior silicone strip feet into their corresponding recessed alignment channels.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide4_1.webp" alt="guide4">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide4_2.webp" alt="guide4">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/envoy/guide4_3.webp" alt="guide4">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Install Daughterboard Module</h4>
-                <p class="body-xl">Align the daughterboard module cleanly inside its designated interior cutout slot on the bottom case. Secure it firmly using the provided screws.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                    <li class="tab_btn" data-step="4">step 4</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide5_1.webp" alt="guide5">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide5_2.webp" alt="guide5">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/envoy/guide5_3.webp" alt="guide5">
-                </figure>
-                <figure class="tab_panel" data-step="4">
-                    <img src="images/guides/envoy/guide5_4.webp" alt="guide5">
-                </figure>
-            </article>
-            <h4 class="title2">[03] PCB Sub-Assembly & Structural Prep</h4>
-            <article>
-                <h4 class="title3">01. Add Optional PE Foam</h4>
-                <p class="body-xl">If you prefer a brighter acoustic profile, lay the optional thin PE foam layer completely flat across the front top surface of the PCB.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide6_1.webp" alt="guide6">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide6_2.webp" alt="guide6">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Mount Stabilizers & Layer Plate Foam</h4>
-                <p class="body-xl">Lubricate and mount your screw-in stabilizers directly to the PCB with safety washers. Once secured, place the custom Poron plate foam cleanly over the PCB layout</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                    <li class="tab_btn" data-step="4">step 4</li>
-                    <li class="tab_btn" data-step="5">step 5</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide7_1.webp" alt="guide7">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide7_2.webp" alt="guide7">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/envoy/guide7_3.webp" alt="guide7">
-                </figure>
-                <figure class="tab_panel" data-step="4">
-                    <img src="images/guides/envoy/guide7_4.webp" alt="guide7">
-                </figure>
-                <figure class="tab_panel" data-step="5">
-                    <img src="images/guides/envoy/guide7_5.webp" alt="guide7">
-                </figure>
-        
-            </article>
-            <h4 class="title2">[04] Switch Population & Verification</h4>
-            <article>
-                <h4 class="title3">01. Mount Plate and Install Switches</h4>
-                <p class="body-xl">Align your chosen plate over the foam layers. If using flexible plate materials like POM or polycarbonate, take extra care to prevent excessive warping. Snap switches into the perimeter corners first to anchor the alignment, then populate the remaining layout. Crucial: Support the underside of the hotswap joints with your thumb while pushing switches in to protect the solder pads.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide8_1.webp" alt="guide8">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide8_2.webp" alt="guide8">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Confirm Flush Seating</h4>
-                <p class="body-xl">Inspect the completed sub-assembly from a side profile view to ensure every single switch housing is clicked entirely flush against the plate with no crooked pins.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide9_1.webp" alt="guide9">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide9_2.webp" alt="guide9">
-                </figure>
-            </article>
-            <h4 class="title2">[05] Hardware Finishing & Fine Tuning</h4>
-            <article>
-                <h4 class="title3">01. Configure Mounting Blocks</h4>
-                <p class="body-xl">Choose between the flexible Lattice blocks or the firmer Solid blocks. Slide them tightly over the designated rectangular tabs extending along the perimeter of the plate frame.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                    <li class="tab_btn" data-step="4">step 4</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide10_1.webp" alt="guide10">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide10_2.webp" alt="guide10">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/envoy/guide10_3.webp" alt="guide10">
-                </figure>
-                <figure class="tab_panel" data-step="4">
-                    <img src="images/guides/envoy/guide10_4.webp" alt="guide10">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Connect & Seal Case</h4>
-                <p class="body-xl">Lay the optional case foam into the bottom chassis if desired. Connect the internal JST daughterboard ribbon wire carefully to the main PCB receptacle, then gently lower the plate/PCB layout inside. Sandwich the top case over the assembly and fasten the case perimeter screws until perfectly flush.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                    <li class="tab_btn" data-step="4">step 4</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide11_1.webp" alt="guide11">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide11_2.webp" alt="guide11">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/envoy/guide11_3.webp" alt="guide11">
-                </figure>
-                <figure class="tab_panel" data-step="4">
-                    <img src="images/guides/envoy/guide11_4.webp" alt="guide11">
-                </figure>
-            </article>
-        </section>
-        <section id="section_move5">
-            <h3 class="title1">Customization & Software</h3>
-            <p class="body-xl">Configuring layouts on the Sonnet requires zero proprietary download packages.</p>
-            <article>
-                <h4 class="title3">01. Instant Key Remapping</h4>
-                <p class="body-xl">Plug the board in and navigate to the VIA web application. Any macro, layer assignment, or media key adjustment changes instantly on the keyboard hardware memory.</p>
-                <figure>
-                    <img src="images/guides/envoy/guide12_1.webp" alt="guide12">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Entering DFU Flash Mode</h4>
-                <p class="body-xl">If you ever need to perform a hard firmware flash using QMK Toolbox, simply hold down Escape while inserting the USB cable. Alternatively, press the tiny tactile button on the underside of the PCB through the bottom case alignment hole.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/envoy/guide13_1.webp" alt="guide13">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/envoy/guide13_2.webp" alt="guide13">
-                </figure>
-            </article>
-            <div class="warning_cont">
-                <img src="images/icon/icon_danger.svg" alt="icon_danger">
-                <h4 class="body-l">Tip for Mac Users:</h4>
-                <p class="body-l">When using the keyboard on macOS, you can swap the Command and Option key mapping natively under System Preferences -> Keyboard to keep your layout seamless and intuitive across different operating systems.</p>
-            </div>
-        </section>
-        <section id="section_move6">
-            <h3 class="title1">Still need help?</h3>
-            <p class="body-xl">No builder is an island. If you hit a roadblock during assembly or need advice on tuning your stabilizer rattles, we've got your back.</p>
-            <ul class="btn_cont">
-                <li>
-                    <a href="https://discord.com/invite/Mvsq4BP" class="btn_yellow label-m">Join us on Discord</a>
-                </li>
-                <li>
-                    <a href="contact_support_main.html" class="btn_blue label-m">Contact Support</a>
-                </li>
-            </ul>
-        </section>
     </main>
     <footer>
         <section class="footer_front">
@@ -787,7 +494,5 @@
         </div>
     </footer>
 </body>
-<div class="top_btn label-m boxShadow">Top</div>
 <div id="toast" class="toast label-m"></div>
-
 </html>

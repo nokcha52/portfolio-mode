@@ -1,0 +1,69 @@
+main div.support_cont{
+    width: 100%;
+    background-color: var(--gs09);
+    border-radius: 20px;
+    overflow: hidden;
+}
+main > div > a{
+    display: block;
+    width: 100%;
+    background-color: var(--gs01);
+    color: var(--gs09);
+    padding: 10px;
+}
+main > div > a > span:first-child{
+    margin-right: 10px;
+}
+main > div section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+main > div section div.search_box{
+    display: flex;
+    width: 48%;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid var(--gs05);
+    border-radius: 10px;
+}
+main > div section div.search_box input{
+    border: none;
+}
+main > div section h3{
+    color: var(--bs03);
+}
+main > div section .category_cont h3{
+    margin-bottom: 20px;
+}
+main > div section .category_cont ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main > div section .category_cont ul li{
+    padding: 10px;
+    border: 1px solid var(--gs05);    
+    border-radius: 10px;
+}
+main > div section .category_cont ul li button{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width:1024px) {
+    main > div > section{
+        padding: 40px;
+    }
+    main > div section .category_cont ul li{
+        width: 49%;
+    }
+    
+}
+@media screen and (max-width:1023px) {
+    main > div > section{
+        padding: 20px;
+    }
+    
+}

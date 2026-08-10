@@ -1,0 +1,76 @@
+main > div{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--gs09);
+    gap: 40px;
+    border-radius: 30px;
+}
+main div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+main div section,
+main div section div,
+main div section fieldset{
+    display: flex;
+    flex-direction: column;
+}
+main div section{
+    justify-content: space-between;
+    gap: 30px;
+}
+main div section div h2{
+    color: var(--bs03);
+    margin-bottom: 20px;
+}
+main div section div > *{
+    width: 100%;
+}
+main div section fieldset{
+    gap: 10px;
+}
+main div section fieldset input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--gs05);
+    color: var(--gs05);
+}
+main div section fieldset input:first-of-type{
+    margin-bottom: 20px;
+}
+main div section button{
+    margin-top: 40px;
+}
+main div section button,
+main div section a{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+main div section a{
+    color: var(--gs04);
+}
+@media screen and (min-width:1024px){
+    main > div{
+        padding: 40px;
+    }
+    main > div > *{
+        width: 45%;
+    }
+    main div figure{
+        width: 100%;
+        max-width: 450px;
+        min-height: 450px;
+    }
+}
+@media screen and (max-width:1023px){
+    main div{
+        padding: 20px;
+        flex-direction: column;
+    }
+    main div > *{
+        width: 100%;
+    }
+}
