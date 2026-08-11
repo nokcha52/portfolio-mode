@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support</title>
+    <title>Support Shipping</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
@@ -423,91 +423,51 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="issue">
         <div class="support_cont">
-            <a href="contact_support_login.html">
-                <span class="label-xl"> < </span>
-                <span class="label-xl">Log out</span>
+            <a href="contact_support_main.html">
+                <span class="label-xl"> &lt; </span>
+                <span class="label-xl">Categories</span>
             </a>
             <section>
-                <div class="search_box">
-                    <img src="images/icon/icon_search.svg" alt="searchIcon">
-                    <input type="text" placeholder="Search for a help topic">
-                </div>
-                <div class="category_cont">
-                    <h3 class="title3">Pick a category below</h3>
-                    <ul>
-                        <li>
-                            <a href="contact_support_shipping.html">
-                                <img src="images/icon/icon_shipping.svg" alt="icon">
-                                <span class="label-m">Shipping</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact_support_return.html">
-                                <img src="images/icon/icon_return.svg" alt="icon">
-                                <span class="label-m">Returns</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact_support_order.html">
-                                <img src="images/icon/icon_orders.svg" alt="icon">
-                                <span class="label-m">Orders</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact_support_trouble.html">
-                                <img src="images/icon/icon_troubleshooting.svg" alt="icon">
-                                <span class="label-m">Troubleshooting</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="accordion">
-                    <div class="accordion_item">
-                        <button type="button" class="accordion_header label-m">
-                            <h3 class="title4">Track your request</h3>
-                            <img src="images/icon/icon_chevron.svg" alt="chevronIcon" class="accordion_icon">
-                        </button>
-                        <div class="accordion_body">
-                            <form id="trackReq">
-                                <label for="email" class="label-l">Email</label>
-                                <input type="email" id="email2" class="label-m" placeholder="Enter your email">
-                                <label for="id" class="label-l">Request ID</label>
-                                <input type="password" id="password2" class="label-m" placeholder="#A18329">
-                                <button type="button" class="btn_yellow check_stat label-m">Check status</button>
-                            </form>
-                            <article class="req_stat received">
-                                <h4 class="label-l">Request status</h4>
-                                <div class="span_cont">
-                                    <span class="request_id label-m">Request ID : #A18392</span>
-                                    <span class="status label-m">Status: Received</span>
-                                </div>
-                                <p class="body-l">We’ve successfully received your request. We’ll get back to you as soon as possible.</p>
-                            </article>
-                            <article class="req_stat in_progress" hidden>
-                                <h4 class="label-l">Request status</h4>
-                                <div class="span_cont">
-                                    <span class="request_id label-m">Request ID : #A18392</span>
-                                    <span class="status label-m">Status: In progress</span>
-                                </div>
-                                <p class="body-l">We’re currently looking into your request.</p>
-                            </article>
-                            <article class="req_stat resolved">
-                                <h4 class="label-l">Request status</h4>
-                                <div class="span_cont">
-                                    <span class="request_id label-m">Request ID : #A18392</span>
-                                    <span class="status label-m">Status: Resolved</span>
-                                </div>
-                                <p class="body-l">We’ve replied to your email with the answer.</p>
-                            </article>
-                            <article class="req_stat error">
-                                <p class="body-l">We couldn’t find a request with this information.<br>Please check your email and request ID.</p>
-                            </article>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="title3"><img src="images/icon/icon_shipping_color.svg" alt="">Shipping issue</h3>
+                <ul class="issue_cont">
+                    <li>
+                        <button class="label-m" data-target="article1">When will my pre-order ship?</button>
+                        <span class="label-l"> &gt;</span>
+                    </li>
+                    <li>
+                        <button class="label-m" data-target="article2">Why haven’t I received my shipping notification
+                            yet?</button>
+                        <span class="label-l"> &gt;</span>
+                    </li>
+                    <li>
+                        <button class="label-m" data-target="article3">Do you ship internationally?</button>
+                        <span class="label-l"> &gt;</span>
+                    </li>
+                    <li>
+                        <button class="label-m" data-target="article4">Do you offer an alternative shipping
+                            option</button>
+                        <span class="label-l"> &gt;</span>
+                    </li>
+                    <li>
+                        <button class="label-m" data-target="article5">Where do you ship from?</button>
+                        <span class="label-l"> &gt;</span>
+                    </li>
+                </ul>
             </section>
+        </div>
+        <div class="issue_cont">
+        <section>
+            <article data-artnumb="article1" class="article1">
+                <h3 class="title3">When will my pre-order ship? </h3>
+                <p class="body-l">If your order includes pre-order items, find the estimated delivery date on your order
+                    status page by clicking "View your order" in your Mode Account. Your order will be shipped once each
+                    item is in stock.</p>
+                <button class="btn_yellow label-m">Reach out to support</button>
+            </article>
+        </section>
+
         </div>
     </main>
     <footer>
