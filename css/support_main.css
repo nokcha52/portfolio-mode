@@ -144,6 +144,30 @@ main.issue > div > section .issue_cont li button{
 main.issue > div > section .issue_cont li:hover button{
     color: var(--bs06);
 }
+main div.issue_cont{
+    width: 100%;
+    background-color: var(--gs09);
+    border-radius: 20px;
+    overflow: hidden;
+}
+main div.issue_cont > button{
+    background-color: var(--gs01);
+    width: 100%;
+    border: none;
+    text-align: left;
+    padding: 20px;
+    color: var(--gs09);
+}
+main div.issue_cont > button span:first-child{
+    margin-right: 10px;
+}
+main div.issue_cont section p{
+    max-width: 800px;
+}
+main div.issue_cont section a{
+    max-width: 200px;
+    text-align: center;
+}
 @media screen and (min-width:1024px) {
     main > div > section{
         padding: 40px;
