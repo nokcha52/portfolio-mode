@@ -216,6 +216,9 @@ section article.card_slot section div.span_align span:first-child{
     max-width: 150px;
     width: 100%;
 }
+.sortBox ul li:hover{
+    cursor: pointer;
+}
 .mini_card{
     width: 100%;
     overflow-x: auto;
