@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +14,8 @@
     <script src="js/search.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/overlay.js"></script>
+    <script src="js/textlimit.js"></script>
 </head>
-
 <body>
     <header>
         <div class="headerTop">
@@ -442,14 +441,14 @@
                         <p class="body-l">You can find this information in My Orders.</p>
                     </div>
                     <div class="input_box">
-                        <label for="text" class="label-m">Any additional information you’d like to share?</label>
-                        <textarea id="text500" class="label-m">Let us know if there is anything else</textarea>
+                        <label for="text500" class="label-m">Any additional information you’d like to share?</label>
+                        <textarea id="text500" class="label-m" placeholder="Let us know if there is anything else"></textarea>
                         <p class="text500 body-m"><span>0</span>/500 character</p>
                     </div>
-                    <div class="checkbox">
+                    <label class="checkbox">
                         <input type="checkbox">
                         <p class="body-l">I confirm that all information entered is correct and complete.*</p>
-                    </div>
+                    </label>
                     <button class="btn_blue label-m" id="receive_btn">
                         Submit
                     </button>
