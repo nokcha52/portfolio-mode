@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encore Building Guide
-    </title>
+    <title>Support</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/guide_page.css">
+    <link rel="stylesheet" href="css/comp_accordion.css">
+    <link rel="stylesheet" href="css/support_main.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
-    <script src="js/step_img_change.js"></script>
-    <script src="js/guide_page.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="js/textlimit.js"></script>
 </head>
 <body>
     <header>
@@ -423,347 +424,42 @@
         </div>
     </header>
     <main>
-        <div class="top_cont">
-            <a href="bulid_guides_list.html">
-                <img src="images/icon/icon_chevron.svg" alt="back">
-                <span class="label-xl">Building Guides</span>
+        <div class="support_cont">
+            <a href="contact_support_shipping.html">
+                <span class="label-xl"> < </span>
+                        <span class="label-xl">Order</span>
             </a>
-            <h2 class="heading1">Encore Build Guides</h2>
-            <p class="label-m">Last updated: 14/05/2026</p>
+            <section>
+                <fieldset>
+                    <div class="input_box">
+                        <label for="email" class="label-m">Emali*</label>
+                        <input type="email" placeholder="user@gmail.com" class="label-m">
+                    </div>
+                    <div class="input_box">
+                        <label for="orderNumb" class="label-m">What is your order number*</label>
+                        <input type="text" placeholder="e.g. #20260607A0339" class="label-m">
+                        <p class="body-l">You can find this information in My Orders.</p>
+                    </div>
+                    <div class="input_box">
+                        <label for="orderNumb" class="label-m">What do you want to change to*</label>
+                        <input type="text" class="label-m">
+                        <p class="body-l">You can find this information in My Orders.</p>
+                    </div>
+                    <div class="input_box">
+                        <label for="text500" class="label-m">Any additional information you’d like to share?</label>
+                        <textarea id="text500" class="label-m" placeholder="Let us know if there is anything else"></textarea>
+                        <p class="text500 body-m"><span>0</span>/500 character</p>
+                    </div>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <p class="body-l">I confirm that all information entered is correct and complete.*</p>
+                    </label>
+                    <button class="btn_blue label-m" id="receive_btn">
+                        Submit
+                    </button>
+                </fieldset>
+            </section>
         </div>
-        <section>
-            <h3 class="title4">On this page</h3>
-            <ul class="label-s section_list">
-                <li data-target="section_move1">01. Introduction</li>
-                <li data-target="section_move2">02. What's inside the box?</li>
-                <li data-target="section_move3">03. Mounting Styles</li>
-                <li data-target="section_move4">04. Step-by-step Assembly</li>
-                <li data-target="section_move5">05. Customization & Software</li>
-                <li data-target="section_move6">06. Still need help?</li>
-            </ul>
-        </section>
-        <section id="section_move1">
-            <h3 class="title1">Introduction</h3>
-            <p class="body-xl">This guide will walk you through assembling and getting started with your new Mode Encore
-                keyboard. Please read through each step carefully and avoid skipping ahead to ensure the best possible
-                build experience and acoustics.</p>
-            <h4 class="title3">Join the Mode Community!</h4>
-            <p class="body-xl">If you have any questions before or during your build, join our Discord server to connect
-                with fellow builders and get real-time tips. Once you finish your masterpiece, tag us at @modekeyboards
-                on Instagram—we love seeing your builds!</p>
-        </section>
-        <section id="section_move2">
-            <h3 class="title1">What's inside the box?</h3>
-            <p class="body-xl">Before you start, make sure you have all the necessary components. (Estimated build time:
-                45–90 minutes)</p>
-            <h4 class="title3">Included Components:</h4>
-            <ul class="list_style body-l">
-                <li>1x Encore Case (Pre-assembled Top and Bottom case)</li>
-                <li>1x PCB & Daughterboard (with JST cable)</li>
-                <li>1x Plate</li>
-                <li>1x Mounting Block Set</li>
-                <li>1x Screwdriver & Fastener Pack (Screws)</li>
-                <li>4x Silicone Feet</li>
-                <li>1x Keycap & Switch Puller</li>
-                <li>1x Stabilizer Set</li>
-            </ul>
-            <h4 class="title3">Required (Not Included):</h4>
-            <ul class="list_style body-l">
-                <li>Switches (x70) and Keycaps</li>
-                <li>(Optional) Foam Kit</li>
-                <li>(Optional) Stabilizer Lubricant</li>
-            </ul>
-        </section>
-        <section id="section_move3">
-            <h3 class="title1">Mounting Styles</h3>
-            <p class="body-xl">The Mode Encore features a highly versatile internal mounting system designed to cater to
-                your specific typing preference. Choose your preferred mounting style before starting the assembly:</p>
-            <h4 class="title3">Lattice Block Mount</h4>
-            <p class="body-xl">Offers a flexible, bouncy, and soft typing experience.</p>
-            <ul class="list_style body-l">
-                <li>Green Lattice Blocks: Highest flex (Most Flex)</li>
-                <li>Black Lattice Blocks: Balanced flexibility (Mid Flex)</li>
-                <li>Green Half-Lattice Blocks: Firm yet forgiving (Low Flex)</li>
-            </ul>
-            <h4 class="title3">Solid Block Mount</h4>
-            <p class="body-xl">Provides a responsive, crisp, yet highly comfortable typing experience.</p>
-            <h4 class="title3">Isolated Top Mount</h4>
-            <p class="body-xl">Delivers a lively responsiveness paired with a generally lower-pitched acoustic profile.
-            </p>
-        </section>
-        <section id="section_move4">
-            <h3 class="title1">Step-by-step Assembly</h3>
-            <h4 class="title2">[01] Test the PCB</h4>
-            <p class="body-xl">Testing your PCB before final housing assembly is highly recommended to ensure everything
-                is functioning correctly.</p>
-            <article>
-                <h4 class="title3">01. Prepare the Software:</h4>
-                <p class="body-xl">Open the VIA web configurator, navigate to the 'Key Tester' tab, and activate the
-                    'Test Matrix' mode.</p>
-                <figure>
-                    <img src="images/guides/encore/guide1_1.webp" alt="guide1">
-                </figure>
-                <h4 class="title3">02. Connect and Test</h4>
-                <p class="body-xl">Place the PCB face down on a non-conductive surface, connect the daughterboard, and
-                    plug in the USB-C cable. Use metal tweezers to touch the two hot-swap socket contacts for each key,
-                    checking if the corresponding key lights up in VIA.</p>
-                <figure>
-                    <img src="images/guides/encore/guide1_2.webp" alt="guide1">
-                </figure>
-            </article>
-            <div class="warning_cont">
-                <img src="images/icon/icon_danger.svg" alt="icon_danger">
-                <h4 class="body-l">Pro tip: Encountered an issue?</h3>
-                    <p class="body-l">If a specific key fails to register during testing, pause your assembly and
-                        contact our support team immediately at <a
-                            href="contact_support_main.html">support@modedesigns.com</a></p>
-            </div>
-            <h4 class="title2">[02] Stabilizer Installation</h4>
-            <article>
-                <h4 class="title3">01. PE Foam (Optional):</h4>
-                <p class="body-xl">If you are using the optional PE foam, lay it completely flat over the top of the PCB
-                    now.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide2_1.webp" alt="guide2">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide2_2.webp" alt="guide2">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Mount the Stabilizers</h4>
-                <p class="body-xl">Insert the screwless hook end of the stabilizer into the larger PCB cutout first,
-                    then lower the screw-in side into place. Ensure the stabilizer sits completely flush against the PCB
-                    before flipping it over and securing it with the provided screws.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide3_1.webp" alt="guide2">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide3_2.webp" alt="guide2">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/encore/guide3_3.webp" alt="guide2">
-                </figure>
-            </article>
-            <h4 class="title2">[03] Plate and Switch Assembly</h4>
-            <article>
-                <h4 class="title3">01. Remove Standoff Covers</h4>
-                <p class="body-xl">Remove the orange Mylar covers covering the plate standoffs.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide4_1.webp" alt="guide4">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide4_2.webp" alt="guide4">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/encore/guide4_3.webp" alt="guide4">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Secure the Plate</h4>
-                <p class="body-xl">Lay down the optional plate foam, align the plate on top, and secure them together
-                    using the four M2x5 flat head screws.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide5_1.webp" alt="guide5">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide5_2.webp" alt="guide5">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">03. Install the Switches</h4>
-                <p class="body-xl">Check all switch pins to ensure they are perfectly straight.</p>
-                <figure>
-                    <img src="images/guides/encore/guide6_1.webp" alt="guide6">
-                </figure>
-                <p class="body-xl">Push each switch firmly through the plate into the hot-swap sockets, supporting the
-                    back of the socket with your thumb to prevent tearing the pad. Starting with the four corners makes
-                    alignment easier.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                    <li class="tab_btn" data-step="4">step 4</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide7_1.webp" alt="guide7">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide7_2.webp" alt="guide7">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/encore/guide7_3.webp" alt="guide7">
-                </figure>
-                <figure class="tab_panel" data-step="4">
-                    <img src="images/guides/encore/guide7_4.webp" alt="guide7">
-                </figure>
-            </article>
-            <h4 class="title2">[04] Case Disassembly & Daughterboard Setup</h4>
-            <article>
-                <h4 class="title3">01. Disassemble the Case</h4>
-                <p class="body-xl">Turn the pre-assembled case upside down and use an H2.0 bit to loosen the 4 case
-                    screws. Carefully separate the top and bottom case.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide8_1.webp" alt="guide8">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide8_2.webp" alt="guide8">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Install Daughterboard & Force Break Pads</h4>
-                <p class="body-xl">Place the daughterboard into the bottom case, plug in the JST cable, and secure it
-                    with four M2x3 screws. Apply the included Force Break Pads around the designated screw holes on the
-                    bottom case.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                    <li class="tab_btn" data-step="4">step 4</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide9_1.webp" alt="guide9">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide9_2.webp" alt="guide9">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/encore/guide9_3.webp" alt="guide9">
-                </figure>
-                <figure class="tab_panel" data-step="4">
-                    <img src="images/guides/encore/guide9_4.webp" alt="guide9">
-                </figure>
-            </article>
-            <h4 class="title2">[05] Mounting Blocks & Final Assembly</h4>
-            <article>
-                <h4 class="title3">01. Option A: For Lattice/Solid Block Mounts</h4>
-                <p class="body-xl">Slide your chosen mounting blocks onto the 5 designated tabs located around the
-                    plate. ensure the lattice patterned texture faces down toward the PCB.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                    <li class="tab_btn" data-step="4">step 4</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide10_1.webp" alt="guide10">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide10_2.webp" alt="guide10">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/encore/guide10_3.webp" alt="guide10">
-                </figure>
-                <figure class="tab_panel" data-step="4">
-                    <img src="images/guides/encore/guide10_4.webp" alt="guide10">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Option B: For Top Mount Blocks</h4>
-                <p class="body-xl">Insert the top mount blocks into the 5 corresponding slots inside the top case, align
-                    with the plate, and secure them to the top case using M2x5 screws first.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide12_1.webp" alt="guide12">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide12_2.webp" alt="guide12">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-                    <img src="images/guides/encore/guide12_3.webp" alt="guide12">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">03. Final Assembly</h4>
-                <p class="body-xl">Connect the JST cable from the bottom case to the PCB. Carefully lower the entire
-                    internal assembly into the bottom case channels. Fit the top case back over the assembly. Flip the
-                    keyboard over and secure the case using the two long screws (M2.5x14) at the top and two short
-                    screws (M2.5x6) at the bottom.</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                    <li class="tab_btn" data-step="3">step 3</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide13_1.webp" alt="guide13">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide13_2.webp" alt="guide13">
-                </figure>
-                <figure class="tab_panel" data-step="3">
-            </article>
-        </section>
-        <section id="section_move5">
-            <h3 class="title1">Customization & Software</h3>
-            <p class="body-xl">The Mode Encore is designed to be fully customizable directly through your web browser
-                without requiring bloated software.</p>
-            <article>
-                <h4 class="title3">01. VIA / QMK Compatibility</h4>
-                <p class="body-xl">Map your keys, configure layers, and manage macros easily using the web-based VIA
-                    tool</p>
-                <ul class="tab_btn_cont label-m">
-                    <li class="tab_btn active" data-step="1">step 1</li>
-                    <li class="tab_btn" data-step="2">step 2</li>
-                </ul>
-                <figure class="tab_panel active" data-step="1">
-                    <img src="images/guides/encore/guide14_1.webp" alt="guide14">
-                </figure>
-                <figure class="tab_panel" data-step="2">
-                    <img src="images/guides/encore/guide14_2.webp" alt="guide14">
-                </figure>
-            </article>
-            <article>
-                <h4 class="title3">02. Entering Bootloader Mode</h4>
-                <p class="body-xl">If you need to flash custom QMK firmware, hold Fn + Esc while plugging in the cable, or press the physical reset button located on the bottom of the PCB.</p>
-                <figure>
-                    <img src="images/guides/encore/guide15_1.webp" alt="guide15">
-                </figure>
-            </article>
-            <div class="warning_cont">
-                <img src="images/icon/icon_danger.svg" alt="icon_danger">
-                <h4 class="body-l">Tip for Mac Users:</h4>
-                <p class="body-l">When using the keyboard on macOS, you can swap the Command and Option key mapping natively under System Preferences -> Keyboard to keep your layout seamless and intuitive across different operating systems.</p>
-            </div>
-
-        </section>
-        <section id="section_move6">
-            <h3 class="title1">Still need help?</h3>
-            <p class="body-xl">No builder is an island. If you hit a roadblock during assembly or need advice on tuning your stabilizer rattles, we've got your back.</p>
-            <ul class="btn_cont">
-                <li>
-                    <a href="https://discord.com/invite/Mvsq4BP" class="btn_yellow label-m">Join us on Discord</a>
-                </li>
-                <li>
-                    <a href="contact_support_main.html" class="btn_blue label-m">Contact Support</a>
-                </li>
-            </ul>
-        </section>
     </main>
     <footer>
         <section class="footer_front">
@@ -815,7 +511,15 @@
         </div>
     </footer>
 </body>
-<div class="top_btn label-m boxShadow"><a href="#">Top</a></div>
 <div id="toast" class="toast label-m"></div>
-
+<div id="modal_overlay" hidden></div>
+<div class="receive_req" hidden>
+    <h3 class="title3">We’ve Received Your Request</h3>
+    <p class="body-l">Request ID: <span class="request_id">#A18329</span></p>
+    <p class="body-l">status: <span class="status">Received</span></p>
+    <p class="body-l">We’ve received your message and our team will review it as soon as possible. Most requests are
+        answered within 24-48 hours.</p>
+    <p class="body-l">You can track your request anytime using your Request ID and email.</p>
+    <a href="contact_support_main.html" class="btn_blue label-m">Back to support</a>
+</div>
 </html>

@@ -201,6 +201,18 @@ section.card_slot_section .card_slot_cont .card_slot_product > div a{
 .green{
     color: var(--ls02)!important;
 }
+main div.fig_hor{
+    display: flex;
+    gap: 2%;
+    margin-bottom: 10px;
+}
+main div.fig_hor figure{
+    width: 48%;
+}
+main div.fig_hor figure img{
+    width: 100%;
+    border-radius: 5px;
+}
 @media screen and (min-width:1024px) {
     .main_head.detail_page .left_side{
         width: 600px;

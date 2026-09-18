@@ -159,6 +159,7 @@ div.top_btn{
     text-align: center;
     line-height: 40px;
     z-index: 1000;
+    cursor: pointer;
 }
 div.top_btn a{
     color: inherit;
