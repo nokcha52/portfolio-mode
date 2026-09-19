@@ -21,6 +21,7 @@
     <script src="js/accordion.js"></script>
     <script src="js/policy.js"></script>
     <script src="js/order_sub_detail.js"></script>
+    <script src="js/order_img_change.js"></script>
 </head>
 
 <body>
@@ -440,25 +441,9 @@
                 <div class="width_cont">
                     <article class="product_card">
                         <h2 class="title2">Eighty Plate</h2>
-                        <p class="body-l">For plate materials, bottom-out firmness and acoustics are considerations of
-                            preference</p>
-                        <figure class="img_cont" data-category="edition1">
-                            <img src="images/extra_parts/eighty/plate_detail1.webp" alt="ed1">
-                        </figure>
-                        <figure class="img_cont" data-category="edition2">
-                            <img src="images/extra_parts/eighty/plate_detail2.webp" alt="ed2">
-                        </figure>
-                        <figure class="img_cont" data-category="edition3">
-                            <img src="images/extra_parts/eighty/plate_detail3.webp" alt="ed3">
-                        </figure>
-                        <figure class="img_cont" data-category="edition4">
-                            <img src="images/extra_parts/eighty/plate_detail4.webp" alt="ed4">
-                        </figure>
-                        <figure class="img_cont" data-category="edition5">
-                            <img src="images/extra_parts/eighty/plate_detail5.webp" alt="ed5">
-                        </figure>
-                        <figure class="img_cont" data-category="edition6">
-                            <img src="images/extra_parts/eighty/plate_detail6.webp" alt="ed6">
+                        <p class="body-l">For plate materials, bottom-out firmness and acoustics are considerations of preference</p>
+                        <figure class="encore_fig">
+                            <img src="images/extra_parts/eighty/plate_detail1.webp" alt="encore">
                         </figure>
                         <div class="star_cont">
                             <img src="images/icon/icon_star_filled.svg" alt="starImg">
@@ -468,29 +453,28 @@
                             <img src="images/icon/icon_star_filled.svg" alt="starImg">
                             <span class="label-s">4.7 (85)</span>
                         </div>
-                        <ul class="tab_cont">
+                        <span class="label-l">color</span>
+                        <ul class="pack_tab_cont">
                             <li>
-                                <button type="button" data-righttab="edition1"
-                                    class="tab_btn yellow active" data-price="35.00">POM</button>
+                                <button type="button" class="tab_btn yellow active" data-price="35.00" data-img="images/extra_parts/eighty/plate_detail1.webp">POM</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition2" class="tab_btn yellow" data-price="35.00">FR4</button>
+                                <button type="button" class="tab_btn yellow" data-price="35.00" data-img="images/extra_parts/eighty/plate_detail2.webp">FR4</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition3" class="tab_btn yellow" data-price="45.00">Aluminum</button>
+                                <button type="button" class="tab_btn yellow" data-price="45.00" data-img="images/extra_parts/eighty/plate_detail3.webp">Aluminum</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition4" class="tab_btn yellow" data-price="70.00">Brass</button>
+                                <button type="button" class="tab_btn yellow" data-price="70.00" data-img="images/extra_parts/eighty/plate_detail4.webp">Brass</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition5" class="tab_btn yellow" data-price="70.00">Copper</button>
+                                <button type="button" class="tab_btn yellow" data-price="70.00" data-img="images/extra_parts/eighty/plate_detail5.webp">Cooper</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition6" class="tab_btn yellow" data-price="55.00">Carbon
-                                    Fiber</button>
+                                <button type="button" class="tab_btn yellow" data-price="55.00" data-img="images/extra_parts/eighty/plate_detail6.webp">Carbon Fiber</button>
                             </li>
                         </ul>
-                        <span class="title3">$35.00</span>
+                        <span class="title3 price_span">$50.00</span>
                         <button type="button" class="btn_blue label-m" data-category="addtocart">Add to cart</button>
                         <div class="price_policy_cont">
                             <p class="body-m">Prices exclude import duties and taxes. Duties and taxes are collected at
@@ -514,27 +498,9 @@
                         </div>
                     </article>
                 </div>
-                <div class="img_cont">
-                    <figure data-righttab="edition1">
-                        <img src="images/extra_parts/eighty/plate_detail1.webp" alt="ed1">
-                    </figure>
-                    <figure data-righttab="edition2">
-                        <img src="images/extra_parts/eighty/plate_detail2.webp" alt="ed2">
-                    </figure>
-                    <figure data-righttab="edition3">
-                        <img src="images/extra_parts/eighty/plate_detail3.webp" alt="ed3">
-                    </figure>
-                    <figure data-righttab="edition4">
-                        <img src="images/extra_parts/eighty/plate_detail4.webp" alt="ed4">
-                    </figure>
-                    <figure data-righttab="edition5">
-                        <img src="images/extra_parts/eighty/plate_detail5.webp" alt="ed5">
-                    </figure>
-                    <figure data-righttab="edition6">
-                        <img src="images/extra_parts/eighty/plate_detail6.webp" alt="ed6">
-                    </figure>
-                </div>
-
+                <figure class="main_thumb">
+                    <img class="mainImg" src="images/extra_parts/eighty/plate_detail1.webp" alt="encoreImg">
+                </figure>
                 <p class="body-l">The Eighty Plate serves as the structural lattice that suspends your switches,
                     dictating the fundamental flex, acoustic profile, and tactile feedback of every keystroke.
                     Meticulously precision-cut to align with the internal geometry of the chassis, each plate material
@@ -658,8 +624,10 @@
                 <div class="width_cont">
                     <article class="product_card">
                         <h2 class="title2">Eighty Plate</h2>
-                        <p class="body-l">For plate materials, bottom-out firmness and acoustics are considerations of
-                            preference</p>
+                        <p class="body-l">For plate materials, bottom-out firmness and acoustics are considerations of preference</p>
+                        <figure class="encore_fig">
+                            <img src="images/extra_parts/encore/65_plate_detail1.webp" alt="encore">
+                        </figure>
                         <div class="star_cont">
                             <img src="images/icon/icon_star_filled.svg" alt="starImg">
                             <img src="images/icon/icon_star_filled.svg" alt="starImg">
@@ -668,29 +636,28 @@
                             <img src="images/icon/icon_star_filled.svg" alt="starImg">
                             <span class="label-s">4.7 (85)</span>
                         </div>
-                        <ul class="tab_cont">
+                        <span class="label-l">color</span>
+                        <ul class="pack_tab_cont">
                             <li>
-                                <button type="button" data-righttab="edition1"
-                                    class="tab_btn yellow active" data-price="35.00">POM</button>
+                                <button type="button" class="tab_btn yellow active" data-price="35.00" data-img="images/extra_parts/eighty/plate_detail1.webp">POM</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition2" class="tab_btn yellow" data-price="35.00">FR4</button>
+                                <button type="button" class="tab_btn yellow" data-price="35.00" data-img="images/extra_parts/eighty/plate_detail2.webp">FR4</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition3" class="tab_btn yellow" data-price="45.00">Aluminum</button>
+                                <button type="button" class="tab_btn yellow" data-price="45.00" data-img="images/extra_parts/eighty/plate_detail3.webp">Aluminum</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition4" class="tab_btn yellow" data-price="70.00">Brass</button>
+                                <button type="button" class="tab_btn yellow" data-price="70.00" data-img="images/extra_parts/eighty/plate_detail4.webp">Brass</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition5" class="tab_btn yellow" data-price="70.00">Copper</button>
+                                <button type="button" class="tab_btn yellow" data-price="70.00" data-img="images/extra_parts/eighty/plate_detail5.webp">Cooper</button>
                             </li>
                             <li>
-                                <button type="button" data-righttab="edition6" class="tab_btn yellow" data-price="55.00">Carbon
-                                    Fiber</button>
+                                <button type="button" class="tab_btn yellow" data-price="55.00" data-img="images/extra_parts/eighty/plate_detail6.webp">Carbon Fiber</button>
                             </li>
                         </ul>
-                        <span class="title3">$35.00</span>
+                        <span class="title3 price_span">$50.00</span>
                         <button type="button" class="btn_blue label-m" data-category="addtocart">Add to cart</button>
                         <div class="price_policy_cont">
                             <p class="body-m">Prices exclude import duties and taxes. Duties and taxes are collected at

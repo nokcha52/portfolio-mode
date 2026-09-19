@@ -11,6 +11,9 @@
     justify-content: space-between;
     width: 100%;
 }
+.accordion .accordion_item button span{
+    text-align: left;
+}
 .accordion .accordion_item img{
     transform: rotate(90deg);
 }
