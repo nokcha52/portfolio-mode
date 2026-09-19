@@ -254,6 +254,9 @@ main{
 .product_list .pagination .page_btn.active{
     background-color: var(--ys05);
 }
+.product_list > ul li .card_slot_cont figure img{
+    transition: all ease 0.3s;
+}
 @media screen and (min-width: 1024px){    
     .product_list .sortBox .optionList li:hover{
         background-color: var(--bs06);
