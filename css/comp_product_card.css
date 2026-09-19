@@ -13,11 +13,12 @@
 }
 .product_card .star_cont{
     display: flex;
-    line-height: 20px;
-    margin-bottom: 20px;
+    line-height: 16px;
+    margin-bottom: 10px;
 }
 .product_card .star_cont > img{
     width: 20px;
+    height: 20px;
     margin-right: 5px;
 }
 .product_card .star_cont span{
