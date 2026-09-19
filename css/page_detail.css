@@ -78,7 +78,7 @@ figure.encore img{
 .main_head.detail_page .width_cont .product_card h2{
     color: var(--gs04);
 }
-.main_head.detail_page .width_cont .product_card span.label-xl{
+.main_head.detail_page .width_cont .product_card span.label-l{
     display: block;
     margin-bottom: 20px;
 }
